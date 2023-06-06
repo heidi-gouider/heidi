@@ -1,0 +1,232 @@
+body {
+    width: 100%;
+    margin: o;
+    padding: 0;
+    list-style: none;
+    background-color: aquamarine;
+}
+
+/* body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-position: 0, 90px;
+} */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/******************* LE MENU *******************************/
+header {
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: 3rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.logo img {
+    width: 3rem;
+    height: 6rem;
+    line-height: 6rem;
+
+    /* top: 0; */
+    /* z-index: 2; */
+}
+
+.menu {
+    height: 6rem;
+    line-height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    padding: 1rem;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    transition: all;
+    font-size: 30px;
+    /* color: rgb(146, 126, 126); */
+    color: rgb(41, 47, 73);
+
+}
+
+
+/* ******************** CREATION DES ICONES ********************************* */
+
+.icone {
+    width: 4.2rem;
+    height: 2.4rem;
+    position: relative;
+    /* la position sera par rapport à l'élément parent span qui sera en position absolue */
+    cursor: pointer;
+    display: none;
+}
+
+/* *********icone open *********** */
+
+/* je crée le prier trait de l'icône qui sera central */
+.icone .open {
+    /* attentien les balises span sont de type inline, donc ne comprenne pas les valeurs hauteur et largeur
+    j'utilise un display */
+    /* je donne à la span la taille de 100% c'est à dire 5rem comme la class icone */
+    width: 100%;
+    height: 0.4rem;
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: black;
+    /* maintenant je vais placer l'élément et le centrer*/
+    top: 50%;
+    /* avec la position absolue le top de 50% ne suffira pas à centrer mon élément
+    je vais donc utiliser un transform pour le déplacer de sa moitié vers le haut => (valeur négative)*/
+    transform: translateY(-50%);
+
+}
+
+/* je crée les deux autres traits de l'icône, un avant et un après */
+.icone .open::before,
+.icone .open::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    /* height: 0.6rem; */
+    height: 0.4rem;
+    background-color: black;
+
+}
+
+/* maintenant je les positionne */
+.icone .open::before {
+    transform: translateY(-1rem);
+}
+
+.icone .open::after {
+    transform: translateY(1rem);
+}
+
+/* *********icone close *********** */
+
+.icone .close {
+    width: 100%;
+    height: 0.4rem;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(10px);
+}
+
+.icone .close:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.icone .close:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 0.4rem;
+    background-color: black;
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+/* ****** MENU RESPONSIVE ******** */
+
+@media screen and (max-width: 576px) {
+    /* header {
+        background: transparent;
+    } */
+
+    .icone {
+        display: block;
+        right: 20px;
+        top: 20px;
+        position: relative;
+        z-index: 30;
+        cursor: pointer;
+    }
+
+    /* l'icone open sera visible */
+    .open {
+        display: flex;
+    }
+
+    /* l'icone close sera caché */
+    .close {
+        display: none;
+    }
+
+    /* j'appelle ma fonction et je lui dis de cacher l'icone open 
+    si elle est vrai */
+    .actif .open {
+        display: none;
+    }
+
+    .actif .close {
+        display: flex;
+    }
+
+    /* .nav {
+        display: flex;
+    } */
+
+    .menu {
+        width: 100%;
+        height: 100vh;
+        /* display: flex; */
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 0;
+        padding: 2rem;
+        background-color: rgb(34, 33, 33);
+        transform: translateY(-100%);
+        transition: transform 1s;
+    }
+
+
+    .actif .menu {
+        transform: translateY(0);
+        /* display: none; */
+
+    }
+
+    .menu a {
+        font-size: 2rem;
+    }
+
+}

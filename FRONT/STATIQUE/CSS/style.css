@@ -1,11 +1,12 @@
 /* Les liens internes et externes seront différenciés
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
-*{
+* {
     margin: o;
     padding: 0;
 
 }
+
 body {
     width: 100%;
     /* margin: o;
@@ -208,6 +209,7 @@ section {
     /* aninition de l'image de fond , apparition de la gauche */
     animation: slideRight 3s;
 }
+
 /* animation sur l'image de fond */
 
 /* @keyframes slideRight {
@@ -224,7 +226,7 @@ section {
 #recherche {
     height: 15%;
     border-color: #242629;
-    border-radius: 10%;
+    /* border-radius: 10%; */
     cursor: pointer;
 
 }
@@ -234,7 +236,7 @@ section {
 } */
 
 .change image {
-	display: none;
+    display: none;
 }
 
 /* .change video {
@@ -249,37 +251,44 @@ iframe {
 }
 
 h1 {
+    padding-right: 10%;
     text-align: end;
+
 }
 
 /********** LES CATEGORIES *************/
-.grille{
+.grille {
+    max-width: 1300px;
+    width: 80%;
+    /* la grille va prendre la valeur de tous les éléments */
+    height: auto;
+    /* je centre la grille */
+    margin: auto;
     display: grid;
-    /* grid-template-rows: repeat(2); */
-    grid-template-columns: repeat(3, 1fr);
-
-    /* grid-row: 1; */
-    /* grid-column: 3; */
-
-}
-
-.grille img{
-    width: 50%;
-    height: 75%;
-    justify-self: center;
+    /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
+    grid-template-columns: repeat(auto-fill, 320px);
+    /* grid-template-columns: repeat(3, 1fr); */
     justify-content: center;
-    transition: all;
-
-    
+    gap: 30px;
 }
-.grille img:hover{
+
+.grille img {
+    width: 100%;
+    height: 80%;
+    /* justify-self: center;
+    justify-content: center;
+    transition: all; */
+}
+
+.grille img:hover {
     width: 70px;
     /* height: 50px; */
 }
 
-#i1{
+#i1 {
     grid-row: 1;
 }
+
 /* #i2{
     grid-row: 2;
 } */
@@ -356,6 +365,3 @@ afficher le nom en texte du lien
     }
 
 }
-
-
-

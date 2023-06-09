@@ -1,4 +1,9 @@
+//////// MENU MOBIL FIRST /////////
+
+
+
 //////////// VARIABLES //////////
+
 
 // menu responsive //
 let body = document.querySelector("body");
@@ -22,4 +27,6 @@ icone.addEventListener("click", function () {
 image.addEventListener("click", function () {
     section.classList.toggle("change");
 });
+
+
 

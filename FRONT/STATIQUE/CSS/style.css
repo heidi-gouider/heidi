@@ -19,22 +19,13 @@ body {
     src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
 
-
-/* body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-position: 0, 90px;
-} */
-
 /* a {
     text-decoration: none;
     color: inherit;
 } */
 
 
-/******************* LE MENU *******************************/
+/* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
 
 header {
     width: 100%;
@@ -105,9 +96,11 @@ menu a:visited {
     text-decoration: none;
 }
 
+/* ////////////// LE FOOTER INCLU DANS TOUTES LES PAGES /////////////// */
 
 
-/* ******************** CREATION DES ICONES POUR LE MOBIL FIRST ********************************* */
+
+/* ********* CREATION DES ICONES POUR LE MOBIL FIRST *********** */
 
 .icone {
     width: 4.2rem;
@@ -118,7 +111,7 @@ menu a:visited {
     display: none;
 }
 
-/* *********icone open *********** */
+/* *********icone open ********** */
 
 /* je crée le prier trait de l'icône qui sera central */
 .icone .open {
@@ -194,6 +187,7 @@ menu a:visited {
 
 }
 
+/* /////////// SECTION RECHERCHE AVEC IMAGE DE FOND ET VIDEO ///////////////// */
 
 /********* IMAGE DE FOND ENTETE **********/
 section {
@@ -256,7 +250,8 @@ h1 {
 
 }
 
-/********** LES CATEGORIES *************/
+/* ////////// PAGE ACCEUIL  //////////// */
+
 .grille {
     max-width: 1300px;
     width: 80%;
@@ -299,7 +294,7 @@ afficher le nom en texte du lien
 } */
 
 
-/* ****** MENU RESPONSIVE ******** */
+/* ////////////// MENU RESPONSIVE INCLU DANS TOUTES LES PAGES /////////////// */
 
 @media screen and (max-width: 576px) {
     /* header {

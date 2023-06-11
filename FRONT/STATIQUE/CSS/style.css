@@ -4,20 +4,18 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 * {
     margin: o;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
-body {
+/* body {
     width: 100%;
-    /* margin: o;
-    padding: 0; */
     list-style: none;
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: "Libre Baskerville";
     src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
-}
+} */
 
 /* a {
     text-decoration: none;
@@ -31,12 +29,12 @@ header {
     width: 100%;
     position: fixed;
     /* display: flex; */
-    height: 13%;
+    height: 15%;
     top: 0;
     left: 0;
     background-color: antiquewhite;
     /* justify-content: space-between; */
-    border-bottom: #535d65 solid;
+    border-bottom: #970646 solid 2px;
     /* will-change: scroll-position ; */
 
 
@@ -82,7 +80,7 @@ nav {
 
 
 .menu a:hover {
-    font-size: 25px;
+    /* font-size: 25px; */
     color: #242629;
 
 }
@@ -188,8 +186,8 @@ menu a:visited {
 
 footer {
     width: 100%;
+    height: 50px;
     display: flex;
-    height: 200px;
     bottom: 0;
     position: relative;
     background-color: antiquewhite;
@@ -199,24 +197,37 @@ footer {
     /* will-change: scroll-position ; */
 }
 
-nav {
+.network {
     position: absolute;
-    /* height: 6rem;
-    line-height: 6rem; */
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
 }
 
+/* je modifie l'apparence de la check box et je fais en sorte que tous les
+navigateur prenne en cherge cette propriété */
+/* 
+  */
+
+nav {
+    height: 100%;
+}
+
+/* #checkbox{
+    background-image: ;
+} */
 .link-external i {
     /* margin: auto;
     padding: auto; */
     width: 20px;
     height: 20px;
+    text-decoration: none;
+    display: none;
 }
 
 
-/* .link-external a :hover{
+/* .link-external i:hover{
 afficher le nom en texte du lien
 } */
 
@@ -225,9 +236,9 @@ afficher le nom en texte du lien
 
 /********* IMAGE DE FOND ENTETE **********/
 section {
-    /* margin: 0;
-    padding: 0; */
-    width: 100%;
+    margin: 0;
+    /* padding: 0; */
+    /* width: 100%; */
     height: 200px;
     display: flex;
     justify-content: center;
@@ -235,7 +246,8 @@ section {
     margin-top: 13%;
     background-image: url('../ASSETS/IMG/fond/fosyyyy.jpg');
     /* aninition de l'image de fond , apparition de la gauche */
-    animation: slideRight 3s;
+    /* animation: slideRight 3s; */
+    cursor: pointer;
 }
 
 /* animation sur l'image de fond */
@@ -262,8 +274,8 @@ section {
 /* video {
 	display: none;
 } */
-
-.change image {
+/* au click sur l'image de fond de la section, l'image disparait */
+.change section {
     display: none;
 }
 
@@ -299,7 +311,7 @@ h1 {
     grid-template-columns: repeat(auto-fill, 320px);
     /* grid-template-columns: repeat(3, 1fr); */
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .grille img {
@@ -310,11 +322,17 @@ h1 {
     transition: all; */
 }
 
-/* .grille img:hover {
-    width: 70px;
-    height: 50px;
-} */
+.grille img:hover {
+    width: 350px;
+    height: 320px;
+}
 
+/* .menu a:hover {
+    font-size: 25px;
+    color: #242629;
+
+}
+ */
 #i1 {
     grid-row: 1;
 }

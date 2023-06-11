@@ -11,7 +11,6 @@ let icone = document.querySelector(".icone");
 
 // section recherche //
 let section = document.querySelector("section");
-let image = document.querySelector("bg-image");
 let video = document.querySelector("video");
 
 
@@ -24,8 +23,8 @@ icone.addEventListener("click", function () {
 
 // évennement change au click/////
 
-image.addEventListener("click", function () {
-    section.classList.toggle("change");
+section.addEventListener("click", function () {
+    section.style.backgroundImage.classList.toggle("change");
 });
 
 

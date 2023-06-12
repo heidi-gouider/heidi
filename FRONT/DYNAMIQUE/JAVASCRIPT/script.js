@@ -27,5 +27,6 @@ section.addEventListener("click", function () {
     section.style.backgroundImage.classList.toggle("change");
 });
 
+// section.style.backgroundImage.classList.toggle("change");
 
 

@@ -184,11 +184,12 @@ menu a:visited {
 
 }
 
-/* ////////////// LE FOOTER INCLU DANS TOUTES LES PAGES /////////////// */
+/* ////////////// LE FOOTER /////////////// */
 
 footer {
     width: 100%;
-    height: 50px;
+    height: 80px;
+    /* margin: auto; */
     display: flex;
     bottom: 0;
     position: relative;
@@ -204,7 +205,10 @@ footer {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-
+}
+.network i{
+    width: 60px;
+    height: 60px;
 }
 /* #open-liens{
     display: flex;
@@ -236,8 +240,6 @@ nav {
 .link-external i {
     /* margin: auto;
     padding: auto; */
-    width: 20px;
-    height: 20px;
     text-decoration: none;
     display: none;
 }

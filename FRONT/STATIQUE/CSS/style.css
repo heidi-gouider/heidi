@@ -9,15 +9,20 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 }
 
-/* body {
-    width: 100%;
-    list-style: none;
-} */
+/* body { */
+/* position: relative; */
+/* width: 100%;
+    list-style: none; */
+/* } */
 
+/*  */
 @font-face {
     font-family: "Libre Baskerville";
     src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
+
+/* ////////////// VARIABLES POUR LES COULEURS /////////////// */
+
 
 /* a {
     text-decoration: none;
@@ -29,13 +34,15 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 header {
     width: 100%;
-    position: fixed;
-    /* display: flex; */
     height: 15%;
     top: 0;
     left: 0;
-    background-color: antiquewhite;
-    /* justify-content: space-between; */
+    position: fixed;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* background-color: antiquewhite; */
+    background-color: #e2e2e2;
     border-bottom: #970646 solid 2px;
     /* will-change: scroll-position ; */
 
@@ -53,19 +60,21 @@ nav {
 }
 
 .logo {
-    /* padding-left: 3rem; */
-    width: 15%;
-    /* height: 100%; */
+    margin: auto;
+    width: 13%;
+    height: 80%;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+
+    border-radius: 50%;
+    /* opacity: 0.5; */
 }
 
-.logo img {
-    width: 4rem;
-    /* height: 5rem; */
-}
 
 .menu {
-    height: 6rem;
-    line-height: 6rem;
+    /* height: 6rem;
+    line-height: 6rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,7 +201,7 @@ footer {
     /* margin: auto; */
     display: flex;
     bottom: 0;
-    position: relative;
+    /* position: relative; */
     background-color: antiquewhite;
     justify-content: center;
     align-items: center;
@@ -206,10 +215,12 @@ footer {
     justify-content: center;
     align-items: center; */
 }
-.network i{
+
+.network i {
     width: 60px;
     height: 60px;
 }
+
 /* #open-liens{
     display: flex;
 }
@@ -250,24 +261,138 @@ afficher le nom en texte du lien
 } */
 
 
-/* /////////// SECTION RECHERCHE AVEC IMAGE DE FOND ET VIDEO ///////////////// */
+/* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 
-/********* IMAGE DE FOND ENTETE **********/
-section {
+.video-recherche {
     margin: 0;
-    /* padding: 0; */
-    /* width: 100%; */
+    top: 120px;
+    left: 0;
     position: relative;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 13%;
-    /* background-image: url('../ASSETS/IMG/fond/fosyyyy.jpg'); */
-    /* aninition de l'image de fond , apparition de la gauche */
-    /* animation: slideRight 3s; */
+    height: 30vh;
+    /* display: flex;
+    justify-content: center; */
+    background-color: #970646;
     cursor: pointer;
 }
+
+/********* Video **********/
+
+.video-recherche video {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* .controls {
+    display: none;
+} */
+
+/********* Titre & Barre de recherche **********/
+
+.video-recherche .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* je centre les éléments */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/**** Titre ****/
+h1 {
+    /* position: absolute; */
+    text-align: center;
+    color: #242629;
+}
+
+/**** barre de recherche ****/
+
+.video-recherche .content .search-bar {
+    /*position: absolute;
+    display: flex;
+    align-items: center; */
+}
+
+#recherche {
+    height: 15%;
+    border-color: #242629;
+    /* border-radius: 10%; */
+    cursor: pointer;
+}
+
+/***** TITRE DE LA PAGE ******/
+h2 {
+    /* display: flex;
+    justify-content: center;
+    align-items: end; */
+    padding-right: 10%;
+    text-align: end;
+}
+
+/* ////////// PAGE ACCEUIL GRILLE  //////////// */
+section {
+    /* height: 60vh; */
+    /* height: 400px; */
+    top: 130px;
+    border-top: #970646 solid 2px;
+    position: relative;
+}
+
+.grille {
+    max-width: 1300px;
+    width: 80%;
+    margin-bottom: 15%;
+    /* la grille va prendre la valeur de tous les éléments */
+    height: auto;
+    /* je centre la grille */
+    margin: auto;
+    display: grid;
+    /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
+    grid-template-columns: repeat(auto-fill, 320px);
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: center;
+    gap: 60px;
+    /* overflow: hidden; */
+}
+
+.grille img {
+    width: 100%;
+    height: 300px;
+    /* justify-self: center;
+    justify-content: center; */
+    transition: transform 2s;
+}
+
+.grille img:hover {
+    transform: scale(1.2, 1.2);
+    /* border-radius: 50%; */
+}
+
+/* .menu a:hover {
+    font-size: 25px;
+    color: #242629;
+
+}
+ */
+#i1 {
+    grid-row: 1;
+}
+
+
+/* ////////////// ANIMATION /////////////// */
+/* aninition de l'image de fond , apparition de la gauche */
+/* animation: slideRight 3s; */
+
+/* #i2{
+    grid-row: 2;
+} */
 
 /* animation sur l'image de fond */
 
@@ -280,95 +405,6 @@ section {
         transform: translateX(100%);
     }
 } */
-
-/********* barre de recherche **********/
-
-.search-bar{
-    position: relative;
-}
-#recherche {
-    height: 15%;
-    border-color: #242629;
-    /* border-radius: 10%; */
-    cursor: pointer;
-}
-
-/********* Video **********/
-
-video {
-    width: 100%;
-    height: 200px;
-	display: block;
-    position: absolute;
-}
-
-figure {
-    max-width: 64rem;
-    width: 100%;
-    max-height: 30.875rem;
-    height: 100%;
-    margin: auto;
-    /* padding: 1.051%; */
-    /* background-color: #666; */
-  }
-  
-.controls{
-    display: none;
-}
-/********* VIDEO **********/
-
-
-h1 {
-    padding-right: 10%;
-    text-align: end;
-
-}
-
-/* ////////// PAGE ACCEUIL GRILLE  //////////// */
-
-.grille {
-    max-width: 1300px;
-    width: 80%;
-    margin-bottom: 15%;
-    /* la grille va prendre la valeur de tous les éléments */
-    height: auto;
-    /* height: 60%; */
-    /* je centre la grille */
-    margin: auto;
-    display: grid;
-    /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
-    grid-template-columns: repeat(auto-fill, 320px);
-    /* grid-template-columns: repeat(3, 1fr); */
-    justify-content: center;
-    gap: 40px;
-}
-
-.grille img {
-    width: 100%;
-    height: 300px;
-    /* justify-self: center;
-    justify-content: center; */
-    transition: transform 2s;
-}
-
-.grille img:hover {
-    transform: scale(1.5, 1.5);
-    border-radius: 50%;}
-
-/* .menu a:hover {
-    font-size: 25px;
-    color: #242629;
-
-}
- */
-#i1 {
-    grid-row: 1;
-}
-
-/* #i2{
-    grid-row: 2;
-} */
-
 
 
 

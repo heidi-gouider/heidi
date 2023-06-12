@@ -262,6 +262,7 @@ afficher le nom en texte du lien
 
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
+/* créer un parallax avec les éléments barre de recherche et titre sur fond vidéo */
 
 .video-recherche {
     margin: 0;
@@ -271,8 +272,17 @@ afficher le nom en texte du lien
     height: 30vh;
     /* display: flex;
     justify-content: center; */
-    background-color: #970646;
+    background-color: #242629;
     cursor: pointer;
+}
+
+.video-recherche ::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* background-color: #970646; */
+    /* background: linear-gradient(#970646, #4d0918); */
+    z-index: 1;
 }
 
 /********* Video **********/
@@ -314,13 +324,12 @@ h1 {
 
 /**** barre de recherche ****/
 
-.video-recherche .content .search-bar {
-    /*position: absolute;
-    display: flex;
-    align-items: center; */
+.video-recherche .search-bar {
+    display: inline-block;
 }
 
 #recherche {
+    display: flex;
     height: 15%;
     border-color: #242629;
     /* border-radius: 10%; */
@@ -347,7 +356,7 @@ section {
 
 .grille {
     max-width: 1300px;
-    width: 80%;
+    width: 75%;
     margin-bottom: 15%;
     /* la grille va prendre la valeur de tous les éléments */
     height: auto;
@@ -355,7 +364,7 @@ section {
     margin: auto;
     display: grid;
     /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
-    grid-template-columns: repeat(auto-fill, 320px);
+    grid-template-columns: repeat(auto-fill, 300px);
     /* grid-template-columns: repeat(3, 1fr); */
     justify-content: center;
     gap: 60px;
@@ -364,7 +373,7 @@ section {
 
 .grille img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     /* justify-self: center;
     justify-content: center; */
     transition: transform 2s;

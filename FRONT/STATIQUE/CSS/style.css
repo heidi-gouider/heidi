@@ -5,6 +5,8 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
     margin: o;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Libre Baskerville";
+
 }
 
 /* body {
@@ -12,10 +14,10 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
     list-style: none;
 } */
 
-/* @font-face {
+@font-face {
     font-family: "Libre Baskerville";
     src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
-} */
+}
 
 /* a {
     text-decoration: none;
@@ -204,7 +206,21 @@ footer {
     align-items: center; */
 
 }
+/* #open-liens{
+    display: flex;
+}
+#close-liens{
+    display: none;
+}
 
+.actif #open-liens{
+    display: flex;
+}
+
+.actif #close-liens{
+    display: none;
+}
+ */
 /* je modifie l'apparence de la check box et je fais en sorte que tous les
 navigateur prenne en cherge cette propriété */
 /* 
@@ -239,12 +255,13 @@ section {
     margin: 0;
     /* padding: 0; */
     /* width: 100%; */
+    position: relative;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 13%;
-    background-image: url('../ASSETS/IMG/fond/fosyyyy.jpg');
+    /* background-image: url('../ASSETS/IMG/fond/fosyyyy.jpg'); */
     /* aninition de l'image de fond , apparition de la gauche */
     /* animation: slideRight 3s; */
     cursor: pointer;
@@ -262,33 +279,42 @@ section {
     }
 } */
 
+/********* barre de recherche **********/
 
+.search-bar{
+    position: relative;
+}
 #recherche {
     height: 15%;
     border-color: #242629;
     /* border-radius: 10%; */
     cursor: pointer;
-
 }
 
-/* video {
-	display: none;
-} */
-/* au click sur l'image de fond de la section, l'image disparait */
-.change section {
+/********* Video **********/
+
+video {
+    width: 100%;
+    height: 200px;
+	display: block;
+    position: absolute;
+}
+
+figure {
+    max-width: 64rem;
+    width: 100%;
+    max-height: 30.875rem;
+    height: 100%;
+    margin: auto;
+    /* padding: 1.051%; */
+    /* background-color: #666; */
+  }
+  
+.controls{
     display: none;
 }
-
-/* .change video {
-	display: flex;
-} */
-
 /********* VIDEO **********/
 
-iframe {
-    width: 20%;
-
-}
 
 h1 {
     padding-right: 10%;
@@ -301,6 +327,7 @@ h1 {
 .grille {
     max-width: 1300px;
     width: 80%;
+    margin-bottom: 15%;
     /* la grille va prendre la valeur de tous les éléments */
     height: auto;
     /* height: 60%; */
@@ -324,9 +351,7 @@ h1 {
 
 .grille img:hover {
     transform: scale(1.5, 1.5);
-    /* width: 350px;
-    height: 320px; */
-}
+    border-radius: 50%;}
 
 /* .menu a:hover {
     font-size: 25px;
@@ -342,65 +367,8 @@ h1 {
     grid-row: 2;
 } */
 
-/*********** PAGE CATEGORY ********** */
-
-/* carousel d'image */
-
-.carousel-items{
-    height: 50%;
-}
-.carousel-items p{
-    color: black;
-}
-
-/* chaque catégorie "image" redirige l'utilisateur au click vers ses plats  */
-
-/*********** PAGE PLATS ********** */
 
 
-.tableau {
-    overflow-x: auto;
-    height: 100%;
-    padding-bottom: 2rem;
-    position: relative;
-    padding-top: 15%;
-
-}
-
-table {
-    border-collapse: separate;
-    width: 80%;
-    /* height: 100%; */
-    display: table;
-    table-layout: fixed;
-    border-spacing: 1rem;
-    /* justify-content: space-between;
-    text-align: center;  */
-}
-
-caption {
-    border-bottom: 0.06rem solid;
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-tbody,
-thead {
-    margin: auto;
-    /* border-collapse: collapse;
-    border-spacing: 0rem;    */
-}
-
-th,
-td {
-    text-align: center;
-    /* font-weight: 100; */
-}
-
-.photo {
-    width: 50%;
-}
 
 /* ////////////// MENU RESPONSIVE INCLU DANS TOUTES LES PAGES /////////////// */
 

@@ -1,0 +1,41 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Baskerville";
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
+}
+
+h1 {
+    padding-right: 10%;
+    text-align: end;
+    /* color: #970646; */
+    color: blue;
+    text-decoration: underline;
+    /* background-color: black; */
+}
+
+/* carousel d'image */
+
+.carousel{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.carousel-item{
+    margin: auto;
+    /* width: 50%; */
+}
+.carousel-item p{
+    color: black;
+}
+button{
+    bottom: 100px;
+}
+
+/* chaque catégorie "image" redirige l'utilisateur au click vers ses plats  */
+

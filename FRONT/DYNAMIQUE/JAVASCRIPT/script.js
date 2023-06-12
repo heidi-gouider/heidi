@@ -13,6 +13,10 @@ let icone = document.querySelector(".icone");
 let section = document.querySelector("section");
 let video = document.querySelector("video");
 
+// footer //
+let network = document.querySelector(".network");
+let footer = document.querySelector("footer");
+
 
 //////// CREATION DE CLASSES AU CLICK /////////
 
@@ -23,9 +27,14 @@ icone.addEventListener("click", function () {
 
 // évennement change au click/////
 
-section.img.addEventListener("click", function () {
-    section.classList.toggle("change");
+// section.img.addEventListener("click", function () {
+//     section.classList.toggle("actif");
+// });
+
+network.addEventListener("click", function () {
+    footer.classList.toggle("actif");
 });
+
 
 // section.style.backgroundImage.classList.toggle("change");
 

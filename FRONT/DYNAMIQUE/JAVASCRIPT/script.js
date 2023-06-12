@@ -23,8 +23,8 @@ icone.addEventListener("click", function () {
 
 // évennement change au click/////
 
-section.addEventListener("click", function () {
-    section.style.backgroundImage.classList.toggle("change");
+section.img.addEventListener("click", function () {
+    section.classList.toggle("change");
 });
 
 // section.style.backgroundImage.classList.toggle("change");

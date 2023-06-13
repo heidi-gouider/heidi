@@ -1,3 +1,6 @@
+/* Penser à faire des captures d'écran des pages pour les
+intégrer au READ ME */
+
 /* Les liens internes et externes seront différenciés
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
@@ -23,7 +26,15 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 /* ////////////// VARIABLES POUR LES COULEURS /////////////// */
 
+/* Les couleurs */
 
+html {
+--bordeau: #970646;
+--grisClair: #535d65;
+--grisFonce: #242629;
+--fondClair: #e2e2e2;
+--black: #000;
+}
 /* a {
     text-decoration: none;
     color: inherit;
@@ -38,13 +49,10 @@ header {
     top: 0;
     left: 0;
     position: fixed;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    /* background-color: antiquewhite; */
-    background-color: #e2e2e2;
-    border-bottom: #970646 solid 2px;
+    background-color: var(--fondClair);
+    border-bottom: var(--bordeau) solid 2px;
     /* will-change: scroll-position ; */
+    z-index: 3;
 
 
 }
@@ -84,7 +92,7 @@ nav {
 .menu a {
     padding: 5rem;
     font-size: 20px;
-    color: #535d65;
+    color: var(--grisClair);
     transition: color 1s;
     text-decoration: none;
 }
@@ -92,12 +100,12 @@ nav {
 
 .menu a:hover {
     /* font-size: 25px; */
-    color: #242629;
+    color: var(--grisFonce);
 
 }
 
 .menu a:active {
-    color: #970646;
+    color: var(--bordeau);
     text-decoration: none;
 }
 
@@ -109,8 +117,10 @@ menu a:visited {
 /* ********* CREATION DES ICONES POUR LE MOBIL FIRST *********** */
 
 .icone {
-    width: 4.2rem;
-    height: 2.4rem;
+    /* width: 4.2rem;
+    height: 2.4rem; */
+    width: 3.2rem;
+    height: 2.2rem;
     position: relative;
     /* la position sera par rapport à l'élément parent span qui sera en position absolue */
     cursor: pointer;
@@ -129,7 +139,7 @@ menu a:visited {
     display: block;
     position: absolute;
     content: "";
-    background-color: black;
+    background-color: var(--black);
     /* maintenant je vais placer l'élément et le centrer*/
     top: 50%;
     /* avec la position absolue le top de 50% ne suffira pas à centrer mon élément
@@ -146,7 +156,7 @@ menu a:visited {
     width: 100%;
     /* height: 0.6rem; */
     height: 0.4rem;
-    background-color: black;
+    background-color: var(--black);
 
 }
 
@@ -176,7 +186,7 @@ menu a:visited {
     top: 10px;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--black);
     transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
@@ -187,7 +197,7 @@ menu a:visited {
     top: 10px;
     width: 100%;
     height: 0.4rem;
-    background-color: black;
+    background-color: var(--black);
     transform: rotate(45deg);
     transform: rotate(45deg);
 
@@ -196,12 +206,12 @@ menu a:visited {
 /* ////////////// LE FOOTER /////////////// */
 
 footer {
-    width: 100%;
-    height: 80px;
+    /* width: 100%; */
+    height: 40px;
     /* margin: auto; */
     display: flex;
     bottom: 0;
-    /* position: relative; */
+    position: relative;
     background-color: antiquewhite;
     justify-content: center;
     align-items: center;
@@ -216,12 +226,15 @@ footer {
     align-items: center; */
 }
 
-.network i {
-    width: 60px;
-    height: 60px;
+.network i{
+    width: 40px;
 }
 
-/* #open-liens{
+.network #open-liens {
+    height: 40px;
+}
+
+#open-liens{
     display: flex;
 }
 #close-liens{
@@ -235,7 +248,7 @@ footer {
 .actif #close-liens{
     display: none;
 }
- */
+
 /* je modifie l'apparence de la check box et je fais en sorte que tous les
 navigateur prenne en cherge cette propriété */
 /* 
@@ -266,13 +279,13 @@ afficher le nom en texte du lien
 
 .video-recherche {
     margin: 0;
-    top: 120px;
+    top: 140px;
     left: 0;
     position: relative;
     height: 30vh;
     /* display: flex;
     justify-content: center; */
-    background-color: #242629;
+    background-color: var(--grisFonce);
     cursor: pointer;
 }
 
@@ -290,7 +303,7 @@ afficher le nom en texte du lien
 .video-recherche video {
     width: 100%;
     height: 100%;
-    /* position: absolute; */
+    position: absolute;
     object-fit: cover;
     opacity: 0.9;
 }
@@ -316,21 +329,23 @@ afficher le nom en texte du lien
 }
 
 /**** Titre ****/
-h1 {
+.content h1 {
     /* position: absolute; */
+    padding-top: 5%;
+    height: 100%;
     text-align: center;
-    color: #242629;
+    color: white;
 }
 
 /**** barre de recherche ****/
 
-.video-recherche .search-bar {
+.content .search-bar {
     display: inline-block;
 }
 
 #recherche {
-    display: flex;
-    height: 15%;
+    /* display: flex; */
+    height: 30px;
     border-color: #242629;
     /* border-radius: 10%; */
     cursor: pointer;
@@ -343,19 +358,21 @@ h2 {
     align-items: end; */
     padding-right: 10%;
     text-align: end;
+    color: var(--bordeau);
 }
 
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
+
 section {
     /* height: 60vh; */
     /* height: 400px; */
-    top: 130px;
-    border-top: #970646 solid 2px;
+    top: 150px;
+    border-top: var(--bordeau) solid 2px;
     position: relative;
 }
 
 .grille {
-    max-width: 1300px;
+    max-width: 1200px;
     width: 75%;
     margin-bottom: 15%;
     /* la grille va prendre la valeur de tous les éléments */
@@ -364,7 +381,7 @@ section {
     margin: auto;
     display: grid;
     /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 250px);
     /* grid-template-columns: repeat(3, 1fr); */
     justify-content: center;
     gap: 60px;
@@ -374,8 +391,6 @@ section {
 .grille img {
     width: 100%;
     height: 250px;
-    /* justify-self: center;
-    justify-content: center; */
     transition: transform 2s;
 }
 
@@ -458,19 +473,27 @@ section {
     } */
 
     .menu {
-        width: 100%;
+        width: 50%;
         height: 100vh;
-        /* display: flex; */
+        display: flex;
         position: absolute;
         flex-direction: column;
         justify-content: space-around;
-        top: 0;
-        padding: 2rem;
+        right: 0;
+        top: 70px;
+        /* padding: 1rem; */
         background-color: rgb(34, 33, 33);
         transform: translateY(-100%);
         transition: transform 1s;
     }
 
+    .menu a {
+        font-size: 15px bold;
+        color: var(--fondClair);
+        padding: 0.5rem;
+
+
+    }
 
     .actif .menu {
         transform: translateY(0);
@@ -478,8 +501,27 @@ section {
 
     }
 
-    .menu a {
-        font-size: 2rem;
-    }
+/* ////////////// BARRE DE RECHERCHE /////////////// */
+
+.content .search-bar {
+    display: inline-block;
+}
+
+/* REMPLACER LE BOUTON PAR UN ICONE */
+.search-bar button{
+    display: none;
+}
+.bi bi-search{
+    display: flex;
+}
+
+#recherche {
+    width: 60%;
+    /* display: flex; */
+    height: 20px;
+    border-color: #242629;
+    /* border-radius: 10%; */
+    cursor: pointer;
+}
 
 }

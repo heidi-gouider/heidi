@@ -38,4 +38,10 @@ network.addEventListener("click", function () {
 
 // section.style.backgroundImage.classList.toggle("change");
 
+//////// EVENNEMENT /////////
+
+// pour la vidéo, voir l'évennement pause dans la doc
+// vidéo cursor pointer
+// click pour mettre en pause
+// click pour refaire jouer la boucle
 

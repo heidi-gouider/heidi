@@ -1,41 +1,33 @@
 * {
-    margin: o;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Libre Baskerville";
+  font-family: "Libre Baskerville";
 }
 
 @font-face {
-    font-family: "Libre Baskerville";
-    src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
+  font-family: "Libre Baskerville";
+  src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
 
-h1 {
-    padding-right: 10%;
-    text-align: end;
-    /* color: #970646; */
-    color: blue;
-    text-decoration: underline;
-    /* background-color: black; */
-}
+/* h1 {
+  padding-right: 10%;
+  text-align: end; */
+/* color: #970646; */
+/* text-decoration: underline;
+} */
 
 /* carousel d'image */
 
-.carousel{
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.carousel {
+  width: 75%;
 }
-.carousel-item{
-    margin: auto;
-    /* width: 50%; */
+/* .carousel-item h5 {
+  color: black;
+} */
+button {
+  bottom: 80px;
 }
-.carousel-item p{
-    color: black;
-}
-button{
-    bottom: 100px;
+
+.carousel-item {
+  display: flex !important;
 }
 
 /* chaque catégorie "image" redirige l'utilisateur au click vers ses plats  */
-

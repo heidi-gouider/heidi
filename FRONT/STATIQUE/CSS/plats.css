@@ -1,10 +1,8 @@
 /*********** PAGE PLATS ********** */
 
-
-/* #image1{
-    width: 70%;
-} */
-
-/* .row img{
-    width: 75%;
-} */
+.container .row {
+  background-color: antiquewhite;
+}
+.container p {
+  border: black solid 3px;
+}

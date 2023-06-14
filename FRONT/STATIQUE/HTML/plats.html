@@ -1,68 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Plats</title>
-  <link rel="stylesheet" type="text/css" href="../CSS/plats.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Plats</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/plats.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
 
-</head>
+  <body>
+    <!-- 
+    class title-card
+    class img-card
+  class tex-card -->
 
-<body>
+    <!-- <?php include("../../../SERVEUR/PHP/header.php"); ?> -->
+    <!-- le header pourrait etre dans un container fluid -->
+    <header><h2>le header</h2></header>
 
-  <!-- <?php include("../../../SERVEUR/PHP/header.php"); ?> -->
-  <!-- le header pourrait etre dans un container fluid -->
-<header> <h2>le header</h2></header>
+    <!-- soit 
+  1/je créer un tableau multidimentionnel:
+- puis pour chaque catégorie le tableau de plats correspondant apparaitra
+  2/je fais plusieurs container 
+-->
+    <div class="container">
+      <h1>Nos burgers</h1>
 
-<div class="container">
-  <div class="row">
-    <h1>Nos burgers</h1>
-    <div class="col-3" >
-      <img src="../ASSETS/IMG/food/hamburger.jpg" alt="image hamburger" id="image1">
-    </div>
-    <div class="col-3">
-      <p>description produit</p>
-    </div>
-    <div class="col-3">
-      <img src="../ASSETS/IMG/food/burger-du-chef.jpg" alt="image hamburger" id="image2">
-    </div>
-    <div class="col-3">
-      <p>description produit</p>
-    </div>
-  </div>
+      <div class="row justify-content-end">
+        <div class="col-3 align-self-center">
+          <p class="bg-light border mt-2">description produit</p>
+        </div>
+        <div class="col-4">
+          <img
+            src="../ASSETS/IMG/food/hamburger.jpg"
+            alt="image hamburger"
+            id="image1"
+          />
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="col-3">
-      <img src="../ASSETS/IMG/food/burger.jpeg" alt="image hamburger">
-    </div>
-    <div class="col">
-      <p>description produit</p>
-    </div>
-    <div class="colw-3">
-      <img src="../ASSETS/IMG/food/cheesburger.jpg" alt="image cheesburger">
-    </div>
-    <div class="col">
-      <p>description produit</p>
-    </div>
-  </div>
-</div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <img
+            src="../ASSETS/IMG/food/burger-du-chef.jpg"
+            alt="image hamburger"
+            id="image2"
+          />
+        </div>
+        <div class="col-3 align-self-center">
+          <p class="bg-light border mt-2">description produit</p>
+        </div>
+      </div>
 
+      <div class="row justify-content-end">
+        <div class="col-3 align-self-center">
+          <p class="bg-light border mt-2">
+            description produit jsjsjjdjdjjdjdjjdjdjd dhdhdhdhhdhdhdhhdhdhdh
+          </p>
+        </div>
+        <div class="col-4">
+          <img src="../ASSETS/IMG/food/burger.jpg" alt="image hamburger" />
+        </div>
+      </div>
 
-          <!-- <th>Photos</th>
-          <th>Catégorie</th>
-          <th>description</th>
+      <div class="row justify-content-start">
+        <div class="colw-4">
+          <img
+            src="../ASSETS/IMG/food/cheesburger.jpg"
+            alt="image cheesburger"
+          />
+        </div>
+        <div class="col-3 align-self-center">
+          <p class="bg-light border mt-2">
+            description produit hdhdkszoieuhfhfhfjj
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <th>description</th>
           <th>Prix</th> -->
 
-  <footer>
-<h2>le footer</h2>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-</body>
+    <footer>
+      <h2>le footer</h2>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-  
-  
-
-

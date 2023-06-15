@@ -15,24 +15,62 @@
   </head>
 
   <body>
-    <!-- 
-    class title-card
-    class img-card
-  class tex-card -->
 
     <!-- <?php include("../../../SERVEUR/PHP/header.php"); ?> -->
     <!-- le header pourrait etre dans un container fluid -->
     <header><h2>le header</h2></header>
 
-    <!-- soit 
-  1/je créer un tableau multidimentionnel:
-- puis pour chaque catégorie le tableau de plats correspondant apparaitra
-  2/je fais plusieurs container 
--->
     <div class="container">
       <h1>Nos burgers</h1>
+      <div class="row justify-content-around">
+        <div class="card" style="width: 25%;">
+          <img src="../ASSETS/IMG/food/burger.jpg"  alt="image burger"id="image1"/>
+          <div class="card-title">
+            <h5>burger</h5>
+          </div>
+          <div class="card-body">
+            <p>description du produit</p>
+            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+          </div>
+        </div>
 
-      <div class="row justify-content-end">
+        <div class="card" style="width: 25%;">
+          <img src="../ASSETS/IMG/food/veggie-burger.jpg"alt="image burger"id="image1"/>
+          <div class="card-title">
+            <h5>veggie burger</h5>
+          </div>
+          <div class="card-body">
+            <p>description du produit</p>
+            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-between">
+        <div class="card" style="width: 25%;">
+          <img src="../ASSETS/IMG/food/hamburger.jpg"alt="image hamburger"id="image1"/>
+          <div class="card-title">
+            <h5>hamburger</h5>
+          </div>
+          <div class="card-body">
+            <p>description du produit</p>
+            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+          </div>
+  
+        </div>
+
+        <div class="card" style="width: 25%;">
+          <img src="../ASSETS/IMG/food/burger-du-chef.jpg" alt="image hamburger" id="image2"/>
+          <div class="card-title">
+            <h5>hamburger</h5>
+          </div>
+          <div class="card-body">
+            <p>description du produit</p>
+            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+        </div>
+      </div>
+    <!-- </div> -->
+      <!-- <div class="row justify-content-end">
         <div class="col-3 align-self-center">
           <p class="bg-light border mt-2">description produit</p>
         </div>
@@ -83,7 +121,7 @@
         </div>
       </div>
     </div>
-
+ -->
     <!-- <th>description</th>
           <th>Prix</th> -->
 

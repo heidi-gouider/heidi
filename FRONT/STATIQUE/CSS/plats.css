@@ -1,8 +1,27 @@
 /*********** PAGE PLATS ********** */
 
-.container .row {
-  background-color: antiquewhite;
+html {
+  /* couleurs logo */
+  --bordeau: #970646;
+  --saumon: #fef4e8;
+  /* couleur image de fond restaurant */
+  --grisClair: #535d65;
+  --grisFonce: #242629;
+  --fondClair: #e2e2e2;
+  --beige: #c3ae95;
+  /* couleurs food */
+  --grisFonce: #261d31;
+  --black: #000;
 }
-.container p {
-  border: black solid 3px;
+
+.row{
+  background: var();
+}
+/* 
+.card {
+  width: 100px;
+} */
+
+.card-body{
+  background: var(--fondClair);
 }

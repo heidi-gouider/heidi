@@ -45,3 +45,12 @@ network.addEventListener("click", function () {
 // click pour mettre en pause
 // click pour refaire jouer la boucle
 
+//////// MODAL COMMANDE PAGE PLATS /////////
+
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//     myInput.focus()
+// })
+

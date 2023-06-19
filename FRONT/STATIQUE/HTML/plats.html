@@ -18,55 +18,59 @@
 
     <!-- <?php include("../../../SERVEUR/PHP/header.php"); ?> -->
     <!-- le header pourrait etre dans un container fluid -->
-    <header><h2>le header</h2></header>
+  
+    <header>  <a href="index.html">Accueil</a>
+    </header>
+    <h1 class="row col-12 justify-content-end">Nos burgers</h1>
 
-    <div class="container">
-      <h1>Nos burgers</h1>
-      <div class="row justify-content-around">
-        <div class="card" style="width: 25%;">
+    <!-- insérer une liste déroulante par plat pour la quantité commandé -->
+    <div class="container m-5">
+      <div class="row  m-3 justify-content-around">
+        <div class="card p-3" style="width: 25%;">
           <img src="../ASSETS/IMG/food/burger.jpg"  alt="image burger"id="image1"/>
           <div class="card-title">
             <h5>burger</h5>
           </div>
           <div class="card-body">
             <p>description du produit</p>
-            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
-          </div>
+              <button type="button" class="btn btn-secondary"><i class="bi bi-basket"></i>Ajouter au panier</button> 
+            </div>
         </div>
 
-        <div class="card" style="width: 25%;">
+        <div class="card p-3" style="width: 25%;">
           <img src="../ASSETS/IMG/food/veggie-burger.jpg"alt="image burger"id="image1"/>
           <div class="card-title">
             <h5>veggie burger</h5>
           </div>
           <div class="card-body">
             <p>description du produit</p>
-            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+            <i class=" btn bi bi-basket3"></i>
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-between">
-        <div class="card" style="width: 25%;">
+      <div class="row  m-3 justify-content-around">
+        <div class="card p-3" style="width: 25%;">
           <img src="../ASSETS/IMG/food/hamburger.jpg"alt="image hamburger"id="image1"/>
           <div class="card-title">
             <h5>hamburger</h5>
           </div>
           <div class="card-body">
             <p>description du produit</p>
-            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+            <a href="#" class="btn"><i class="bi bi-basket3">panier icone</i></a>
           </div>
   
         </div>
 
-        <div class="card" style="width: 25%;">
+        <div class="card p-3" style="width: 25%;">
           <img src="../ASSETS/IMG/food/burger-du-chef.jpg" alt="image hamburger" id="image2"/>
           <div class="card-title">
             <h5>hamburger</h5>
           </div>
           <div class="card-body">
             <p>description du produit</p>
-            <a href="#" class="btn"><i class="bi bi-basket3">icone</i></a>
+            <a href="#" class="btn bi bi-basket3">panier icone</a>
+            <!-- <i class="bi bi-basket3">icone</i> -->
         </div>
       </div>
     <!-- </div> -->

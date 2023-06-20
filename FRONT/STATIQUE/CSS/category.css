@@ -7,21 +7,6 @@
   src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
 
-/* h1 {
-  padding-right: 10%;
-  text-align: end; */
-/* color: #970646; */
-/* text-decoration: underline;
-} */
-
-/* carousel d'image */
-
-.carousel {
-  width: 75%;
-}
-/* .carousel-item h5 {
-  color: black;
-} */
 button {
   bottom: 80px;
 }

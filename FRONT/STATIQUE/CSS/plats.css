@@ -14,13 +14,13 @@ html {
   --black: #000;
 }
 
-.row{
-  background: var();
+.container{
+  border-top: var(--bordeau) solid 2px;
 }
-/* 
-.card {
-  width: 100px;
-} */
+
+.row{
+  background-image: url() ;
+}
 
 .card-body{
   background: var(--fondClair);

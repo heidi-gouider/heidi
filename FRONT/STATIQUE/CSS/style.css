@@ -16,10 +16,9 @@ html {
   /* position: relative; */
 }
 
-/* body {
-position: relative;
+body {
 height: 100%;
-} */
+}
 
 /*  */
 @font-face {
@@ -65,17 +64,14 @@ nav {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  margin: auto;
-  width: 13%;
+  /* margin: auto; */
+  width: 10%;
   height: 80%;
-  /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
-
-  border-radius: 50%;
+  border-radius: 45%;
   /* opacity: 0.5; */
 }
 
@@ -83,12 +79,12 @@ nav {
   /* height: 6rem;
     line-height: 6rem; */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between;
+  align-items: center; */
 }
 
 .menu a {
-  padding: 5rem;
+  padding: 20px;
   font-size: 20px;
   color: var(--grisClair);
   transition: color 1s;
@@ -294,8 +290,10 @@ afficher le nom en texte du lien
 si l'utilisateur ne veut plus que la vidéo joue */
 .video-recherche video {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  /* height: 100%; */
+  height: 30vh;
+  /* position: absolute; */
+  position: fixed;
   object-fit: cover;
   opacity: 0.9;
 }

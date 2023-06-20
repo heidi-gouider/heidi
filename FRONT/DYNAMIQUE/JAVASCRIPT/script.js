@@ -1,7 +1,3 @@
-//////// MENU MOBIL FIRST /////////
-
-
-
 //////////// VARIABLES //////////
 
 
@@ -17,8 +13,9 @@ let video = document.querySelector("video");
 let network = document.querySelector(".network");
 let footer = document.querySelector("footer");
 
+// menu langue //
 
-//////// CREATION DE CLASSES AU CLICK /////////
+//////// LES CLASSES /////////
 
 // menu responsive //
 icone.addEventListener("click", function () {
@@ -39,6 +36,7 @@ network.addEventListener("click", function () {
 // section.style.backgroundImage.classList.toggle("change");
 
 //////// EVENNEMENT /////////
+
 
 // pour la vidéo, voir l'évennement pause dans la doc
 // vidéo cursor pointer

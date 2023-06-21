@@ -6,13 +6,28 @@
   font-family: "Libre Baskerville";
   src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
-
-button {
+/* body {
+  overflow: hidden;
+  align-items: center;
+} */
+/* button {
   bottom: 80px;
-}
+} */
 
-.carousel-item {
+/* .item {
   display: flex !important;
-}
+} */
 
 /* chaque catégorie "image" redirige l'utilisateur au click vers ses plats  */
+.button{
+  display: flex !important;
+}
+.row{
+  display: flex !important;
+  justify-content: space-around;
+}
+.carousel img{
+  width: 400px;
+  height: 500px;
+
+}

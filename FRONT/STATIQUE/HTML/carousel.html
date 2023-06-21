@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notre carte</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/category.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+
+</head>
+
+<body>
+    <!-- include header.php -->
+    <a href="index.html">Accueil</a>
+    <a href="category.html">Catégories</a>
+    <a href="plats.html">Plats</a>
+    <a href="contact.html">Contact</a>
+    <a href="commande.html">
+      <i class="bi bi-basket"></i> 
+      Ma commande
+  </a>
+
+  <!-- CAROUSEL -->
+    <div class="container m-5">
+        <div id="carousel" class="carousel slide" data-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="3000">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../ASSETS/IMG/category/asian_food_cat.jpg" class=" rounded w-100" alt="photo asian food"/>
+                        </div>
+                        <div class="col-6">
+                            <img src="../ASSETS/IMG/category/pizza_cat.jpg" class=" rounded-2" alt="photo pizza"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-interval="3000">
+                    <div class="row ">
+                        <div class="col-6">
+                            <img src="../ASSETS/IMG/category/burger_cat.jpg" class="rounded w-100" alt="photo burger"/>
+                        </div>
+
+                        <div class="col-6 d-flex justify-content-center">
+                            <img src="../ASSETS/IMG/category/pasta_cat.jpg" class="rounded w-100" alt="photo pates"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-interval="3000">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../ASSETS/IMG/category/salade_cat.jpg" class="  w-100"  alt="photo salade"/>
+                        </div>
+                    <div class="col-6">
+                        <img src="../ASSETS/IMG/category/sandwich_cat.jpg" class=" w-100" alt="photo sandwich"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTROL DU CAROUSEL -->
+        <!-- <div class="button"> -->
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+         </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ let form = document.querySelector(".validation");
 // {2,10}
 // );
 
-//  évennements //
+//  évennement / fonction / classe //
 form.addEventListener("submit", valider);
 
 function valider(e) {

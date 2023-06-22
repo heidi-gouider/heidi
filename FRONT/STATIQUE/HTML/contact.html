@@ -2,91 +2,77 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <script defer src="FRONT/DYNAMIQUE/JAVASCRIPT/contact.js"></script>
+
 </head>
 
 <body>
-    <a href="index.html">Accueil</a>
-    <a href="category.html">Catégories</a>
-    <a href="plats.html">Plats</a>
-    <a href="contact.html">Contact</a>
-    <a href="commande.html">
-      <i class="bi bi-basket"></i> 
-      Ma commande
+  <a href="index.html">Accueil</a>
+  <a href="category.html">Catégories</a>
+  <a href="plats.html">Plats</a>
+  <a href="contact.html">Contact</a>
+  <a href="commande.html">
+    <i class="bi bi-basket"></i>
+    Ma commande
   </a>
 
 
-    <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
-    <h1 class="row col-12 justify-content-end">Nous contacter</h1>
+  <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+  <h1 class="row col-12 justify-content-end">Nous contacter</h1>
 
-    <div class="container d-flex justify-content-center">
-        <form class="row col-8 m-5 ">
-        <div class="row">
-            <!-- <div class="col-md-6">
-                <label for="validationServer01" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="validationServer01" aria-describedby="validationServer01Feedback"  required>
-                <div id="validationServer01Feedback" class="invalid-feedback">
-                    Ce champ est obligatoire
-                </div>
-            </div> -->
+  <div class="container d-flex justify-content-center">
+    <form action="" method="post" class="validation row col-8 m-5 " novalidate>
+      <div class="col-md-6 mb-4">
+        <label for="nom" class="form-label">Nom*</label>
+        <input type="text" class="form-control" name="nom" id="nom" required>
+        <span class="invalid-feedback">Ce champ est obligatoire</span>
+      </div>
 
-             <div class="col-md-6">
-                <label for="validationDefault01" class="form-label">Nom*</label>
-                <input type="text" class="form-control " id="validationDefault01" value="" required>
-               <!-- <p class="text-danger">Ce champ est obligatoire</p>  -->
-              </div>
- 
-        <div class="col-md-6">
-          <label for="validationServer02" class="form-label">Prénom</label>
-          <input type="text" class="form-control" id="validationServer02" value="">
-          <div class="valid-feedback">
-          </div>
+      <div class="col-md-6 mb-4">
+        <label for="prénom" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="prénom">
+        <!-- <div class="valid-feedback"></div> -->
+      </div>
+      <div class="col-md-6 mb-4">
+        <label for="email" class="form-label">Email</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="email">@</span>
+          <input type="text" class="form-control" id="email">
+          <!-- <div id="validationServerUsernameFeedback">
+          </div> -->
         </div>
-        <div class="col-md-6">
-          <label for="validationServerUsername" class="form-label">Email</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend3">@</span>
-            <input type="text" class="form-control" id="validationServerUsername" >
-            <div id="validationServerUsernameFeedback" >
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-6">
-          <label for="validationServer03" class="form-label">Téléphone</label>
-          <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
-          <div id="validationServer03Feedback" class="invalid-feedback">
-            Entrez un numéro de téléphone
-          </div>
-        </div> -->
+      </div>
 
-        <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Téléphone</label>
-            <input type="number" class="form-control" id="validationDefault03" value="" required>
-           <p class="text-danger">Ce champ est obligatoire</p> 
-          </div>
+      <div class="col-md-6 mb-4">
+        <label for="tel" class="form-label">Téléphone*</label>
+        <input type="number" class="form-control" id="tel" required>
+        <span class="invalid-feedback">Ce champ est obligatoire</span>
+      </div>
 
 
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Votre demande</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-        <div class="col-12">
-        </div>
-        <div class="col-12 d-flex justify-content-end">
-          <button class="btn btn-primary" type="submit">Envoyer</button>
-        </div>
-        </div>
-        </div>
-      </form>
-    </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script src="FRONT/DYNAMIQUE/JAVASCRIPT/contact.js"></script>
+      <div class="mb-3">
+        <label for="message" class="form-label">Votre demande</label>
+        <textarea class="form-control" id="message" rows="10"></textarea>
+      </div>
+      <!-- <div class="col-12">
+      </div> -->
+      <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

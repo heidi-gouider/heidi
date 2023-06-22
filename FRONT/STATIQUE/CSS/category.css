@@ -6,6 +6,7 @@
   font-family: "Libre Baskerville";
   src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
+
 /* body {
   overflow: hidden;
   align-items: center;
@@ -27,7 +28,7 @@
   justify-content: space-around;
 } */
 
-.carousel img{
-  width: 300px;
-  height: 500px;
+.container img {
+  width: 200px;
+  height: 400px;
 }

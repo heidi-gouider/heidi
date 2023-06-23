@@ -9,9 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
-  <script defer src="FRONT/DYNAMIQUE/JAVASCRIPT/contact.js"></script>
+  <link rel="stylesheet" type="text/css" href="../CSS/contact.css">
+  <script defer src="../../DYNAMIQUE/JAVASCRIPT/contact.js"></script>
 
 </head>
 
@@ -29,42 +28,45 @@
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <h1 class="row col-12 justify-content-end">Nous contacter</h1>
 
-  <div class="container d-flex justify-content-center">
+  <div class="container d-flex justify-content-center m-5">
     <form action="" method="post" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
-        <label for="nom" class="form-label">Nom*</label>
-        <input type="text" class="form-control" name="nom" id="nom" required>
+        <label for="nom" class="form-label">Nom
+          <span class="required text-danger">*</span>
+        </label>
+        <input type="text" class="form-control form-control-hover" name="nom" id="nom" required>
         <span class="invalid-feedback">Ce champ est obligatoire</span>
       </div>
 
       <div class="col-md-6 mb-4">
         <label for="prénom" class="form-label">Prénom</label>
-        <input type="text" class="form-control" id="prénom">
+        <input type="text" class="form-control form-control-hover" id="prénom">
         <!-- <div class="valid-feedback"></div> -->
       </div>
       <div class="col-md-6 mb-4">
         <label for="email" class="form-label">Email</label>
         <div class="input-group has-validation">
-          <span class="input-group-text" id="email">@</span>
-          <input type="text" class="form-control" id="email">
+          <span class="input-group-text b-" id="email">@</span>
+          <input type="text" class="form-control form-control-hover" id="email">
           <!-- <div id="validationServerUsernameFeedback">
           </div> -->
         </div>
       </div>
 
       <div class="col-md-6 mb-4">
-        <label for="tel" class="form-label">Téléphone*</label>
-        <input type="number" class="form-control" id="tel" required>
+        <label for="tel" class="form-label">Téléphone
+          <span class="required text-danger">*</span>
+        </label>
+        <input type="number" class="form-control form-control-hover" id="tel" required>
         <span class="invalid-feedback">Ce champ est obligatoire</span>
       </div>
 
 
       <div class="mb-3">
         <label for="message" class="form-label">Votre demande</label>
-        <textarea class="form-control" id="message" rows="10"></textarea>
+        <textarea class="form-control form-control-hover" id="message" rows="10"></textarea>
       </div>
-      <!-- <div class="col-12">
-      </div> -->
+      <h6 class="row text-danger">*Champ obligatoire</h6>
       <div class="col-12 d-flex justify-content-end">
         <button class="btn btn-primary" type="submit">Envoyer</button>
       </div>

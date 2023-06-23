@@ -25,3 +25,9 @@ html {
 .card-body{
   background: var(--fondClair);
 }
+
+.modal-body{
+  background-image: url("../ASSETS/IMG/fond/bg3.jpeg");
+  background-size: cover;
+  background-position: center;
+}

@@ -3,13 +3,10 @@
   font-family: "Libre Baskerville";
   src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
- 
-*{
-  font-family: "Libre Baskerville";
 
-}
 
 html {
+  font-family: "Libre Baskerville";
   /* couleurs logo */
   --bordeau: #970646;
   --saumon: #fef4e8;
@@ -24,27 +21,39 @@ html {
 }
 
 
-.container{
+.container {
   border-top: var(--bordeau) solid 2px;
 }
 
-.row{
-  background-image: url() ;
+.row {
+  background-image: url();
 }
 
-.card-body{
+.card-body {
   background: var(--fondClair);
 }
 
-.modal-body{
+.modal-title {
+  color: white;
+  font-weight: bold;
+  background-color: var(--black);
+  opacity: 0.5;
+}
+
+.modal-content {
   background-image: url("../ASSETS/IMG/fond/bg3.jpeg");
   background-size: cover;
   background-position: center;
 }
 
-.modal-header{
+/* .modal-body {
+  background-image: url("../ASSETS/IMG/fond/bg3.jpeg");
+  background-size: cover;
+  background-position: center;
+} */
+
+.modal-header {
   /* height: 10px; */
   font-family: "Libre Baskerville";
-  color: var(--bordeau);
-  
+  /* color: var(--bordeau); */
 }

@@ -1,54 +1,27 @@
 
-/******** VALIDATION FORMULAIRE DE CONTACT ***********/
+////// VALIDATION FORMULAIRE DE CONTACT //////
 
-//  variables je récupère mon formulaire //
+//***  variables ***//
+
+// je récupère mon formulaire
 let form = document.querySelector(".validation");
-// let testPrenom = identityRegExp.test(form.prenom);
 
-// let nomRegExp = new RegExp(
-//     "^[a-zA-Z-]$"
-// {2,10}
-// );
 
-//  évennement / fonction / classe //
+//***  évennement / fonction / classe ***//
+
+// j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
 form.addEventListener("submit", valider);
-
+// la fonction "valider (e)" est appelée quand la soumission du formulaire est déclenchée
+// j'utilise la méthode "checkValidity()" pour vérifier la validité du formulaire
+// et la méthode "preventDefault()" pour empêcher l'envoi du formulaire si la validatin échoue
+// j'ajoute la class bootstrap "was-validated" pour activer les styles de validation propre à la bibliothèque bs
+// J'utilise la fonction "modal()" de jQuery pour afficher une modal
 function valider(e) {
     if (form.checkValidity() == false) {
         e.preventDefault();
+    } else {
+        $("#modal").modal("show");
     }
     form.classList.add("was-validated");
-}
-// form.valider.addEventListener("submit", function (event) {
-//     event.preventDefault();
+};
 
-
-//     if (form.nom.validity.valueMissing) {
-//         form.nom.style.border = " 1px solid red";
-//         nomMiss.textContent = "Ce champ est obligatoire";
-//     }
-//     else if (form.nom !== nomRegExp) {
-//         form.nom.style.border = " 1px solid red";
-//         nomMiss.textContent = "erreur de saisie";
-//     };
-
-
-//     if (form.tel.validity.valueMissing) {
-//         form.naissance.style.border = " 1px solid red";
-//         naissanceMiss.textContent = "Ce champ est obligatoire";
-//     };
-
-    // let cpRegExp = new RegExp(
-    //     "^[0-9]{5}$"
-    // );
-
-    //     if (form.cp.validity.valueMissing) {
-    //         // e.preventDefault();
-    //         form.naissance.style.border = " 1px solid red";
-    //         naissanceMiss.textContent = "Ce champ est obligatoire";
-    //     }
-    //     else if (form.cp!=cpRegExp) {
-    //         form.cp.style.border = " 1px solid red";
-    //         cpMiss.textContent = "erreur de saisie";
-    //     };
-// });

@@ -27,7 +27,8 @@
   <h1 class="row col-12 justify-content-end">Nous contacter</h1>
 
   <!-- /// LA MODAL include la modal avec php /// -->
-  <div class="modal fade modal-sm" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="message envoyé" aria-hidden="true">
+  <!-- data-bs-backdrop="static" -->
+  <div class="modal fade modal-sm" id="modal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="message envoyé" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -87,7 +88,8 @@
       </div>
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>
       <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-primary" type="submit" data-bs-toggle="modal">Envoyer</button>
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+        <!--  data-bs-toggle="modal" -->
       </div>
     </form>
   </div>

@@ -58,3 +58,9 @@
                     <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Recherche</button>
                 </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

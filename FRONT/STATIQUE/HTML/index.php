@@ -14,7 +14,9 @@
 
 <body>
 
-    <header>
+    <?php require 'header.php'; ?>
+
+    <!-- <header>
         <nav>
             <img class="logo" src="../ASSETS/IMG/logo/logo.png" alt="logo">
 
@@ -27,9 +29,9 @@
                     <i class="bi bi-basket"></i> 
                     Ma commande
                 </a>
-
+ -->
                 <!-- choix de la langue  possibilité de le faire avec php-->
-            <div class="dropdown-wrap drodown-wrap--lang ">
+            <!-- <div class="dropdown-wrap drodown-wrap--lang ">
             <div class="dropdown">
                 <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     FR
@@ -61,7 +63,7 @@
         </nav>
     </header> 
 
-    </div>
+    </div> -->
     <div class="video-recherche">
         <video controls="controls" class="controls" loop="loop" autoplay="autoplay" muted>
             <source src="../ASSETS/VIDEO/video2.mp4">

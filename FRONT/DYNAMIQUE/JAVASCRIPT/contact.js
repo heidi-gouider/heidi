@@ -23,5 +23,5 @@ function valider(e) {
         $("#modal").modal("show");
     }
     form.classList.add("was-validated");
-};
+}
 

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Le District</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 
@@ -15,7 +16,7 @@
 <body>
 
     <!-- <?php require 'header.php'; ?>  -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-between">
             <!-- le header -->
             <div class="col-3">
@@ -31,135 +32,85 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>  -->
                 <!-- je regroupe et cache les éléments pour le responsive -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">           
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="category.html">Tableau</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link " href="plats.html">Plats</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link " href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link " href="commande.html">
-                    <i class="bi bi-basket"></i> 
-                    Ma commande</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Recherche</button>
-                </form>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Tableau</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="plats.html">Plats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="commande.html">
+                                <i class="bi bi-basket"></i>
+                                Ma commande</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </div>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="video-recherche">
+                <video controls="controls" class="controls" loop="loop" autoplay="autoplay" muted>
+                    <source src="../ASSETS/VIDEO/video2.mp4">
+                </video>
 
-    <!-- <header>
-        <nav>
-            <img class="logo" src="../ASSETS/IMG/logo/logo.png" alt="logo">
+                <div class="content">
+                    <h1>Le District</h1>
+                    <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Recherche</button>
+                </form> -->
 
-            <div class="menu">
-                <a href="index.html">Accueil</a>
-                <a href="category.html">Catégories</a>
-                <a href="plats.html">Plats</a>
-                <a href="contact.html">Contact</a>
-                <a href="commande.html">
-                    <i class="bi bi-basket"></i> 
-                    Ma commande
-                </a>
- -->
-                <!-- choix de la langue  possibilité de le faire avec php-->
-            <!-- <div class="dropdown-wrap drodown-wrap--lang ">
-            <div class="dropdown">
-                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    FR
-                    <i class="bi bi-flag-fill"></i>
-                  </a>                
-                <ul class="dropdown-menu">
-                    <li class="lang lang-en">
-                        <a href="#" language="english">EN</a>
-                    </li>
-                </ul>
-                <ul class="dropdown-menu">
-                    <li class="lang lang-en">
-                        <a href="#" language="japanese">JP</a>
-                    </li>
-                </ul>
-                <ul class="dropdown-menu">
-                    <li class="lang lang-en">
-                        <a href="#" language="arabic">AR</a>
-                    </li>
-                </ul>
-            </div>
-
-            </div>
-
-            <div class="icone">
-                <span class="open"></span>
-                <span class="close"></span>
-            </div>
-        </nav>
-    </header> 
-
-    </div> -->
-    <div class="video-recherche">
-        <video controls="controls" class="controls" loop="loop" autoplay="autoplay" muted>
-            <source src="../ASSETS/VIDEO/video2.mp4">
-        </video>
-
-        <div class="content">
-            <h1>Le District</h1>
-            <div class="search-bar">
-                <label for="search"> </label>
-                <input type="search" id="recherche" name="search" placeholder="Entrez votre recherche">
-                <button type="button">Recherche</button>
-                <i class="bi bi-search"></i>
+                    <div class="search-bar">
+                        <label for="search"> </label>
+                        <input type="search" id="recherche" name="search" placeholder="Entrez votre recherche">
+                        <button type="button">Recherche</button>
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <h2>Bienvenue au restaurant</h2>
 
-    <section>
-        <h2>Bienvenue au restaurant</h2>
-        <div class="grille">
-            <!-- <div id="item1"></div>
-        <div id="item2"></div>
-        <div id="item3"></div> -->
-            <img src="../ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food" id="i1">
-            <img src="../ASSETS/IMG/category/burger_cat.jpg" alt="burger" id="i2">
-            <img src="../ASSETS/IMG/category/salade_cat.jpg" alt="salad" id="i3">
-            <img src="../ASSETS/IMG/category/pasta_cat.jpg" alt="salad" id="i3">
-            <img src="../ASSETS/IMG/category/sandwich_cat.jpg" alt="salad" id="i3">
-            <img src="../ASSETS/IMG/category/veggie_cat.jpg" alt="salad" id="i3">
+    <div class="container d-grid mx-auto">
+        <div class="gap-3 d-sm-flex">
+            <img class="col p-2" src="../ASSETS/IMG/category/asian_food_cat.jpg"  alt="asian food">
+            <img class="col p-2" src="../ASSETS/IMG/category/burger_cat.jpg"  alt="burger">
+            <img class="col p-2" src="../ASSETS/IMG/category/salade_cat.jpg" alt="salad">
         </div>
-    </section>
+        <div class="gap-3 d-md-flex">
+            <img class="col p-2" src="../ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
+            <img class="col p-2 " src="../ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
+            <img class="col p-2" src="../ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
+        </div>
+    </div>
 
-    <!-- Pour les icones des réseaux sociaux, j'utilise la librairie Font Awesome -->
-    <!-- penser à ajouter adresse et tel dans la nav -->
-    <footer>
-        <!-- <div class="network"> -->
-            <!-- création d'une checkbox pour le bouton qui affiche au click les liens
-            des résx -->
-            <!-- <i class="fa-sharp fa-solid fa-share-nodes" id="open-liens"></i>
-            <i class="fa-regular fa-xmark" id="close-liens"></i> -->
-            <!-- <i class="bi bi-share-fill" id="open-liens"></i>
-            <i class="bi bi-x" id="close-liens"></i> -->
-        </div>
 
-        <div class="link-external">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-geo-alt"></i>
-        </div>
-    </footer>
-    <script type="text/javascript" src="../../DYNAMIQUE/JAVASCRIPT/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!-- penser à ajouter adresse et tel dans la nav -->
+        <footer>
+            </div>
+
+            <div class="link-external">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-geo-alt"></i>
+            </div>
+        </footer>
+        <script type="text/javascript" src="../../DYNAMIQUE/JAVASCRIPT/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

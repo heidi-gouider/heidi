@@ -5,19 +5,19 @@ intégrer au READ ME */
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
 * {
-  margin: o;
+  /* margin: o;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
   font-family: "Libre Baskerville";
 }
 
-html {
+/* html {
   min-height: 100%;
-  /* position: relative; */
-}
+} */
 
 body {
   height: 100%;
+  min-height: 100vh;
 }
 
 /*  */
@@ -45,7 +45,7 @@ html {
 
 /* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
 
-header {
+/* header {
   width: 100%;
   height: 10%;
   top: 0;
@@ -53,13 +53,10 @@ header {
   position: fixed;
   background-color: var(--fondClair);
   border-bottom: var(--bordeau) solid 2px;
-  /* will-change: scroll-position ; */
   z-index: 3;
-}
+} */
 
-nav {
-  /* height: 6rem;
-    line-height: 6rem; */
+/* nav {
   width: 100%;
   height: 100%;
   display: flex;
@@ -68,35 +65,28 @@ nav {
 }
 
 .logo {
-  /* margin: auto; */
   width: 10%;
   height: 80%;
   border-radius: 45%;
-  /* opacity: 0.5; */
 }
 
 .menu {
-  /* height: 6rem;
-    line-height: 6rem; */
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
 }
-
-.menu a {
-  padding: 20px;
+ */
+.nav link {
   font-size: 20px;
   color: var(--grisClair);
   transition: color 1s;
   text-decoration: none;
 }
 
-.menu a:hover {
+.nav link:hover {
   /* font-size: 25px; */
   color: var(--grisFonce);
 }
 
-.menu a:active {
+.nav link:active {
   color: var(--bordeau);
   text-decoration: none;
 }
@@ -105,90 +95,10 @@ menu a:visited {
   text-decoration: none;
 }
 
-/* ********* CREATION DES ICONES POUR LE MOBIL FIRST *********** */
+/* ////////////// GRILLE IMAGE /////////////// */
 
-.icone {
-  /* width: 4.2rem;
-    height: 2.4rem; */
-  width: 3.2rem;
-  height: 2.2rem;
-  position: relative;
-  /* la position sera par rapport à l'élément parent span qui sera en position absolue */
-  cursor: pointer;
-  display: none;
-}
-
-/* *********icone open ********** */
-
-/* je crée le prier trait de l'icône qui sera central */
-.icone .open {
-  /* attentien les balises span sont de type inline, donc ne comprenne pas les valeurs hauteur et largeur
-    j'utilise un display */
-  /* je donne à la span la taille de 100% c'est à dire 5rem comme la class icone */
-  width: 100%;
-  height: 0.4rem;
-  display: block;
-  position: absolute;
-  content: "";
-  background-color: var(--black);
-  /* maintenant je vais placer l'élément et le centrer*/
-  top: 50%;
-  /* avec la position absolue le top de 50% ne suffira pas à centrer mon élément
-    je vais donc utiliser un transform pour le déplacer de sa moitié vers le haut => (valeur négative)*/
-  transform: translateY(-50%);
-}
-
-/* je crée les deux autres traits de l'icône, un avant et un après */
-.icone .open::before,
-.icone .open::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  /* height: 0.6rem; */
-  height: 0.4rem;
-  background-color: var(--black);
-}
-
-/* maintenant je les positionne */
-.icone .open::before {
-  transform: translateY(-1rem);
-}
-
-.icone .open::after {
-  transform: translateY(1rem);
-}
-
-/* *********icone close *********** */
-
-.icone .close {
-  width: 100%;
-  height: 0.4rem;
-  position: absolute;
-  margin-top: 0;
-  margin-left: 0;
-  transform: translateY(10px);
-}
-
-.icone .close:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--black);
-  transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.icone .close:after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 0.4rem;
-  background-color: var(--black);
-  transform: rotate(45deg);
-  transform: rotate(45deg);
+.container img{
+  width: 200px;
 }
 
 /* ////////////// LE FOOTER /////////////// */

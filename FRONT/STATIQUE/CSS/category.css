@@ -7,10 +7,12 @@
   src: url(ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
 }
 
-/* body {
-  overflow: hidden;
-  align-items: center;
-} */
+body {
+  height: 100%;
+  min-height: 100vh;
+  /* overflow: hidden;
+  align-items: center; */
+}
 /* button {
   bottom: 80px;
 } */
@@ -28,7 +30,6 @@
   justify-content: space-around;
 } */
 
-.container img {
-  width: 200px;
-  height: 400px;
-}
+/* .container-inner img {
+  width: 50px;
+} */

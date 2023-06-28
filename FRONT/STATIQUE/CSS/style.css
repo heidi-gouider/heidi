@@ -42,14 +42,15 @@ html {
 }
 
 .nav link:hover {
-  font-size: 1rem;
+  transform: scale(1.3);
   color: var(--grisFonce);
 }
 
-.nav link:active {
+.nav link active {
   color: var(--bordeau);
   text-decoration: none;
 }
+
 
 menu a:visited {
   text-decoration: none;
@@ -58,10 +59,6 @@ menu a:visited {
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 
-/* .video-container{
-  position: relative;
-
-} */
 video {
   /* width: 100%; */
   height: 25vh;
@@ -74,10 +71,10 @@ video {
 }
 
 video ::before {
-content: "";
+  content: "";
 }
 
-/* je crée un évennement pause et play au clik
+/* créer un évennement pause et play au clik
 si l'utilisateur ne veut plus que la vidéo joue */
 
 /* .controls {
@@ -85,12 +82,11 @@ si l'utilisateur ne veut plus que la vidéo joue */
 } */
 
 /********* Titre & Barre de recherche **********/
-
 h1 {
   position: absolute;
-  color: white;
+  padding-top: 2%;
+  /* color: white; */
   z-index: 2;
-
 }
 
 form {
@@ -98,95 +94,30 @@ form {
   z-index: 2;
 }
 
-
-
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
-/* ////////////// GRILLE IMAGE /////////////// */
 
 .container img {
   height: 300px;
   transition: transform 2s;
   border: var(--grisFonce) solid 1px;
   border-radius: 10%;
-
 }
 
+/* revoir les animations pour un effet plus doux sur la disparition de la bordure */
 .container img:hover {
   transform: scale(1.1);
   translate: 1s;
+  border: none;
+  transition: 2s;
   /* border-radius: 50%; */
 }
 
-
-
-
-  /* ////////////// LE FOOTER /////////////// */
+/* ////////////// LE FOOTER /////////////// */
 
 footer {
-  width: 100%;
-  height: 60px;
-  /* margin: auto; */
-  display: flex;
-  bottom: 0;
-  position: fixed;
-  /* background-color: antiquewhite; */
-  justify-content: center;
-  align-items: center;
+  height: 20vh;
   border-top: #535d65 solid;
-  /* will-change: scroll-position ; */
 }
-
-
-/* .network { */
-/* position: absolute; */
-/* display: flex;
-    justify-content: center;
-    align-items: center; */
-/* } */
-
-/* .network i{
-    width: 40px;
-}
-
-.network #open-liens {
-    height: 40px;
-}
-
-#open-liens{
-    display: flex;
-}
-#close-liens{
-    display: none;
-}
-
-.actif #open-liens{
-    display: flex;
-}
-
-.actif #close-liens{
-    display: none;
-} */
-
-/* je modifie l'apparence de la check box et je fais en sorte que tous les
-navigateur prenne en cherge cette propriété */
-/* 
-  */
-
-nav {
-  height: 100%;
-}
-
-/* #checkbox{
-    background-image: ;
-} */
-.link-external {
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* .link-external i {} */
-
 
 /* .link-external i:hover{
 afficher le nom en texte du lien

@@ -5,22 +5,15 @@ intégrer au READ ME */
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
 * {
-  /* margin: o;
-  padding: 0;
-  box-sizing: border-box; */
   font-family: "Libre Baskerville";
 }
 
-/* html {
-  min-height: 100%;
-} */
 
 body {
   height: 100%;
   min-height: 100vh;
 }
 
-/*  */
 @font-face {
   font-family: "Libre Baskerville";
   src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
@@ -38,51 +31,18 @@ html {
   --black: #000;
 }
 
-/* a {
-    text-decoration: none;
-    color: inherit;
-} */
 
 /* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
 
-/* header {
-  width: 100%;
-  height: 10%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background-color: var(--fondClair);
-  border-bottom: var(--bordeau) solid 2px;
-  z-index: 3;
-} */
-
-/* nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  width: 10%;
-  height: 80%;
-  border-radius: 45%;
-}
-
-.menu {
-  display: flex;
-}
- */
 .nav link {
-  font-size: 20px;
+  /* font-size: 45px; */
   color: var(--grisClair);
   transition: color 1s;
   text-decoration: none;
 }
 
 .nav link:hover {
-  /* font-size: 25px; */
+  font-size: 1rem;
   color: var(--grisFonce);
 }
 
@@ -101,7 +61,115 @@ menu a:visited {
   width: 200px;
 }
 
-/* ////////////// LE FOOTER /////////////// */
+
+/* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
+/* créer un parallax avec les éléments barre de recherche et titre sur fond vidéo */
+#video{
+  position: relative;
+  content: "";
+  z-index: 1;
+
+}
+video {
+  /* position: relative; */
+  height: 30vh;
+  background-color: var(--grisFonce);
+  cursor: pointer;
+}
+
+/* .video-recherche ::after {
+} */
+
+/********* Video **********/
+
+/* je crée un évennement pause et play au clik
+si l'utilisateur ne veut plus que la vidéo joue */
+#media {
+  /* width: 100%;
+  height: 30vh; */
+position: absolute;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* .controls {
+    display: none;
+} */
+
+/********* Titre & Barre de recherche **********/
+.video-recherche .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* je centre les éléments */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+/**** Titre ****/
+.content h1 {
+  /* position: absolute; */
+  padding-top: 5%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+/**** barre de recherche ****/
+
+/* .content .search-bar {
+  display: inline-block;
+} */
+
+/* #recherche {
+  height: 30px;
+  border-color: #242629;
+  cursor: pointer;
+} */
+
+
+
+  /* #recherche {
+    width: 60%;
+    height: 20px;
+    border-color: #242629;
+    cursor: pointer;
+  } */
+
+
+
+/* ////////// PAGE ACCEUIL GRILLE  //////////// */
+
+section {
+  width: 100%;
+  /* height: 400px; */
+  top: 50%;
+  border-top: var(--bordeau) solid 2px;
+  position: absolute;
+}
+
+.container img {
+  height: 300px;
+  transition: transform 2s;
+  border: var(--grisFonce) solid 1px;
+  border-radius: 10%;
+
+}
+
+.container img:hover {
+  transform: scale(1.2, 1.2);
+  /* border-radius: 50%; */
+}
+
+
+
+
+  /* ////////////// LE FOOTER /////////////// */
 
 footer {
   width: 100%;
@@ -172,261 +240,3 @@ nav {
 /* .link-external i:hover{
 afficher le nom en texte du lien
 } */
-
-/* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
-/* créer un parallax avec les éléments barre de recherche et titre sur fond vidéo */
-
-.video-recherche {
-  margin: 0;
-  top: 150px;
-  left: 0;
-  position: relative;
-  height: 30vh;
-  /* display: flex;
-    justify-content: center; */
-  background-color: var(--grisFonce);
-  cursor: pointer;
-}
-
-.video-recherche ::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  /* background-color: #970646; */
-  /* background: linear-gradient(#970646, #4d0918); */
-  z-index: 1;
-}
-
-/********* Video **********/
-
-/* je crée un évennement pause et play au clik
-si l'utilisateur ne veut plus que la vidéo joue */
-.video-recherche video {
-  width: 100%;
-  /* height: 100%; */
-  height: 30vh;
-  position: absolute;
-  /* position: fixed; */
-  object-fit: cover;
-  opacity: 0.9;
-}
-
-/* .controls {
-    display: none;
-} */
-
-/********* Titre & Barre de recherche **********/
-
-.video-recherche .content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  /* je centre les éléments */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/**** Titre ****/
-.content h1 {
-  /* position: absolute; */
-  padding-top: 5%;
-  height: 100%;
-  text-align: center;
-  color: white;
-}
-
-/**** barre de recherche ****/
-
-.content .search-bar {
-  display: inline-block;
-}
-
-#recherche {
-  /* display: flex; */
-  height: 30px;
-  border-color: #242629;
-  /* border-radius: 10%; */
-  cursor: pointer;
-}
-
-/***** TITRE DE LA PAGE ******/
-section h2 {
-  /* display: flex;
-    justify-content: center;
-    align-items: end; */
-  padding-right: 10%;
-  text-align: end;
-  color: var(--bordeau);
-}
-
-/* ////////// PAGE ACCEUIL GRILLE  //////////// */
-
-section {
-  width: 100%;
-  /* height: 400px; */
-  top: 50%;
-  border-top: var(--bordeau) solid 2px;
-  position: absolute;
-}
-
-.grille {
-  max-width: 1200px;
-  width: 75%;
-  /* position: absolute; */
-  /* la grille va prendre la valeur de tous les éléments */
-  height: auto;
-  /* height: 400px; */
-  padding-top: 40px;
-  bottom: 300px;
-  /* je centre la grille */
-  margin: auto auto 100px auto;
-  display: grid;
-  /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
-  grid-template-columns: repeat(auto-fill, 250px);
-  /* grid-template-columns: repeat(3, 1fr); */
-  justify-content: center;
-  gap: 60px;
-  /* overflow: hidden; */
-}
-
-.grille img {
-  width: 100%;
-  height: 200px;
-  transition: transform 2s;
-  border: var(--grisFonce) solid;
-  border-radius: 10%;
-}
-
-.grille img:hover {
-  transform: scale(1.2, 1.2);
-  /* border-radius: 50%; */
-}
-
-/* .menu a:hover {
-    font-size: 25px;
-    color: #242629;
-
-}
- */
-#i1 {
-  grid-row: 1;
-}
-
-
-/* ////////////// MENU RESPONSIVE INCLU DANS TOUTES LES PAGES /////////////// */
-
-@media screen and (max-width: 576px) {
-
-  /* nav {
-        display: flex;
-        justify-content: space-between;
-    } */
-  .logo {
-    margin: 30px;
-    align-self: center;
-  }
-
-  .icone {
-    display: block;
-    right: 20px;
-    top: 20px;
-    position: relative;
-    z-index: 30;
-    cursor: pointer;
-  }
-
-  /* l'icone open sera visible */
-  .open {
-    display: flex;
-  }
-
-  /* l'icone close sera caché */
-  .close {
-    display: none;
-  }
-
-  /* j'appelle ma fonction et je lui dis de cacher l'icone open 
-    si elle est vrai */
-  .actif .open {
-    display: none;
-  }
-
-  .actif .close {
-    display: flex;
-  }
-
-  /* .nav {
-        display: flex;
-    } */
-
-  .menu {
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: space-around;
-    right: 0;
-    top: 70px;
-    /* padding: 1rem; */
-    background-color: rgb(34, 33, 33);
-    transform: translateY(-150%);
-    transition: transform 1s;
-  }
-
-  .menu a {
-    font-size: 15px bold;
-    color: var(--fondClair);
-    padding: 0.5rem;
-  }
-
-  .actif .menu {
-    transform: translateY(0);
-    /* display: none; */
-  }
-
-  /* ////////////// VIDEO /////////////// */
-
-  .video-recherche {
-    top: 100px;
-  }
-
-  /* ////////////// BARRE DE RECHERCHE /////////////// */
-
-  .content .search-bar {
-    display: inline-block;
-  }
-
-  /* REMPLACER LE BOUTON PAR UN ICONE */
-  .search-bar button {
-    display: none;
-  }
-
-  .bi bi-search {
-    display: flex;
-  }
-
-  #recherche {
-    width: 60%;
-    /* display: flex; */
-    height: 20px;
-    border-color: #242629;
-    /* border-radius: 10%; */
-    cursor: pointer;
-  }
-
-  /* ////////////// GRILLE ACCEUIL /////////////// */
-  section h2 {
-    font-size: 20px;
-  }
-
-  .grille img:hover {
-    transform: none;
-    /* border-radius: 50%; */
-  }
-}

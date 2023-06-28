@@ -17,7 +17,7 @@ let form = document.querySelector(".validation");
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
 
 
-// document.querySelector("validation").addEventListener("submit", valider);
+form.addEventListener("submit", valider);
 
 
 
@@ -28,7 +28,7 @@ let form = document.querySelector(".validation");
 // J'utilise la fonction "modal()" de jQuery pour afficher une modal
 
 // $('#valid').on('click',valider);
-$('.validation').on('click',valider);
+// $('.validation').on('click',valider);
 
 
 function valider(e) {

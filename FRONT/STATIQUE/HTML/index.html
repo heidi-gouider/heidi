@@ -16,16 +16,14 @@
 <body>
 
     <!-- <?php require 'header.php'; ?>  -->
+    <!-- le header -->
     <div class="container-fluid">
         <div class="row justify-content-between">
-            <!-- le header -->
             <div class="col-3">
-                <img src="../ASSETS/IMG/logo/logo.png" alt="logo" style="width: 90%;">
+                <img src="../ASSETS/IMG/logo/logo.png" alt="logo" style="width: 75%; border-radius: 60%;">
             </div>
             <!-- la nav-bar -->
-        </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <nav class=" col-8 navbar navbar-expand-lg bg-body-tertiary justify-content-center">
                 <!-- utiliser ce lien pour le logo -->
                 <!-- <a class="navbar-brand" href="#">Jarditou.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,12 +31,12 @@
                 </button>  -->
                 <!-- je regroupe et cache les éléments pour le responsive -->
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav p-4 me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="category.html">Tableau</a>
+                            <a class="nav-link" href="category.html">Catégories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="plats.html">Plats</a>
@@ -53,43 +51,44 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="video">
         <div class="row">
-            <div class="video-recherche">
-                <video controls="controls" class="controls" loop="loop" autoplay="autoplay" muted>
-                    <source src="../ASSETS/VIDEO/video2.mp4">
-                </video>
-
-                <div class="content">
+                <div class="row">
                     <h1>Le District</h1>
-                    <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Recherche</button>
-                </form> -->
-
-                    <div class="search-bar">
+                </div>
+                <form class="col" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+                    <button class="btn btn-outline-success col-4" type="submit">Rechercher <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <div class="container">
+                    <video controls="controls" class="controls w-100" id="medi" loop="loop" autoplay="autoplay" muted>
+                        <!-- <source src="../ASSETS/VIDEO/video2.mp4"> -->
+                    </video>
+                </div>
+    
+                <!-- <div class="search-bar d-flex">
                         <label for="search"> </label>
                         <input type="search" id="recherche" name="search" placeholder="Entrez votre recherche">
                         <button type="button">Recherche</button>
                         <i class="bi bi-search"></i>
-                    </div>
-                </div>
-            </div>
+                    </div> -->
+                <!-- </div> -->
         </div>
     </div>
     <h2>Bienvenue au restaurant</h2>
 
     <div class="container d-grid mx-auto">
-        <div class="gap-3 d-sm-flex">
-            <img class="col p-2" src="../ASSETS/IMG/category/asian_food_cat.jpg"  alt="asian food">
-            <img class="col p-2" src="../ASSETS/IMG/category/burger_cat.jpg"  alt="burger">
+        <div class="gap-3 d-sm-flex m-3">
+            <img class="col p-3" src="../ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food">
+            <img class="col p-2" src="../ASSETS/IMG/category/burger_cat.jpg" alt="burger">
             <img class="col p-2" src="../ASSETS/IMG/category/salade_cat.jpg" alt="salad">
         </div>
-        <div class="gap-3 d-md-flex">
+        <div class="gap-3 d-md-flex m-3">
             <img class="col p-2" src="../ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
             <img class="col p-2 " src="../ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
             <img class="col p-2" src="../ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
@@ -97,20 +96,20 @@
     </div>
 
 
-        <!-- penser à ajouter adresse et tel dans la nav -->
-        <footer>
-            </div>
+    <!-- penser à ajouter adresse et tel dans la nav -->
+    <footer>
+        </div>
 
-            <div class="link-external">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-geo-alt"></i>
-            </div>
-        </footer>
-        <script type="text/javascript" src="../../DYNAMIQUE/JAVASCRIPT/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-            crossorigin="anonymous"></script>
+        <div class="link-external">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-geo-alt"></i>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../../DYNAMIQUE/JAVASCRIPT/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

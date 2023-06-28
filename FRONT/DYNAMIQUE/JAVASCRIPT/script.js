@@ -18,9 +18,9 @@ let footer = document.querySelector("footer");
 //////// LES CLASSES /////////
 
 // menu responsive //
-icone.addEventListener("click", function () {
-    body.classList.toggle("actif");
-});
+// icone.addEventListener("click", function () {
+//     body.classList.toggle("actif");
+// });
 
 // évennement change au click/////
 
@@ -28,9 +28,9 @@ icone.addEventListener("click", function () {
 //     section.classList.toggle("actif");
 // });
 
-network.addEventListener("click", function () {
-    footer.classList.toggle("actif");
-});
+// network.addEventListener("click", function () {
+//     footer.classList.toggle("actif");
+// });
 
 
 // section.style.backgroundImage.classList.toggle("change");

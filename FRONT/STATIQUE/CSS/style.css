@@ -55,103 +55,53 @@ menu a:visited {
   text-decoration: none;
 }
 
-/* ////////////// GRILLE IMAGE /////////////// */
-
-.container img{
-  width: 200px;
-}
-
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
-/* créer un parallax avec les éléments barre de recherche et titre sur fond vidéo */
-#video{
-  position: relative;
-  content: "";
-  z-index: 1;
 
-}
+/* .video-container{
+  position: relative;
+
+} */
 video {
-  /* position: relative; */
-  height: 30vh;
+  /* width: 100%; */
+  height: 25vh;
+  position: relative;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 1;
   background-color: var(--grisFonce);
   cursor: pointer;
 }
 
-/* .video-recherche ::after {
-} */
-
-/********* Video **********/
+video ::before {
+content: "";
+}
 
 /* je crée un évennement pause et play au clik
 si l'utilisateur ne veut plus que la vidéo joue */
-#media {
-  /* width: 100%;
-  height: 30vh; */
-position: absolute;
-  object-fit: cover;
-  opacity: 0.9;
-}
 
 /* .controls {
     display: none;
 } */
 
 /********* Titre & Barre de recherche **********/
-.video-recherche .content {
-  width: 100%;
-  height: 100%;
+
+h1 {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  /* je centre les éléments */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-}
-
-/**** Titre ****/
-.content h1 {
-  /* position: absolute; */
-  padding-top: 5%;
-  height: 100%;
-  text-align: center;
   color: white;
+  z-index: 2;
+
 }
 
-/**** barre de recherche ****/
-
-/* .content .search-bar {
-  display: inline-block;
-} */
-
-/* #recherche {
-  height: 30px;
-  border-color: #242629;
-  cursor: pointer;
-} */
-
-
-
-  /* #recherche {
-    width: 60%;
-    height: 20px;
-    border-color: #242629;
-    cursor: pointer;
-  } */
+form {
+  position: absolute;
+  z-index: 2;
+}
 
 
 
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
-
-section {
-  width: 100%;
-  /* height: 400px; */
-  top: 50%;
-  border-top: var(--bordeau) solid 2px;
-  position: absolute;
-}
+/* ////////////// GRILLE IMAGE /////////////// */
 
 .container img {
   height: 300px;
@@ -162,7 +112,8 @@ section {
 }
 
 .container img:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1);
+  translate: 1s;
   /* border-radius: 50%; */
 }
 

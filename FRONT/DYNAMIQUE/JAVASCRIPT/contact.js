@@ -1,3 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
+import $ from 'jquery';
+
+import '../../../FRONT/STATIQUE/CSS/contact.css'
+
 
 ////// VALIDATION FORMULAIRE DE CONTACT //////
 

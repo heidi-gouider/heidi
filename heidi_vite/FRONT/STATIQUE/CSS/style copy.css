@@ -1,0 +1,522 @@
+/* Penser à faire des captures d'écran des pages pour les
+intégrer au READ ME */
+
+/* Les liens internes et externes seront différenciés
+Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
+-> tab : l'élément passe en surbrillance par exemple */
+* {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville";
+}
+
+html {
+  min-height: 100%;
+  /* position: relative; */
+}
+
+body {
+  height: 100%;
+}
+
+/*  */
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
+}
+
+/* ////////////// VARIABLES POUR LES COULEURS /////////////// */
+
+/* Les couleurs */
+
+html {
+  --bordeau: #970646;
+  --grisClair: #535d65;
+  --grisFonce: #242629;
+  --fondClair: #e2e2e2;
+  --black: #000;
+}
+
+/* a {
+    text-decoration: none;
+    color: inherit;
+} */
+
+/* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
+
+header {
+  width: 100%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: var(--fondClair);
+  border-bottom: var(--bordeau) solid 2px;
+  /* will-change: scroll-position ; */
+  z-index: 3;
+}
+
+nav {
+  /* height: 6rem;
+    line-height: 6rem; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  /* margin: auto; */
+  width: 10%;
+  height: 80%;
+  border-radius: 45%;
+  /* opacity: 0.5; */
+}
+
+.menu {
+  /* height: 6rem;
+    line-height: 6rem; */
+  display: flex;
+  /* justify-content: space-between;
+  align-items: center; */
+}
+
+.menu a {
+  padding: 20px;
+  font-size: 20px;
+  color: var(--grisClair);
+  transition: color 1s;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  /* font-size: 25px; */
+  color: var(--grisFonce);
+}
+
+.menu a:active {
+  color: var(--bordeau);
+  text-decoration: none;
+}
+
+menu a:visited {
+  text-decoration: none;
+}
+
+/* ********* CREATION DES ICONES POUR LE MOBIL FIRST *********** */
+
+.icone {
+  /* width: 4.2rem;
+    height: 2.4rem; */
+  width: 3.2rem;
+  height: 2.2rem;
+  position: relative;
+  /* la position sera par rapport à l'élément parent span qui sera en position absolue */
+  cursor: pointer;
+  display: none;
+}
+
+/* *********icone open ********** */
+
+/* je crée le prier trait de l'icône qui sera central */
+.icone .open {
+  /* attentien les balises span sont de type inline, donc ne comprenne pas les valeurs hauteur et largeur
+    j'utilise un display */
+  /* je donne à la span la taille de 100% c'est à dire 5rem comme la class icone */
+  width: 100%;
+  height: 0.4rem;
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: var(--black);
+  /* maintenant je vais placer l'élément et le centrer*/
+  top: 50%;
+  /* avec la position absolue le top de 50% ne suffira pas à centrer mon élément
+    je vais donc utiliser un transform pour le déplacer de sa moitié vers le haut => (valeur négative)*/
+  transform: translateY(-50%);
+}
+
+/* je crée les deux autres traits de l'icône, un avant et un après */
+.icone .open::before,
+.icone .open::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  /* height: 0.6rem; */
+  height: 0.4rem;
+  background-color: var(--black);
+}
+
+/* maintenant je les positionne */
+.icone .open::before {
+  transform: translateY(-1rem);
+}
+
+.icone .open::after {
+  transform: translateY(1rem);
+}
+
+/* *********icone close *********** */
+
+.icone .close {
+  width: 100%;
+  height: 0.4rem;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  transform: translateY(10px);
+}
+
+.icone .close:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.icone .close:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 0.4rem;
+  background-color: var(--black);
+  transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ////////////// LE FOOTER /////////////// */
+
+footer {
+  width: 100%;
+  height: 60px;
+  /* margin: auto; */
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  /* background-color: antiquewhite; */
+  justify-content: center;
+  align-items: center;
+  border-top: #535d65 solid;
+  /* will-change: scroll-position ; */
+}
+
+
+/* .network { */
+/* position: absolute; */
+/* display: flex;
+    justify-content: center;
+    align-items: center; */
+/* } */
+
+/* .network i{
+    width: 40px;
+}
+
+.network #open-liens {
+    height: 40px;
+}
+
+#open-liens{
+    display: flex;
+}
+#close-liens{
+    display: none;
+}
+
+.actif #open-liens{
+    display: flex;
+}
+
+.actif #close-liens{
+    display: none;
+} */
+
+/* je modifie l'apparence de la check box et je fais en sorte que tous les
+navigateur prenne en cherge cette propriété */
+/* 
+  */
+
+nav {
+  height: 100%;
+}
+
+/* #checkbox{
+    background-image: ;
+} */
+.link-external {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .link-external i {} */
+
+
+/* .link-external i:hover{
+afficher le nom en texte du lien
+} */
+
+/* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
+/* créer un parallax avec les éléments barre de recherche et titre sur fond vidéo */
+
+.video-recherche {
+  margin: 0;
+  top: 150px;
+  left: 0;
+  position: relative;
+  height: 30vh;
+  /* display: flex;
+    justify-content: center; */
+  background-color: var(--grisFonce);
+  cursor: pointer;
+}
+
+.video-recherche ::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /* background-color: #970646; */
+  /* background: linear-gradient(#970646, #4d0918); */
+  z-index: 1;
+}
+
+/********* Video **********/
+
+/* je crée un évennement pause et play au clik
+si l'utilisateur ne veut plus que la vidéo joue */
+.video-recherche video {
+  width: 100%;
+  /* height: 100%; */
+  height: 30vh;
+  position: absolute;
+  /* position: fixed; */
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* .controls {
+    display: none;
+} */
+
+/********* Titre & Barre de recherche **********/
+
+.video-recherche .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* je centre les éléments */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**** Titre ****/
+.content h1 {
+  /* position: absolute; */
+  padding-top: 5%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+/**** barre de recherche ****/
+
+.content .search-bar {
+  display: inline-block;
+}
+
+#recherche {
+  /* display: flex; */
+  height: 30px;
+  border-color: #242629;
+  /* border-radius: 10%; */
+  cursor: pointer;
+}
+
+/***** TITRE DE LA PAGE ******/
+section h2 {
+  /* display: flex;
+    justify-content: center;
+    align-items: end; */
+  padding-right: 10%;
+  text-align: end;
+  color: var(--bordeau);
+}
+
+/* ////////// PAGE ACCEUIL GRILLE  //////////// */
+
+section {
+  width: 100%;
+  /* height: 400px; */
+  top: 50%;
+  border-top: var(--bordeau) solid 2px;
+  position: absolute;
+}
+
+.grille {
+  max-width: 1200px;
+  width: 75%;
+  /* position: absolute; */
+  /* la grille va prendre la valeur de tous les éléments */
+  height: auto;
+  /* height: 400px; */
+  padding-top: 40px;
+  bottom: 300px;
+  /* je centre la grille */
+  margin: auto auto 100px auto;
+  display: grid;
+  /* je crée le nombre de colonnes en fonction de la largeur de mon élélément */
+  grid-template-columns: repeat(auto-fill, 250px);
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: center;
+  gap: 60px;
+  /* overflow: hidden; */
+}
+
+.grille img {
+  width: 100%;
+  height: 200px;
+  transition: transform 2s;
+  border: var(--grisFonce) solid;
+  border-radius: 10%;
+}
+
+.grille img:hover {
+  transform: scale(1.2, 1.2);
+  /* border-radius: 50%; */
+}
+
+/* .menu a:hover {
+    font-size: 25px;
+    color: #242629;
+
+}
+ */
+#i1 {
+  grid-row: 1;
+}
+
+
+/* ////////////// MENU RESPONSIVE INCLU DANS TOUTES LES PAGES /////////////// */
+
+@media screen and (max-width: 576px) {
+
+  /* nav {
+        display: flex;
+        justify-content: space-between;
+    } */
+  .logo {
+    margin: 30px;
+    align-self: center;
+  }
+
+  .icone {
+    display: block;
+    right: 20px;
+    top: 20px;
+    position: relative;
+    z-index: 30;
+    cursor: pointer;
+  }
+
+  /* l'icone open sera visible */
+  .open {
+    display: flex;
+  }
+
+  /* l'icone close sera caché */
+  .close {
+    display: none;
+  }
+
+  /* j'appelle ma fonction et je lui dis de cacher l'icone open 
+    si elle est vrai */
+  .actif .open {
+    display: none;
+  }
+
+  .actif .close {
+    display: flex;
+  }
+
+  /* .nav {
+        display: flex;
+    } */
+
+  .menu {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 0;
+    top: 70px;
+    /* padding: 1rem; */
+    background-color: rgb(34, 33, 33);
+    transform: translateY(-150%);
+    transition: transform 1s;
+  }
+
+  .menu a {
+    font-size: 15px bold;
+    color: var(--fondClair);
+    padding: 0.5rem;
+  }
+
+  .actif .menu {
+    transform: translateY(0);
+    /* display: none; */
+  }
+
+  /* ////////////// VIDEO /////////////// */
+
+  .video-recherche {
+    top: 100px;
+  }
+
+  /* ////////////// BARRE DE RECHERCHE /////////////// */
+
+  .content .search-bar {
+    display: inline-block;
+  }
+
+  /* REMPLACER LE BOUTON PAR UN ICONE */
+  .search-bar button {
+    display: none;
+  }
+
+  .bi bi-search {
+    display: flex;
+  }
+
+  #recherche {
+    width: 60%;
+    /* display: flex; */
+    height: 20px;
+    border-color: #242629;
+    /* border-radius: 10%; */
+    cursor: pointer;
+  }
+
+  /* ////////////// GRILLE ACCEUIL /////////////// */
+  section h2 {
+    font-size: 20px;
+  }
+
+  .grille img:hover {
+    transform: none;
+    /* border-radius: 50%; */
+  }
+}

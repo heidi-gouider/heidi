@@ -23,7 +23,7 @@ let form = document.querySelector(".validation");
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
 
 
-form.addEventListener("submit", valider);
+form.addEventListener("submit", (valider));
 
 
 
@@ -37,7 +37,7 @@ form.addEventListener("submit", valider);
 // $('.validation').on('click',valider);
 
 
-function valider(e) {
+function valider() {
     if (form.checkValidity() == false) {
         e.preventDefault();
     } else {

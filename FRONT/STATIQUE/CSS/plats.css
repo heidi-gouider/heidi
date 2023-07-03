@@ -41,7 +41,7 @@ html {
 }
 
 .modal-content {
-  background-image: url("../ASSETS/IMG/fond/bg3.jpeg");
+  background-image: url("/ASSETS/IMG/fond/bg3.jpeg");
   background-size: cover;
   background-position: center;
 }

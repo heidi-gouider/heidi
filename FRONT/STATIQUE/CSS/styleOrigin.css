@@ -67,6 +67,9 @@ menu a:visited {
   text-decoration: none;
 }
 
+#commande{
+  background-color: var(--beige);
+}
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 

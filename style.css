@@ -69,6 +69,10 @@ menu a:visited {
 	transition: 0.5s;
 }
 
+/* .navbar-toggler{
+  right: 0;
+} */
+
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 
 video {

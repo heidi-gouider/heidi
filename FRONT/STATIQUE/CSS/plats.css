@@ -21,11 +21,11 @@ html {
 }
 
 
-.container {
+#cards {
   border-top: var(--bordeau) solid 2px;
 }
 
-.row {
+#row1-burger {
   background-image: url();
 }
 

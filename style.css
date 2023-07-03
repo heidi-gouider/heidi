@@ -85,21 +85,21 @@ si l'utilisateur ne veut plus que la vidéo joue */
 } */
 
 /********* Titre & Barre de recherche **********/
-h1 {
+#titre-accueil {
   position: absolute;
   padding-top: 2%;
   /* color: white; */
   z-index: 2;
 }
 
-form {
+#search-bar {
   position: absolute;
   z-index: 2;
 }
 
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
 
-.container img {
+#images img {
   height: 300px;
   transition: transform 2s;
   border: var(--grisFonce) solid 1px;
@@ -107,13 +107,29 @@ form {
 }
 
 /* revoir les animations pour un effet plus doux sur la disparition de la bordure */
-.container img:hover {
+#images img:hover {
   transform: scale(1.1);
   translate: 1s;
   border: none;
   transition: 2s;
   /* border-radius: 50%; */
 }
+
+
+/* .container img {
+  height: 300px;
+  transition: transform 2s;
+  border: var(--grisFonce) solid 1px;
+  border-radius: 10%;
+} */
+
+/* revoir les animations pour un effet plus doux sur la disparition de la bordure */
+/* .container img:hover {
+  transform: scale(1.1);
+  translate: 1s;
+  border: none;
+  transition: 2s;
+} */
 
 /* ////////////// LE FOOTER /////////////// */
 

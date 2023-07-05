@@ -43,6 +43,8 @@ html {
 
 /* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
 
+/* penser à ajouter une 'box-shadow' au bottom de la .nav et voir pour le bg 
+vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où il y aurait pls nav hors le header*/
 .nav-link {
   font-size: 30px;
   color: var(--grisClair);

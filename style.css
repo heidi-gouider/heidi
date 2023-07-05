@@ -58,7 +58,7 @@ html {
 
 }
 
-#link-active {
+.nav-link:active {
   color: var(--bordeau) !important;
   /* text-decoration: none; */
 }
@@ -72,15 +72,18 @@ menu a:visited {
   background-color: var(--beige) !;
 }
 
-.btn-order {
-  color: var(--grisClair);
+.btn-command {
+  color: var(--bordeau);
   border-color: var(--bordeau);
   transition: 0.5s;
 }
 
-/* .navbar-toggler{
-  right: 0;
-} */
+.btn-command:hover,
+.btn-command:active {
+  color: white;
+  background-color: var(--bordeau);
+}
+
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 

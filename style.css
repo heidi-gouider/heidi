@@ -5,7 +5,7 @@ intégrer au READ ME */
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
 * {
-  font-family: "Libre Baskerville"!important;
+  font-family: "Libre Baskerville" !important;
   box-shadow: 0 0 2px red;
 }
 
@@ -15,9 +15,17 @@ body {
   min-height: 100vh;
 }
 
+/* ATTENTION LA POLICE NE S4APPLIQUE PAS!!! */
+
+/* @font-face {
+  font-family: "Libre Baskerville";
+  src: local("Libre Baskerville"),
+    url("/ASSETS/font/LibreBaskerville-Regular.ttf") format("ttf");
+} */
+
 @font-face {
   font-family: "Libre Baskerville";
-  src: url(./ASSETS/font/LibreBaskerville-Regular.ttf) format(ttf);
+  src: url("public\ASSETS\font\LibreBaskerville-Regular.ttf") format("truetype");
 }
 
 /* ////////////// VARIABLES POUR LES COULEURS /////////////// */
@@ -60,13 +68,14 @@ menu a:visited {
   text-decoration: none;
 }
 
-#commande{
-  background-color: var(--beige)!;
+#commande {
+  background-color: var(--beige) !;
 }
+
 .btn-order {
-	color: var(--grisClair);
-	border-color: var(--bordeau);
-	transition: 0.5s;
+  color: var(--grisClair);
+  border-color: var(--bordeau);
+  transition: 0.5s;
 }
 
 /* .navbar-toggler{
@@ -85,7 +94,8 @@ video {
   /* background-color: var(--grisFonce); */
   /* cursor: pointer; */
 }
-.video-container{
+
+.video-container {
   position: relative;
   /* background-color: rgba(0, 0, 0, 0.5); */
 
@@ -135,11 +145,12 @@ si l'utilisateur ne veut plus que la vidéo joue */
   z-index: 2;
 } */
 
-#pause{
+#pause {
   position: absolute;
   padding: 20% 5% 0 0;
   z-index: 2;
 }
+
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
 
 #images img {

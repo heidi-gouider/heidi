@@ -247,6 +247,22 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transition: 2s;
 } */
 
+/* ////////// PAGE COMMANDE  //////////// */
+
+/* :animation sur le btn 'submit' */
+/* .btn-joke{
+  transition-property: transform;
+  transition-duration: _._s;
+  transition-timing-function: ; =>acceleration pour la transition avec 'ease'
+  transition-delay: ;
+
+  donc histoire de racourcir je vais dans le même ordre affecter ttes ses propriétés à une transition:
+  transition: 
+} */
+.btn-joke:hover {
+  transform: translateY(-30px);
+}
+
 /* ////////////// LE FOOTER /////////////// */
 
 .footer {

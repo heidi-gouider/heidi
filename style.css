@@ -47,23 +47,25 @@ html {
 
 /* penser à ajouter une 'box-shadow' au bottom de la .nav et voir pour le bg 
 vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où il y aurait pls nav hors le header*/
-#menu{
+#menu {
   height: 15vh;
   background-color: var(--fondClair);
   box-shadow: 0px 5px 10px #42031f;
   /* opacity: 0.5; */
   /* box-shadow: 0 10px 10px black; */
 }
-.nav-link{
+
+.nav-link {
   font-size: 25px;
   color: var(--grisClair);
   /* transition: color 1s; */
   text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: var(--bordeau) !important;
 }
+
 .nav-link-custom:hover {
   transform: scale(1.1);
   transition: 0.6s;
@@ -87,7 +89,7 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 } */
 
 .btn-command {
-  color: var(--bordeau)!important;
+  color: var(--bordeau) !important;
   border-color: var(--bordeau);
   transition: 0.2s;
 }
@@ -102,30 +104,48 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 
 /* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
 
-  /* supprimer l'espacement horizontal */
+/* supprimer l'espacement horizontal */
 /* .video-container:root {
   --bs-gutter-x: 0;
 } */
 /* .banner {
   position: relative;
 } */
-.video-container {
-  /* position: relative; */
-  /* position: absolute; */
-    height: 20vh;
-    object-fit: cover;
+
+video {
+  /* width: 100%; */
+  height: 25vh;
+  position: relative;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 1;
+  background-color: var(--grisFonce);
+  cursor: pointer;
+  /* object-fit: cover; */
 }
-  /* background-color: rgba(0, 0, 0, 0.5); */
+
+video ::before {
+  content: "";
+}
+
+/* .video-container { */
+/* position: relative; */
+/* position: absolute; */
+/* height: 20vh;
+  object-fit: cover;
+} */
+
+/* background-color: rgba(0, 0, 0, 0.5); */
 
 /* video { */
-  /* min-width: 100%; */
-  /* height: 20vh; */
-  /* position: relative; */
-  /* object-fit: cover; */
-  /* opacity: 0.9; */
-  /* z-index: 1; */
-  /* background-color: var(--grisFonce); */
-  /* cursor: pointer; */
+/* min-width: 100%; */
+/* height: 20vh; */
+/* position: relative; */
+/* object-fit: cover; */
+/* opacity: 0.9; */
+/* z-index: 1; */
+/* background-color: var(--grisFonce); */
+/* cursor: pointer; */
 /* } */
 
 /* video ::before {
@@ -150,6 +170,18 @@ si l'utilisateur ne veut plus que la vidéo joue */
 } */
 
 /********* Titre & Barre de recherche **********/
+#titre-accueil {
+  position: absolute;
+  padding-top: 2%;
+  /* color: white; */
+  z-index: 2;
+}
+
+#search-bar {
+  position: absolute;
+  z-index: 2;
+}
+
 
 .overlay {
   /* position: absolute; */
@@ -160,22 +192,22 @@ si l'utilisateur ne veut plus que la vidéo joue */
 
 }
 
-#titre-accueil {
-  /* position: absolute; */
+/* #titre-accueil {
+  position: absolute;
   padding-top: 2%;
-  /* z-index: 2; */
-}
+  z-index: 2;
+} */
 
 /* #search-bar {
   position: absolute;
   z-index: 2;
 } */
 
-#pause {
+/* #pause {
   position: absolute;
   padding: 20% 5% 0 0;
   z-index: 2;
-}
+} */
 
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
 

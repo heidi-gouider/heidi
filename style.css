@@ -34,7 +34,9 @@ body {
 
 html {
   --bordeau: #970646;
+  --bordeauFonce: #a1115971;
   --grisClair: #535d65;
+  --gris: #bdc4ca;
   --grisFonce: #242629;
   --fondClair: #e2e2e2;
   --black: #000;
@@ -45,17 +47,23 @@ html {
 
 /* penser à ajouter une 'box-shadow' au bottom de la .nav et voir pour le bg 
 vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où il y aurait pls nav hors le header*/
+#menu{
+  background-color: var(--fondClair);
+  box-shadow: 0px 5px 10px #42031f;
+  /* box-shadow: 0 10px 10px black; */
+}
 .nav-link {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--grisClair);
   transition: color 1s;
   text-decoration: none;
+
 }
 
 .nav-link:hover {
   transform: scale(1.1);
-  transition: 1s;
-  /* color: var(--grisFonce); */
+  transition: 0.6s;
+  color: var(--fondClair);
   color: var(--bordeau) !important;
 
 }
@@ -66,24 +74,25 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 }
 
 
-menu a:visited {
+/* menu a:visited {
   text-decoration: none;
-}
+} */
 
 #commande {
   background-color: var(--beige) !;
 }
 
 .btn-command {
-  color: var(--bordeau);
+  color: var(--bordeau)!important;
   border-color: var(--bordeau);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .btn-command:hover,
+.btn-command:focus,
 .btn-command:active {
   color: white;
-  background-color: var(--bordeau);
+  background-color: var(--gris);
 }
 
 
@@ -92,7 +101,7 @@ menu a:visited {
 video {
   /* min-width: 100%; */
   height: 30vh;
-  /* position: relative; */
+  position: relative;
   object-fit: cover;
   opacity: 0.9;
   /* z-index: 1; */
@@ -131,7 +140,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
 /********* Titre & Barre de recherche **********/
 
 .overlay {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -163,6 +172,8 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transition: transform 2s;
   border: var(--grisFonce) solid 1px;
   border-radius: 10%;
+  box-shadow: 10px 10px 10px var(--grisClair);
+  /* box-shadow: 0 10px 10px black; */
 }
 
 /* revoir les animations pour un effet plus doux sur la disparition de la bordure */
@@ -170,7 +181,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transform: scale(1.1);
   translate: 1s;
   border: none;
-  transition: 2s;
+  transition: 2s ease-in-out;
   /* border-radius: 50%; */
 }
 

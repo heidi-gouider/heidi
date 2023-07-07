@@ -50,11 +50,12 @@ html {
 vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où il y aurait pls nav hors le header*/
 #menu {
   height: 15vh;
-  background-color: var(--fondClair);
+  background-color: rgba(226, 226, 226, 0.4);
   box-shadow: 0px 5px 10px #42031f;
   /* opacity: 0.5; */
   /* box-shadow: 0 10px 10px black; */
 }
+
 
 .nav-link {
   font-size: 25px;
@@ -80,6 +81,9 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   /* text-decoration: none; */
 }
 
+.logo img {
+  box-shadow: 1px 5px 5px 3px #42031f;
+}
 
 /* menu a:visited {
   text-decoration: none;
@@ -88,10 +92,11 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 /* #commande {
   background-color: var(--beige) !;
 } */
-
 .btn-command {
+  height: 30px;
   color: var(--bordeau) !important;
   border-color: var(--bordeau);
+  box-shadow: 1px 5px 5px 3px #42031f;
   transition: 0.2s;
 }
 
@@ -112,11 +117,11 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 /* .banner {
   position: relative;
 } */
-.video-container { 
+.video-container {
   top: 15vh;
-/* position: absolute; */
-position: relative;
-height: 15vh;
+  /* position: absolute; */
+  position: relative;
+  height: 15vh;
   /* object-fit: cover; */
 }
 
@@ -215,10 +220,11 @@ si l'utilisateur ne veut plus que la vidéo joue */
 /* section{
   position: relative;
 } */
-#images{
+#images {
   position: relative;
   top: 20vh;
 }
+
 #images img {
   /* width: 100px; */
   height: 200px;
@@ -255,20 +261,63 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transition: 2s;
 } */
 
-/* ////////// PAGE COMMANDE  //////////// */
+/* ////////// ANIMATION  //////////// */
+
+/* ******** page accueil  ************* */
+
+@keyframes titre-move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(150px);
+  }
+}
+
+#titre-accueil {
+  animation: titre-move 1s linear 1s 3 none;
+}
+
+/* ******** page commande  ************* */
 
 /* :animation sur le btn 'submit' */
-/* .btn-joke{
-  transition-property: transform;
-  transition-duration: _._s;
-  transition-timing-function: ; =>acceleration pour la transition avec 'ease'
-  transition-delay: ;
+@keyframes joke1 {
+  from {
+    transform: translateY(0);
+  }
 
-  donc histoire de racourcir je vais dans le même ordre affecter ttes ses propriétés à une transition:
-  transition: 
+  to {
+    transform: translateY(-150px);
+  }
+}
+
+/* @keyframes joke1 {
+  from {
+    transform: translate(-150px, 70%);
+
+  }
+
+  to {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-150px);
+  }
+
 } */
+
+
+/* .btn-joke {
+  animation: joke 1s ease-in-out 1s 3; */
+/* nom/durée/fonction-d'accélération/top-départ/ nb-répet-anim/ itération(normale ou inverse)/ animation-fill-mode (avec delay)? je test pour voir */
+/* } */
+
 .btn-joke:hover {
-  transform: translateY(-30px);
+  animation: joke1 0.5s linear 0.5s 3 none;
+  transform: translate(-150px, 70%);
+  /* transform: rotate(45deg); */
 }
 
 /* ////////////// LE FOOTER /////////////// */

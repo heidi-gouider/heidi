@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/js/bootstrap.js'
-// import $ from 'jquery';
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.js';
 
-import './style.css'
+import './style.css';
 
 //////////// VARIABLES //////////
 
@@ -60,7 +60,8 @@ let footer = document.querySelector("footer");
 // })
 
 //////// CAROUSEL /////////
+// form.addEventListener("submit", (valider));
 
-$(document)(function() {
-    $('#myCarousel').carousel();
-  });
+// $(function () {
+//   $('#carousel').carousel();
+// });

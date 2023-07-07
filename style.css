@@ -265,19 +265,24 @@ si l'utilisateur ne veut plus que la vidéo joue */
 
 /* ******** page accueil  ************* */
 
-@keyframes titre-move {
+@keyframes move {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(150px);
+    transform: translateX(38%);
   }
 }
 
 #titre-accueil {
-  animation: titre-move 1s linear 1s 3 none;
+  animation: move 2s ease-out both;
 }
+
+#search-bar {
+  animation: move 2s ease-out .7s both;
+}
+
 
 /* ******** page commande  ************* */
 
@@ -315,7 +320,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
 /* } */
 
 .btn-joke:hover {
-  animation: joke1 0.5s linear 0.5s 3 none;
+  animation: joke1 0.5s linear 0.5s 3 slidein;
   transform: translate(-150px, 70%);
   /* transform: rotate(45deg); */
 }

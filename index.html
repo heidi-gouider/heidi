@@ -60,13 +60,12 @@
 
     <!-- <section class="banner "> -->
     <!-- <div class="container-fluid video-container mt-lg-5"> -->
-    <section class="container-fluid video-container">
-        <!-- <div class="row justify-content-center align-items-center"> -->
-        <div class="row">
-            <!-- la classe overlay==position:absolute -->
-            <!-- <div class="overlay"> -->
-            <div class="col">
-                <div class="col-12 text-center text-white">
+        <div class="container-fluid video-container">
+            <div class="row justify-content-center align-items-center">
+                <!-- la classe overlay==position:absolute -->
+                <!-- <div class="overlay"> -->
+                <!-- <div class="col"> -->
+                <div class="row text-center text-white">
                     <h1 id="titre-accueil">Le District</h1>
                 </div>
                 <div class="col-12  col-lg-4 mt-4">
@@ -76,20 +75,20 @@
                     </form>
                     <!-- </div> -->
                 </div>
+                <!-- </div> -->
+                <!-- <div class=" w-100"> -->
+                <!-- <div class="col-12 col-md-6 col-lg-8 mt-4"> -->
+
+                <video controls="controls" class="controls" id="media" loop="loop" autoplay="autoplay" muted>
+                    <source src="/ASSETS/VIDEO/video2.mp4">
+                </video>
             </div>
-            <!-- <div class=" w-100"> -->
-            <!-- <div class="col-12 col-md-6 col-lg-8 mt-4"> -->
-
-            <video controls="controls" class="controls" id="media" loop="loop" autoplay="autoplay" muted>
-                <source src="/ASSETS/VIDEO/video2.mp4">
-            </video>
+            <!-- </div> -->
+            <!-- </div> -->
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
-    </section>
 
-    <!-- ORIGIN CODE -->
-    <div class="container-fluid video-container">
+        <!-- ORIGIN CODE -->
+        <!-- <div class="container-fluid video-container">
         <div class="row justify-content-center align-items-center">
             <div class="row text-center text-white">
                 <h1>Le District</h1>
@@ -99,49 +98,50 @@
                     <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
                     <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
                 </div>
-            </form>
-            <!-- <div class="container" -->
-            <video controls="controls" class="controls w-100" id="media" loop="loop" autoplay="autoplay" muted>
+            </form> -->
+        <!-- <div class="container" -->
+        <!-- <video controls="controls" class="controls w-100" id="media" loop="loop" autoplay="autoplay" muted>
                 <source src="../../../public/ASSETS/VIDEO/video2.mp4">
-            </video>
-            <!-- </div> -->
-        </div>
+            </video> -->
+        <!-- </div> -->
+        <!-- </div> -->
 
         <h2>Bienvenue au restaurant</h2>
-
-        <div class="container d-grid mx-auto " id="images">
-            <div class="row gap-3 justify-content-sm-center m-3">
-                <img class="col p-2" src="/ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food">
-                <img class="col p-2" src="/ASSETS/IMG/category/burger_cat.jpg" alt="burger">
-                <img class="col p-2" src="/ASSETS/IMG/category/salade_cat.jpg" alt="salad">
-            </div>
-            <div class="row gap-3 justify-content-sm-center d-md-flex m-3">
-                <img class="col p-2" src="/ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
-                <img class="col p-2 " src="/ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
-                <img class="col p-2" src="/ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
+        <!-- <section class="banner"> -->
+        <div class="container d-grid mt-lg-4" id="images">
+            <div class="row ">
+                <div class="row gap-3 justify-content-sm-center m-3">
+                    <img class="col p-2" src="/ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food">
+                    <img class="col p-2" src="/ASSETS/IMG/category/burger_cat.jpg" alt="burger">
+                    <img class="col p-2" src="/ASSETS/IMG/category/salade_cat.jpg" alt="salad">
+                </div>
+                <div class="row gap-3 justify-content-sm-center d-md-flex m-3">
+                    <img class="col p-2" src="/ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
+                    <img class="col p-2 " src="/ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
+                    <img class="col p-2" src="/ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
+                </div>
             </div>
         </div>
 
+    <!-- penser à ajouter adresse et tel dans la nav -->
 
-        <!-- penser à ajouter adresse et tel dans la nav -->
+    <footer class="footer fixed-bottom">
+        <div class="container">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-geo-alt"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
-        <footer class="footer fixed-bottom">
-            <div class="container">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#"><i class="bi bi-geo-alt"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-
-        <!-- <footer class="container-fluid mx-auto bg-body-tertiary">
+    <!-- <footer class="container-fluid mx-auto bg-body-tertiary">
         <div class="row d-flex">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
@@ -156,7 +156,7 @@
             </ul>
         </div>
     </footer> -->
-        <script type="module" src="main.js"></script>
+    <script type="module" src="main.js"></script>
 
 </body>
 

@@ -59,3 +59,8 @@ let footer = document.querySelector("footer");
 //     myInput.focus()
 // })
 
+//////// CAROUSEL /////////
+
+$(document)(function() {
+    $('#myCarousel').carousel();
+  });

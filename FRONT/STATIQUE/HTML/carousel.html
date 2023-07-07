@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Notre carte</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/category.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"/>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../CSS/category.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
 
 </head>
 
@@ -21,11 +19,11 @@
     <a href="plats.html">Plats</a>
     <a href="contact.html">Contact</a>
     <a href="commande.html">
-      <i class="bi bi-basket"></i> 
-      Ma commande
-  </a>
+        <i class="bi bi-basket"></i>
+        Ma commande
+    </a>
 
-  <!-- <section id="carousel" class="carousel slide thumbnail col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-10" data-ride="carousel">
+    <!-- <section id="carousel" class="carousel slide thumbnail col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-10" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active"></li>
       <li data-target="#carousel" data-slide-to="1"></li>
@@ -55,71 +53,118 @@
  </div>
 </section>  -->
 
-  <h1 class="row col-12 justify-content-end">Notre carte</h1>
+    <h1 class="row col-12 justify-content-end">Notre carte</h1>
 
-    <div class="container m-5">
-        <div id="carousel" class="carousel slide" data-ride="carousel"  data-interval="3000">
-             <!-- Indicateurs -->
-            <!-- <ul class="carousel-indicators">
-                <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="4"></li>
-                <li data-bs-target="#carousel" data-bs-slide-to="5"></li>
-            </ul> -->
-       <!-- CAROUSEL -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row p-3">
-                        <div class="col-6"></div>
-                            <img src="../ASSETS/IMG/category/asian_food_cat.jpg" class="rounded w-100" alt="photo asian food"/>
-                        </div>
-                        <div class="col-6"></div>
-                            <img src="../ASSETS/IMG/category/asian_food_cat.jpg" class="rounded w-100" alt="photo asian food"/>
-                        </div>
+    <!-- <div class="container m-5"> -->
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row p-3">
+                    <div class="col-md-4">
+                        <div class="card p-3 w-25">
+                            <img src="/ASSETS/IMG/food/hamburger.jpg" alt="image hamburger" id="image1" />
+                            <div class="card-title">
+                              <h5>classique</h5>
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <p>description du produit</p>
+                                <p class="content bg-body">5.90 $</p>
+                              </div>
+                              <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal"
+                                data-bs-target="#modal">Ajouter au panier
+                                <i class="bi bi-basket"></i>
+                              </button>
+                            </div>
+                          </div>
                     </div>
-                </div>
-
-                <div class="carousel-item" >
-                    <div class="row p-3">
-                            <img src="../ASSETS/IMG/category/pizza_cat.jpg" class="col-6" alt="photo pizza"/>
-                            <img src="../ASSETS/IMG/category/pizza_cat.jpg" class="col-6" alt="photo pizza"/>
+                    <div class="col-md-4">
+                        <div class="card p-3 w-25">
+                            <img src="/ASSETS/IMG/category/asian_food_cat.jpg" alt="image hamburger" id="image2" />
+                            <div class="card-title">
+                              <h5>burger du chef</h5>
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between">
+                                <p>description du produit</p>
+                                <p class="content bg-body">7.90 $</p>
+                              </div>
+                              <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal"
+                                data-bs-target="#modal">Ajouter au panier
+                                <i class="bi bi-basket"></i>
+                              </button>
+                            </div>
+                          </div>
+                    
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row p-3">
-                        <div class="col-6">
-                            <img src="../ASSETS/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger"/>
-                        </div>
-                        <div class="col-6">
-                            <img src="../ASSETS/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger"/>
-                        </div>
+                    <div class="col-md-4">
+                        <img src="/ASSETS/IMG/category/pizza_cat.jpg" class="rounded w-100" alt="photo asian food" />
                     </div>
-                </div>
-                <div class="carousel-item" >
-                            <img src="../ASSETS/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates"/>
-                </div>
-
-                <div class="carousel-item">
-                            <img src="../ASSETS/IMG/category/salade_cat.jpg" class="d-block w-100"  alt="photo salade"/>
-                </div>
-                <div class="carousel-item">
-                            <img src="../ASSETS/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich"/>
                 </div>
             </div>
-        <!-- CONTROL DU CAROUSEL -->
 
-        <button class="carousel-control-prev" href="#carousel" type="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Précédent</span>
-        </button>
-        <button class="carousel-control-next" href="#carousel" type="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Suivant</span>
-        </button>
+            <div class="carousel-item">
+                <div class="row p-3">
+                    <div class="col-md-4">
+                        <img src="/ASSETS/IMG/category/burger_cat.jpg" class="rounded w-100" alt="photo asian food" />
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/ASSETS/IMG/category/pasta_cat.jpg" class="rounded w-100" alt="photo asian food" />
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/ASSETS/IMG/category/salade_cat.jpg" class="rounded w-100" alt="photo asian food" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+        <!-- <div class="carousel-item">
+            <div class="row p-3">
+                <div class="col-md-4">
+                    <img src="../ASSETS/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger" />
+                </div>
+                <div class="col-md-4">
+                    <img src="../ASSETS/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger" />
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../ASSETS/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates" />
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <div class="carousel-item">
+            <img src="../ASSETS/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade" />
+        </div>
+        <div class="carousel-item">
+            <img src="../ASSETS/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich" />
+        </div>
+    </div> -->
+    <!-- <img src="../ASSETS/IMG/category/pizza_cat.jpg" class="col-6" alt="photo pizza" />
+            <img src="../ASSETS/IMG/category/pizza_cat.jpg" class="col-6" alt="photo pizza" /> -->
+
+    <!-- CONTROL DU CAROUSEL -->
+
+    <button class="carousel-control-prev" href="#carousel" type="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+    </button>
+    <button class="carousel-control-next" href="#carousel" type="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+    </button>
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <!-- Ajoutez d'autres indicateurs ici -->
+      </ol>
+    <!-- </div>
+    </div> -->
+    <script type="module" src="../../../main.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script> -->
 </body>
+
 </html>

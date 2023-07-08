@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
-import { Carousel } from 'bootstrap';
+// import { Carousel } from 'bootstrap';
 
 import './style.css';
 
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // variable
     // je récuprère les éléments sur lesquelles je vais créer un event
-    let carousel = document.querySelector('#carousel');
+    const carousel = document.querySelector('#carousel');
     let slides = Array.from(document.querySelectorAll('.carousel-item'));
 
     // let carouselInstance = new Carousel(carousel, {
@@ -86,30 +86,32 @@ window.addEventListener('DOMContentLoaded', () => {
     // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
     carousel.addEventListener('slide.bs.carousel', event => {
         // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
+
+        // let activeIndex = carouselInstance.getCurrentSlideIndex();
         // let itemActive = event.relatedTarget;
-        let activeIndex = carouselInstance.getCurrentSlideIndex();
+        let activeIndex = event.to;
         let activeSlide = slides[activeIndex];
 
-        // let activeIndex = event.to;
-        // let activeSlide = slides[activeIndex];
+        // je considère l'élément carousel comme un tableau
 
         // Je supprime la classe 'active' de la première image
         // firstSlide.classList.remove('active');
         slides[0].classList.remove('active');
 
-
         // Je sélectionne la première image active
         // let firstSlide = carousel.querySelector('.carousel-item:first-child');
 
-
         // Je déplace la première img à la fin du carousel
         let firstSlide = slides.shift();
-        slides.push(firstSlide);
+        // slides.push(firstSlide);
+        slides[0].push(firstSlide);
+        // carousel.insertBefore(newSlide, carousel.children[2]);
+
         // carousel.appendChild(firstSlide);
 
         // Je clone la quatrième img et la place à la troisieme position
-        let newSlide = slides[2].cloneNode(true);
-        slides.splice(2, 0, newSlide);
+        // let newSlide = slides[2].cloneNode(true);
+        // slides.splice(2, 0, newSlide);
 
         // Je supprime la classe de zoom de toutes les img
         // Array.from(slides).forEach(function (slide) {

@@ -283,6 +283,15 @@ si l'utilisateur ne veut plus que la vidéo joue */
   animation: move 2s ease-out .7s both;
 }
 
+/* ******** page catégory  ************* */
+/* carousel */
+.zoomed-item {
+  transform: scale(1.1);
+}
+
+.carousel-item {
+  transition: transform 0.3s ease-in-out;
+}
 
 /* ******** page commande  ************* */
 

@@ -85,13 +85,6 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   box-shadow: 1px 5px 5px 3px #42031f;
 }
 
-/* menu a:visited {
-  text-decoration: none;
-} */
-
-/* #commande {
-  background-color: var(--beige) !;
-} */
 .btn-command {
   height: 30px;
   color: var(--bordeau) !important;
@@ -105,6 +98,22 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 .btn-command:active {
   color: white;
   background-color: var(--gris);
+}
+
+.bi-list {
+  font-size: 1.5rem;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
 }
 
 

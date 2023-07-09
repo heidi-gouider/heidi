@@ -10,16 +10,25 @@ import './style.css';
 
 
 // menu responsive //
-let body = document.querySelector("body");
-let icone = document.querySelector(".icone");
+const installButton = document.getElementById('installButton');
+
+installButton.addEventListener('click', () => {
+    installButton.classList.remove('btn-danger');
+    installButton.classList.add('btn-success');
+});
+
+
+
+// let body = document.querySelector("body");
+// let icone = document.querySelector(".icone");
 
 // section recherche //
-let section = document.querySelector("section");
-let video = document.querySelector("video");
+// let section = document.querySelector("section");
+// let video = document.querySelector("video");
 
 // footer //
-let network = document.querySelector(".network");
-let footer = document.querySelector("footer");
+// let network = document.querySelector(".network");
+// let footer = document.querySelector("footer");
 
 // menu langue //
 

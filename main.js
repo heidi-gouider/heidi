@@ -10,7 +10,7 @@ import './style.css';
 
 
 // menu responsive //
-const installButton = document.getElementById('installButton');
+let installButton = document.querySelector('#installButton');
 
 installButton.addEventListener('click', () => {
     installButton.classList.remove('btn-danger');

@@ -76,44 +76,51 @@ installButton.addEventListener('click', () => {
 //  3- l'img active centrale aura un effet zoom
 
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
 
-    // variable
+
+//     let carouselInstance = new Carousel(carousel, {
+//         interval: 3000,
+//         perPage: 1,  // Nombre d'images visibles à la fois
+//         slide: true,  // Activer le défilement
+//         pause: 'hover',  // Pause au survol
+//         wrap: true  // Boucler à la fin du carousel
+//     });
+// });
+    // event
+        // variable
     // je récuprère les éléments sur lesquelles je vais créer un event
     const carousel = document.querySelector('#carousel');
     let slides = Array.from(document.querySelectorAll('.carousel-item'));
 
-    // let carouselInstance = new Carousel(carousel, {
-    //     interval: 3000,
-    //     perPage: 3,  // Nombre d'images visibles à la fois
-    //     slide: true,  // Activer le défilement
-    //     pause: 'hover',  // Pause au survol
-    //     wrap: true  // Boucler à la fin du carousel
-    // });
-    // event
     // je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
     // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
     carousel.addEventListener('slide.bs.carousel', event => {
         // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
 
-        // let activeIndex = carouselInstance.getCurrentSlideIndex();
-        // let itemActive = event.relatedTarget;
-        let activeIndex = event.to;
-        let activeSlide = slides[activeIndex];
+        let activeSlide = event.relatedTarget;
+        let activeIndex = slides.indexOf(activeSlide);
+    
+        // la première diapositive (index 0) de la liste slides aura sa classe "active" supprimée,
+        // puis elle sera remplacée par la deusième(index 1).
+        slides[activeIndex].classList.remove('active');
+        // Je déplace la première img à la fin du carousel
+        slides.push(slides[0]);
+        slides[0].replaceWith(slides[1]);
 
-        // je considère l'élément carousel comme un tableau
-
-        // Je supprime la classe 'active' de la première image
-        // firstSlide.classList.remove('active');
-        slides[0].classList.remove('active');
 
         // Je sélectionne la première image active
         // let firstSlide = carousel.querySelector('.carousel-item:first-child');
 
+        // Je supprime la classe 'active' de la première image
+        // firstSlide.classList.remove('active');
+        // slides[0].classList.remove('active');
+
+
         // Je déplace la première img à la fin du carousel
-        let firstSlide = slides.shift();
+        // let firstSlide = slides.shift();
         // slides.push(firstSlide);
-        slides[0].push(firstSlide);
+        // slides[0].push(firstSlide);
         // carousel.insertBefore(newSlide, carousel.children[2]);
 
         // carousel.appendChild(firstSlide);
@@ -157,7 +164,6 @@ window.addEventListener('DOMContentLoaded', () => {
         //         slide.classList.add('zoomed-item');
         //     }
     });
-});
 // });
 
 // form.addEventListener("submit", (valider));

@@ -10,12 +10,12 @@ import './style.css';
 
 
 // menu responsive //
-let installButton = document.querySelector('#installButton');
+// let installButton = document.querySelector('#installButton');
 
-installButton.addEventListener('click', () => {
-    installButton.classList.remove('btn-danger');
-    installButton.classList.add('btn-success');
-});
+// installButton.addEventListener('click', () => {
+//     installButton.classList.remove('btn-danger');
+//     installButton.classList.add('btn-success');
+// });
 
 
 
@@ -87,83 +87,132 @@ installButton.addEventListener('click', () => {
 //         wrap: true  // Boucler à la fin du carousel
 //     });
 // });
-    // event
-        // variable
-    // je récuprère les éléments sur lesquelles je vais créer un event
-    const carousel = document.querySelector('#carousel');
-    let slides = Array.from(document.querySelectorAll('.carousel-item'));
+// event
+// variable
+// je récuprère les éléments sur lesquelles je vais créer un event
+const carousel = document.querySelector('#carousel');
+let slides = Array.from(document.querySelectorAll('.carousel-item img'));
+// let slides = newArray(document.querySelectorAll('.carousel-item img'));
+// let slides = [];
+// let carouselItems = document.getElementsByClassName('carousel-item img');
 
-    // je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
-    // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
-    carousel.addEventListener('slide.bs.carousel', event => {
-        // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
+console.log(slides[3]);
+// je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
+// La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
+carousel.addEventListener('slide.bs.carousel', event => {
+    // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
+    // let activeSlide = event.relatedTarget;
+    // let activeIndex = slides.indexOf(activeSlide);
+    // activeSlide.classList.add('zoomed-item');
+    // Ajoutez la classe de zoom uniquement à l'image active
+    // slides.forEach((slide, index) => {
+    //     if (index === 1) {
+    //         slide.classList.add('zoomed-item');
+    //     } else {
+    //         slide.classList.remove('zoomed-item');
+    //     }
+    // });
 
-        let activeSlide = event.relatedTarget;
-        let activeIndex = slides.indexOf(activeSlide);
-    
-        // la première diapositive (index 0) de la liste slides aura sa classe "active" supprimée,
-        // puis elle sera remplacée par la deusième(index 1).
-        slides[activeIndex].classList.remove('active');
-        // Je déplace la première img à la fin du carousel
-        slides.push(slides[0]);
-        slides[0].replaceWith(slides[1]);
+        // slide.classList.remove('zoomed-item');
+
+    // Je déplace la première img à la fin du carousel
+    // puis je la remplace avec la deusième
+    // la troisème position une nouvelle item apparaitra
+    // slides = slides.map((slide, index) => {
+    //     let newIndex = (index - 1 + slides.length) % slides.length;
+    //     return slides[newIndex];
+    //   });
+      
+    // slides.forEach((slide, index) => {
+    //     let newIndex = (index - 1 + slides.length) % slides.length;
+    //     slides[0].push();
+    //     slides.splice(newIndex, 0, slide);
+    //     slides.pop();
+    //   });
+//     slides.forEach((slide, index) => {
+//     slides.push(slides[0]);
+//     slides[0].replaceWith(slides[1]);
+//     carousel.insertBefore(newSlide, carousel.children[2]);
+//     let newSlide = slides[3];
+//     slides.splice(2, 0, newSlide);
+// });
+    // let newSlide = slides[3];
+
+// Ajoutez la classe de zoom uniquement à l'image active
+// slides.forEach((slide, index) => {
+//     if (index < 3) {
+//         // slide.classList.remove('active');
+//     slides.push(slides[0]);
+//     slides[0].replaceWith(slides[1]);
+//     slides.splice(0, 1, newSlide);
+
+//     }
+
+});
+
+// });
+// let activeSlide = event.relatedTarget;
+// let activeIndex = slides.indexOf(activeSlide);
+
+// la première diapositive (index 0) de la liste slides aura sa classe "active" supprimée,
+// puis elle sera remplacée par la deusième(index 1).
+// slides[activeIndex].classList.remove('active');
+
+// Je sélectionne la première image active
+// let firstSlide = carousel.querySelector('.carousel-item:first-child');
+
+// Je supprime la classe 'active' de la première image
+// firstSlide.classList.remove('active');
+// slides[0].classList.remove('active');
 
 
-        // Je sélectionne la première image active
-        // let firstSlide = carousel.querySelector('.carousel-item:first-child');
+// Je déplace la première img à la fin du carousel
+// let firstSlide = slides.shift();
+// slides.push(firstSlide);
+// slides[0].push(firstSlide);
+// carousel.insertBefore(newSlide, carousel.children[2]);
 
-        // Je supprime la classe 'active' de la première image
-        // firstSlide.classList.remove('active');
-        // slides[0].classList.remove('active');
+// carousel.appendChild(firstSlide);
 
+// Je clone la quatrième img et la place à la troisieme position
+// let newSlide = slides[2].cloneNode(true);
+// slides.splice(2, 0, newSlide);
 
-        // Je déplace la première img à la fin du carousel
-        // let firstSlide = slides.shift();
-        // slides.push(firstSlide);
-        // slides[0].push(firstSlide);
-        // carousel.insertBefore(newSlide, carousel.children[2]);
+// Je supprime la classe de zoom de toutes les img
+// Array.from(slides).forEach(function (slide) {
+//     slide.classList.remove('zoomed-item');
+// });
 
-        // carousel.appendChild(firstSlide);
+// J'ajoute la classe de zoom à l'img centrale et aux img voisines
+// activeSlide.classList.add('zoomed-item');
 
-        // Je clone la quatrième img et la place à la troisieme position
-        // let newSlide = slides[2].cloneNode(true);
-        // slides.splice(2, 0, newSlide);
+// let newSlide = createNewSlide();
+// newSlide.classList.add('carousel-item');
+// slides.splice(2, 0, newSlide);
+// carousel.insertBefore(newSlide, carousel.children[2]);
 
-        // Je supprime la classe de zoom de toutes les img
-        // Array.from(slides).forEach(function (slide) {
-        //     slide.classList.remove('zoomed-item');
-        // });
-
-        // J'ajoute la classe de zoom à l'img centrale et aux img voisines
-        // activeSlide.classList.add('zoomed-item');
-
-        // let newSlide = createNewSlide();
-        // newSlide.classList.add('carousel-item');
-        // slides.splice(2, 0, newSlide);
-        // carousel.insertBefore(newSlide, carousel.children[2]);
-
-        // carousel.appendChild(slides[0]);
+// carousel.appendChild(slides[0]);
 
 
-        // Array.from(slides).forEach(function (slide) {
-        //     slide.classList.remove('zoomed-item');
-        // mise à jour des classes pour les slide
-        slides.forEach((slide, index) => {
-            if (index < 3) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
-            slide; classList.remove('zoomed-item');
-        });
-        activeSlide.classList.add('zoomed-item');
-        // Ajoutez la classe de zoom uniquement à l'image active
-        // slides.forEach((slide, index) => {
-        //     slide.classList.remove('zoomed-item');
-        //     if (index === activeIndex) {
-        //         slide.classList.add('zoomed-item');
-        //     }
-    });
+// Array.from(slides).forEach(function (slide) {
+//     slide.classList.remove('zoomed-item');
+// mise à jour des classes pour les slide
+// slides.forEach((slide, index) => {
+//     if (index < 3) {
+//         slide.classList.add('active');
+//     } else {
+//         slide.classList.remove('active');
+//     }
+//     slide; classList.remove('zoomed-item');
+// });
+// activeSlide.classList.add('zoomed-item');
+    // Ajoutez la classe de zoom uniquement à l'image active
+    // slides.forEach((slide, index) => {
+    //     slide.classList.remove('zoomed-item');
+    //     if (index === activeIndex) {
+    //         slide.classList.add('zoomed-item');
+    //     }
+// });
 // });
 
 // form.addEventListener("submit", (valider));

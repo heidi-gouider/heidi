@@ -268,7 +268,6 @@ si l'utilisateur ne veut plus que la vidéo joue */
 }
 
 .carousel-item img{
-  /* border: red solid 5px; */
   transition: transform 0.3s ease-in-out;
 }
 

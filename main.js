@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
-// import { Carousel } from 'bootstrap';
+import { Carousel } from 'bootstrap';
 
 import './style.css';
 
@@ -76,33 +76,61 @@ import './style.css';
 //  3- l'img active centrale aura un effet zoom
 
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
-// window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
 
 
-//     let carouselInstance = new Carousel(carousel, {
-//         interval: 3000,
-//         perPage: 1,  // Nombre d'images visibles à la fois
-//         slide: true,  // Activer le défilement
-//         pause: 'hover',  // Pause au survol
-//         wrap: true  // Boucler à la fin du carousel
-//     });
-// });
-// event
-// variable
+    let carouselInstance = new Carousel(carousel, {
+        interval: 3000,
+        perPage: 3,  // Nombre d'images visibles à la fois
+        slide: true,  // Activer le défilement
+        pause: 'hover',  // Pause au survol
+        wrap: true  // Boucler à la fin du carousel
+    });
+});
 // je récuprère les éléments sur lesquelles je vais créer un event
 const carousel = document.querySelector('#carousel');
 let slides = Array.from(document.querySelectorAll('.carousel-item img'));
-// let slides = newArray(document.querySelectorAll('.carousel-item img'));
-// let slides = [];
-// let carouselItems = document.getElementsByClassName('carousel-item img');
+let boutton = document.querySelector('.boutton');
 
-console.log(slides[3]);
+
+// PARCOURIR LES IMG DU CAROUSEL (élément du tableau)//
+
+// for (let i = 0; i < slides.length; i++) {
+//     console.log(slides[i]);
+//   };
+
+// ou
+
+//   slides.forEach((slide) => {
+//     console.log(slide);
+
+//   });
+
+//   ou
+
+// slides.forEach(index => console.log(index));
+
+// console.log(slides[1]);
+
+// EVENEMENT//
+
 // je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
 // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
-carousel.addEventListener('slide.bs.carousel', event => {
+// carousel.addEventListener('slide.bs.carousel', event => {
+    boutton.addEventListener('slide.bs.carousel', event => {
+
     // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
     // let activeSlide = event.relatedTarget;
     // let activeIndex = slides.indexOf(activeSlide);
+
+//   slides.forEach((slide) => {
+    let firstSlide = slides.shift();
+    firstSlide.push;
+
+
+//   });
+
+
     // activeSlide.classList.add('zoomed-item');
     // Ajoutez la classe de zoom uniquement à l'image active
     // slides.forEach((slide, index) => {
@@ -124,7 +152,8 @@ carousel.addEventListener('slide.bs.carousel', event => {
     //   });
       
     // slides.forEach((slide, index) => {
-    //     let newIndex = (index - 1 + slides.length) % slides.length;
+    //     // let newIndex = (index - 1 + slides.length) % slides.length;
+    //     let newIndex = (index - 1 + slides) % slides.length;
     //     slides[0].push();
     //     slides.splice(newIndex, 0, slide);
     //     slides.pop();
@@ -141,16 +170,16 @@ carousel.addEventListener('slide.bs.carousel', event => {
 // Ajoutez la classe de zoom uniquement à l'image active
 // slides.forEach((slide, index) => {
 //     if (index < 3) {
-//         // slide.classList.remove('active');
+//         slide.classList.remove('active');
 //     slides.push(slides[0]);
 //     slides[0].replaceWith(slides[1]);
-//     slides.splice(0, 1, newSlide);
+//     slides.splice(0, 2, newSlide);
 
 //     }
 
-});
-
 // });
+
+});
 // let activeSlide = event.relatedTarget;
 // let activeIndex = slides.indexOf(activeSlide);
 

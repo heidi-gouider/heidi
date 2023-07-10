@@ -134,7 +134,7 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   /* object-fit: cover; */
 }
 
-.video{
+.video {
   position: absolute;
   opacity: 0.9;
   /* z-index: 1; */
@@ -210,11 +210,14 @@ si l'utilisateur ne veut plus que la vidéo joue */
 
 /* ////////// PAGE ACCEUIL GRILLE  //////////// */
 section
-/* #images*/ { 
+
+/* #images*/
+  {
   position: relative;
   /* position: absolute; */
   /* top: 20vh; */
 }
+
 /* .images-container{
   position: absolute;
 } */
@@ -268,7 +271,7 @@ section
   transform: scale(1.1);
 }
 
-.carousel-item img{
+.carousel-item img {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -312,6 +315,30 @@ section
   transform: translate(-150px, 70%);
   /* transform: rotate(45deg); */
 }
+
+/* ////////// PAGE PLATS  //////////// */
+@keyframes move-titre {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 150px;
+  }
+}
+
+.titre-plats {
+  animation: move-titre 2s ease-out both;
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header .btn {
+  position: absolute;
+}
+
 
 /* ////////////// LE FOOTER /////////////// */
 

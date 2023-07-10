@@ -4,8 +4,11 @@ intégrer au READ ME */
 /* Les liens internes et externes seront différenciés
 Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 -> tab : l'élément passe en surbrillance par exemple */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 * {
-  font-family: "Libre Baskerville" !important;
+  font-family: 'Libre Baskerville', serif !important;
   box-shadow: 0 0 2px red;
 }
 
@@ -266,13 +269,37 @@ section
 
 /* ******** page catégory  ************* */
 
-/* carousel */
-.zoomed-item {
+/* carousel.html */
+/* body {
+  background-color: #242629;
+} */
+
+.wrapper {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #242629;
+}
+
+.carousel {
+  white-space: nowrap;
+  /* background-color: #242629; */
+}
+
+/* .carousel img {
+  object-fit: cover;
+  width: calc(100% / 3);
+} */
+
+/* .zoomed-item {
   transform: scale(1.1);
 }
 
 .carousel-item img {
   transition: transform 0.3s ease-in-out;
+} */
+
+.boutton span {
+  border-radius: 50%;
 }
 
 /* ******** page commande  ************* */
@@ -319,16 +346,33 @@ section
 /* ////////// PAGE PLATS  //////////// */
 @keyframes move-titre {
   from {
-    left: 0;
+    margin-left: 0;
+    font-style: italic;
+    font-size: x-small;
+  }
+
+  25% {
+    font-size: 0.5rem;
+  }
+
+  50% {
+    font-size: 1rem;
+  }
+
+  75% {
+    font-size: 1.5rem;
   }
 
   to {
-    left: 150px;
+    margin-left: 70%;
+    font-style: normal;
+    font-size: 2rem;
   }
 }
 
-.titre-plats {
-  animation: move-titre 2s ease-out both;
+#titre-plats {
+  animation: move-titre 1s ease-in-out both;
+
 }
 
 .card-header {

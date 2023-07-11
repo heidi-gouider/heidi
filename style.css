@@ -45,11 +45,12 @@ html {
   --black: #000;
 }
 
-
-/* ////////////// LE HEADER INCLU DANS TOUTES LES PAGES /////////////// */
+/* -------------------------------------------------------------------------------------------------------------- */
+/* LE HEADER INCLU DANS TOUTES LES PAGES  */
 
 /* penser à ajouter une 'box-shadow' au bottom de la .nav et voir pour le bg 
 vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où il y aurait pls nav hors le header*/
+
 #menu {
   height: 15vh;
   background-color: rgba(226, 226, 226, 0.4);
@@ -57,7 +58,6 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   /* opacity: 0.5; */
   /* box-shadow: 0 10px 10px black; */
 }
-
 
 .nav-link {
   font-size: 25px;
@@ -75,7 +75,6 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   transition: 0.6s;
   /* color: var(--fondClair); */
   color: var(--bordeau) !important;
-
 }
 
 .nav-link:active {
@@ -118,43 +117,42 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   border-color: #28a745;
 }
 
+/* ------------------------------------------------------------------------------------------------------------ *
 
-/* /////////// SECTION RECHERCHE AVEC VIDEO EN FOND  ///////////////// */
+/* SECTION RECHERCHE AVEC VIDEO EN FOND  */
 
 .video-container {
   margin-top: 20vh;
   /* height: 20vh; */
-position: relative;
+  position: relative;
 }
-
 
 /* video ::before {
   content: "";
 } */
-
-
 /* background-color: rgba(0, 0, 0, 0.5); */
 
-.video-container video { 
-min-width: 100%;
-height: 100%;
-object-fit: cover;
-opacity: 0.9;
-/* z-index: -1; */
-background-color: var(--grisFonce);
-cursor: pointer;
+.video-container video {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  /* z-index: -1; */
+  background-color: var(--grisFonce);
+  cursor: pointer;
 }
+
 /********* Titre & Barre de recherche **********/
 #titre-accueil {
   padding-top: 2%;
   /* position: absolute; */
   z-index: 2;
-} 
- 
+}
+
 .search-bar {
   position: absolute;
   z-index: 2;
-} 
+}
 
 /* video ::before {
   content: "";
@@ -169,15 +167,12 @@ cursor: pointer;
   z-index: 3;
 } */
 
-
 /* créer un évennement pause et play au clik
 si l'utilisateur ne veut plus que la vidéo joue */
 
 /* .controls {
     display: none;
 } */
-
-
 
 /* .overlay {
   top: 50%;
@@ -192,7 +187,10 @@ si l'utilisateur ne veut plus que la vidéo joue */
   z-index: 2;
 } */
 
-/* ////////// PAGE ACCEUIL GRILLE  //////////// */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/*  PAGE ACCEUIL GRILLE  */
+
 #images img {
   /* height: 200px; */
   transition: transform 2s;
@@ -211,10 +209,11 @@ si l'utilisateur ne veut plus que la vidéo joue */
   /* border-radius: 50%; */
 }
 
+/* ------------------------------------------------------------------------------------------------------------ */
 
-/* ////////// ANIMATION  //////////// */
+/*  ANIMATION */
 
-/* ******** page accueil  ************* */
+/* **** page accueil  **** */
 
 /* @keyframes move {
   from {
@@ -310,7 +309,10 @@ si l'utilisateur ne veut plus que la vidéo joue */
   /* transform: rotate(45deg); */
 }
 
-/* ////////// PAGE PLATS  //////////// */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/*  PAGE PLATS   */
+
 @keyframes move-titre {
   from {
     margin-left: 0;
@@ -350,8 +352,9 @@ si l'utilisateur ne veut plus que la vidéo joue */
   position: absolute;
 }
 
+/* ------------------------------------------------------------------------------------------------------------ */
 
-/* ////////////// LE FOOTER /////////////// */
+/*  LE FOOTER  */
 
 .footer {
   background-color: #f8f9fa;

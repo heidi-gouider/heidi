@@ -20,8 +20,25 @@
         2- déplacer à logo à droite 
         3- ajouter un bouton 'installer l'appli=>text-danger et il passe en vert quand on click -->
 
+    <!-- penser à ajouter le choix de la langue => php gettext
+    vérifier si l'extension est bien activer dans le fichier init de php
+    pour vérifier les locales supporter par l'os commande >local -a !!-->
+    <!-- <div class="input-group mb-3">
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Anglais</a></li>
+    <li><a class="dropdown-item" href="#">Arabe</a></li>
+    <li><a class="dropdown-item" href="#">Espagnol</a></li>
+        <li><a class="dropdown-item" href="#">portuguais</a></li>
+    <li><a class="dropdown-item" href="#">français</a></li>
+    <li><a class="dropdown-item" href="#">Japonais</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div> -->
 
-
+    <!-- <?php require ('FRONT\html_partials\header.html') ?>-->
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid m-auto fixed-top mb-4" id="menu">
@@ -70,21 +87,20 @@
     </nav>
 
     <!-- ORIGIN CODE -->
-    <div class="container-fluid video-container" >
+    <div class="container-fluid video-container">
         <div class="row align-items-center justify-content-center">
             <div class="text-center text-white" id="titre-accueil">
                 <h1>Le District</h1>
             </div>
             <form class="row-cols-2 ">
-                <div class= "input-group search-bar">
+                <div class="input-group search-bar">
                     <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
                     <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
                 </div>
             </form>
-            <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay"
-            muted>
-            <source src="/ASSETS/VIDEO/video2.mp4">
-        </video>    
+            <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay" muted>
+                <source src="/ASSETS/VIDEO/video2.mp4">
+            </video>
         </div>
     </div>
     <h2>Bienvenue au restaurant</h2>
@@ -101,6 +117,9 @@
             <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
         </div>
     </div>
+
+    <!-- <?php html_partial ('footer') ?>-->
+
 
     <footer class="footer fixed-bottom">
         <h3>Pour nous suivre !</h3>

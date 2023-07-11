@@ -57,79 +57,50 @@
                         <a class="nav-link nav-link-custom" href="FRONT/STATIQUE/HTML/connexion.html">Mon compte</a>
                     </li>
                     <!-- <li class="nav-item" id="commande"> -->
-                    <li class="btn btn-command d-flex rounded-0 mt-3 align-items-center" id="commande">
+                    <li class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
                         <!-- <a class="btn btn-order rounded-0"  href="FRONT/STATIQUE/HTML/commande.html"> -->
-                        <a class="nav-link" href="FRONT/STATIQUE/HTML/commande.html">
-                            Ma commande <i class="bi bi-basket"></i></a>
+                        <a class="nav-link" data-bs-toggle="collapse" href="FRONT/STATIQUE/HTML/commande.html"
+                            role="button">
+                            <span class="d-none d-md-none d-md-inline">Ma commande </span>
+                            <i class="bi bi-basket btn-icon"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- TEST CODE -->
-
-    <!-- <section class="banner "> -->
-    <!-- <div class="container-fluid video-container mt-lg-5"> -->
-    <!-- <div class="container-fluid video-container">
-        <div class="row justify-content-center align-items-center">
-            <div class="row text-white">
-                <h1 id="titre-accueil">Le District</h1>
-            </div>
-            <div class="row">
-                <div class="col-4  col-lg-4 mt-4">
-                    <form class="input-group" id="search-bar">
-                        <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-                        <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
-                    </form>
-                </div>
-            </div>
-
-            <video controls="controls" class="controls" id="media" loop="loop" autoplay="autoplay" muted>
-                <source src="/ASSETS/VIDEO/video2.mp4">
-            </video>
-        </div>
-    </div> -->
-
     <!-- ORIGIN CODE -->
-    <div class="container-fluid video-container">
-        <div class="row justify-content-center align-items-center">
-            <div class="row text-center text-white">
+    <div class="container-fluid video-container" >
+        <div class="row align-items-center justify-content-center">
+            <div class="text-center text-white" id="titre-accueil">
                 <h1>Le District</h1>
             </div>
-            <form class="mt-4 col-4">
-                <div class="input-group">
+            <form class="row-cols-2 ">
+                <div class= "input-group search-bar">
                     <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
                     <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
                 </div>
             </form>
-            <div class="video container-fluid">
-                <video controls="controls" class="controls w-100 video-fluid" id="media" loop="loop" autoplay="autoplay"
-                    muted>
-                    <source src="/ASSETS/VIDEO/video2.mp4">
-                </video>
-            </div>
+            <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay"
+            muted>
+            <source src="/ASSETS/VIDEO/video2.mp4">
+        </video>    
         </div>
     </div>
-    <section>
-        <h2>Bienvenue au restaurant</h2>
+    <h2>Bienvenue au restaurant</h2>
 
-        <div class="container images-container d-grid mt-lg-4" id="images">
-            <div class="row ">
-                <div class="row gap-3 justify-content-sm-center m-3">
-                    <img class="col p-2 img-thumbnail" src="/ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food">
-                    <img class="col p-2" src="/ASSETS/IMG/category/burger_cat.jpg" alt="burger">
-                    <img class="col p-2" src="/ASSETS/IMG/category/salade_cat.jpg" alt="salad">
-                </div>
-                <div class="row gap-3 justify-content-sm-center d-md-flex m-3">
-                    <img class="col p-2" src="/ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
-                    <img class="col p-2 " src="/ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
-                    <img class="col p-2" src="/ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
-                </div>
-            </div>
+    <div class="container d-grid mt-lg-4" id="images">
+        <div class="row gap-5 justify-content-sm-center m-3">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/asian_food_cat.jpg" alt="asian food">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/burger_cat.jpg" alt="burger">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/salade_cat.jpg" alt="salad">
         </div>
-    </section>
-    <!-- penser à ajouter adresse et tel dans la nav -->
+        <div class="row gap-5 justify-content-sm-center d-md-flex m-3">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/pasta_cat.jpg" alt="pates">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/sandwich_cat.jpg" alt="sandwich">
+            <img class="col-3 p-2 img-thumbnail" src="/ASSETS/IMG/category/veggie_cat.jpg" alt="végé">
+        </div>
+    </div>
 
     <footer class="footer fixed-bottom">
         <h3>Pour nous suivre !</h3>
@@ -148,21 +119,6 @@
         </div>
         <h4>Nous contacter</h4>
     </footer>
-    <!-- <footer class="container-fluid mx-auto bg-body-tertiary">
-        <div class="row d-flex">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link w-100" href="#"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-geo-alt"></i></a>
-                </li>
-            </ul>
-        </div>
-    </footer> -->
     <script type="module" src="main.js"></script>
 
 </body>

@@ -76,21 +76,21 @@ import './style.css';
 //  3- l'img active centrale aura un effet zoom
 
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
 
 
-    let carouselInstance = new Carousel(carousel, {
-        interval: 3000,
-        perPage: 3,  // Nombre d'images visibles à la fois
-        slide: true,  // Activer le défilement
-        pause: 'hover',  // Pause au survol
-        wrap: true  // Boucler à la fin du carousel
-    });
-});
+//     let carouselInstance = new Carousel(carousel, {
+//         interval: 3000,
+//         perPage: 3,  // Nombre d'images visibles à la fois
+//         slide: true,  // Activer le défilement
+//         pause: 'hover',  // Pause au survol
+//         wrap: true  // Boucler à la fin du carousel
+//     });
+// });
 // je récuprère les éléments sur lesquelles je vais créer un event
-const carousel = document.querySelector('#carousel');
-let slides = Array.from(document.querySelectorAll('.carousel-item img'));
-let boutton = document.querySelector('.boutton');
+// const carousel = document.querySelector('#carousel');
+// let slides = Array.from(document.querySelectorAll('.carousel-item img'));
+// let boutton = document.querySelector('.boutton');
 
 
 // PARCOURIR LES IMG DU CAROUSEL (élément du tableau)//
@@ -117,15 +117,15 @@ let boutton = document.querySelector('.boutton');
 // je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
 // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
 // carousel.addEventListener('slide.bs.carousel', event => {
-    boutton.addEventListener('slide.bs.carousel', event => {
+    // boutton.addEventListener('slide.bs.carousel', event => {
 
     // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
     // let activeSlide = event.relatedTarget;
     // let activeIndex = slides.indexOf(activeSlide);
 
 //   slides.forEach((slide) => {
-    let firstSlide = slides.shift();
-    firstSlide.push;
+    // let firstSlide = slides.shift();
+    // firstSlide.push;
 
 
 //   });
@@ -179,7 +179,6 @@ let boutton = document.querySelector('.boutton');
 
 // });
 
-});
 // let activeSlide = event.relatedTarget;
 // let activeIndex = slides.indexOf(activeSlide);
 

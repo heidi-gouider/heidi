@@ -6,7 +6,6 @@ import { Carousel } from 'bootstrap';
 
 import './style.css';
 
-//////////// VARIABLES //////////
 
 
 // menu responsive //
@@ -16,7 +15,6 @@ import './style.css';
 //     installButton.classList.remove('btn-danger');
 //     installButton.classList.add('btn-success');
 // });
-
 
 
 // let body = document.querySelector("body");
@@ -52,8 +50,10 @@ import './style.css';
 
 // section.style.backgroundImage.classList.toggle("change");
 
-//////// EVENNEMENT /////////
 
+// ------------------------------------------------------------------------------------------
+
+//********* PAGE PLATS ***********//
 
 // pour la vidéo, voir l'évennement pause dans la doc
 // vidéo cursor pointer
@@ -61,13 +61,20 @@ import './style.css';
 // click pour refaire jouer la boucle
 
 //////// MODAL COMMANDE PAGE PLATS /////////
-
-// const myModal = document.getElementById('myModal')
+// const myModal = document.querySelector('#Modal')
 // const myInput = document.getElementById('myInput')
 
-// myModal.addEventListener('shown.bs.modal', () => {
-//     myInput.focus()
-// })
+// let forms = document.forms;
+// for (var i = 0; i < forms.length; i++) {
+//   var form = forms[i];
+//   if (form.method === 'post' || form.method === 'POST') {
+//     myModal.addEventListener('shown.bs.modal', () => {
+//         myInput.focus()
+//     })
+//       }
+// };
+
+// ------------------------------------------------------------------------------------------
 
 //********  CAROUSEL ***********//
 
@@ -248,3 +255,61 @@ import './style.css';
 // $(function () {
 //     $('#carousel').carousel();
 // });
+// ------------------------------------------------------------------------------------------
+
+//********* PAGE contact ***********//
+
+// la fonction "valider (e)" est appelée quand la soumission du formulaire est déclenchée
+// j'utilise la méthode "checkValidity()" pour vérifier la validité du formulaire
+// et la méthode "preventDefault()" pour empêcher l'envoi du formulaire si la validatin échoue
+// j'ajoute la class bootstrap "was-validated" pour activer les styles de validation propre à la bibliothèque bs
+// J'utilise la fonction "modal()" de jQuery pour afficher une modal
+
+//  variables je récupère mon formulaire //
+let form = document.querySelector(".validation");
+
+// j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
+form.addEventListener("submit", (valider));
+
+// let testNom =  /^[a-zA-Z-]{2,10}$/.test(form.nom.value);
+
+
+function valider(e) {
+    let testNom =  /^[a-zA-Z-]{2,10}$/.test(form.nom.value);
+
+    if (form.checkValidity() === false){
+        e.preventDefault();
+    }
+    if (!testNom){
+        alert("erreur!")
+    }
+    form.classList.add("was-validated");
+}
+// function valider() {
+//     if (form.checkValidity() == false) {
+//         e.preventDefault();
+//     } else {
+//         $("#modal").modal("show");
+//     }
+//     form.classList.add("was-validated");
+// };
+
+//////// MODAL  /////////
+
+// $('#valid').on('click',valider);
+// $('.validation').on('click',valider);
+
+// const myModal = document.querySelector('#Modal')
+// const myInput = document.getElementById('myInput')
+
+// let forms = document.forms;
+// for (var i = 0; i < forms.length; i++) {
+//   let form = forms[i];
+//   if (form.method === 'post' || form.method === 'POST') {
+//     myModal.addEventListener('shown.bs.modal', () => {
+//         myInput.focus()
+//     })
+//       }
+// };
+
+//il faut faire en sorte que l'event se declanche au click button et pas sur le onclick de la zone "votre message"

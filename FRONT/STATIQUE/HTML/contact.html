@@ -20,7 +20,7 @@
 
 
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
-  <h1 class="row col-12 justify-content-end">Nous contacter</h1>
+  <h1 class="row col-12">Nous contacter</h1>
 
 
   <div class="container d-flex justify-content-center m-5">
@@ -31,25 +31,27 @@
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" id="nom" name="nom" autocomplete="off" required>
+        <input type="text" class="form-control form-control-hover" placeholder="Nom" id="nom" name="nom" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
       </div>
 
       <div class="col-md-6 mb-4">
-        <label for="prénom" class="form-label"></label>
+        <label for="prénom" class="form-label">Prénom
+          <span class="required text-danger">*</span>
+        </label>
         <input type="text" class="form-control form-control-hover" placeholder="Prénom" id="prénom" name="prénom"
-          autocomplete="off">
-        <!-- <div class="valid-feedback"></div> -->
-      </div>
+          autocomplete="off" required>
+          <span class="invalid-feedback">Veuillez renseigner votre Prénom</span>
+        </div>
+
       <div class="col-md-6 mb-4">
         <label for="email" class="form-label"></label>
         <div class="input-group has-validation">
           <span class="input-group-text">@</span>
           <input type="text" class="form-control form-control-hover" placeholder="Email" id="email" name="email"
-            autocomplete="off">
-          <!-- <div id="validationServerUsernameFeedback">
-          </div> -->
-        </div>
+            autocomplete="off" required>
+            <span class="invalid-feedback">Veuillez renseigner un email valide</span>
+          </div> 
       </div>
 
       <div class="col-md-6 mb-4">
@@ -65,10 +67,11 @@
         <label for="message" class="form-label">Votre message
           <!-- <span class="required text-danger">*</span> -->
         </label>
-        <textarea class="form-control form-control-hover" rows="10" id="message" name="message"
-          autocomplete="off"></textarea>
-        <!-- <span class="invalid-feedback">Veuillez entrez votre demande</span> -->
-      </div>
+        <textarea class="form-control form-control-hover" placeholder="Mon message" rows="10" id="message" name="message"
+          autocomplete="off" required></textarea>
+          <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
+        </div>
+        
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>
       <div class="col-12 d-flex justify-content-end">
         <button class="btn btn-primary" data-bs-toggle="modal" type="submit">Envoyer</button>

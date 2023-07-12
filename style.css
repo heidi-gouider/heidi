@@ -234,7 +234,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
 } */
 /* ------------------------------------------------------------------------------------------------------------ */
 
-/* ******** page catégory  ************* */
+/* ******** page catégory / carousel ************* */
 section{
   min-height: 100vh;
   background-image:url(/ASSETS/IMG/fond/bg3.jpeg);
@@ -286,7 +286,6 @@ section{
 @keyframes move-titre {
   from {
     margin-left: 0;
-    font-style: italic;
     font-size: x-small;
   }
 
@@ -304,13 +303,15 @@ section{
 
   to {
     margin-left: 70%;
-    font-style: normal;
+    /* font-style: normal; */
     font-size: 2rem;
   }
 }
 
  h1{
   animation: move-titre 1s ease-in-out both;
+  /* font-style: italic !important; */
+
 
 }
 

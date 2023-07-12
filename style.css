@@ -9,7 +9,7 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 * {
   font-family: 'Libre Baskerville', serif !important;
-  box-shadow: 0 0 2px red;
+  /* box-shadow: 0 0 2px red; */
 }
 
 
@@ -232,29 +232,41 @@ si l'utilisateur ne veut plus que la vidéo joue */
 #search-bar {
   animation: move 2s ease-out .7s both;
 } */
+/* ------------------------------------------------------------------------------------------------------------ */
 
 /* ******** page catégory  ************* */
+section{
+  min-height: 100vh;
+  background-image:url(/ASSETS/IMG/fond/bg3.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 1;
+} 
 
-/* carousel.html */
-/* body {
-  background-color: #242629;
+  /* background-attachment: scroll; */
+/* .category ::before {
+  content: "";
 } */
 
+/* .category::after{
+  background-color: #000;
+} */
 .wrapper {
-  width: 100%;
   min-height: 60vh;
-  background-color: #242629;
+  background-color: rgba(36,38,41,0.6);
+  z-index: 2;
 }
 
-.carousel {
+.wrapper .carousel {
   white-space: nowrap;
   /* background-color: #242629; */
 }
 
-/* .carousel img {
+.carousel img {
   object-fit: cover;
   width: calc(100% / 3);
-} */
+}
 
 /* .zoomed-item {
   transform: scale(1.1);
@@ -266,6 +278,48 @@ si l'utilisateur ne veut plus que la vidéo joue */
 
 .boutton span {
   border-radius: 50%;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/*  PAGE PLATS   */
+
+@keyframes move-titre {
+  from {
+    margin-left: 0;
+    font-style: italic;
+    font-size: x-small;
+  }
+
+  25% {
+    font-size: 0.5rem;
+  }
+
+  50% {
+    font-size: 1rem;
+  }
+
+  75% {
+    font-size: 1.5rem;
+  }
+
+  to {
+    margin-left: 70%;
+    font-style: normal;
+    font-size: 2rem;
+  }
+}
+
+ h1{
+  animation: move-titre 1s ease-in-out both;
+
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header .btn {
+  position: absolute;
 }
 
 /* ******** page commande  ************* */
@@ -311,47 +365,12 @@ si l'utilisateur ne veut plus que la vidéo joue */
 
 /* ------------------------------------------------------------------------------------------------------------ */
 
-/*  PAGE PLATS   */
+/*  PAGE CATEGORY   */
 
-@keyframes move-titre {
-  from {
-    margin-left: 0;
-    font-style: italic;
-    font-size: x-small;
-  }
-
-  25% {
-    font-size: 0.5rem;
-  }
-
-  50% {
-    font-size: 1rem;
-  }
-
-  75% {
-    font-size: 1.5rem;
-  }
-
-  to {
-    margin-left: 70%;
-    font-style: normal;
-    font-size: 2rem;
-  }
+.commande:hover{
+  /* font-style: var(--black)!important; */
+  background-color: #28a745 !important;
 }
-
-#titre-plats {
-  animation: move-titre 1s ease-in-out both;
-
-}
-
-.card-header {
-  position: relative;
-}
-
-.card-header .btn {
-  position: absolute;
-}
-
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /*  LE FOOTER  */

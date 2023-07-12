@@ -31,8 +31,9 @@
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Nom" id="nom" name="nom" autocomplete="off" required>
-        <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
+        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" autocomplete="off" required>
+        <span class="invalid-feedback">Veuillez renseigner votre Nom</span><br>
+        <span id="nom-invalid"></span>
       </div>
 
       <div class="col-md-6 mb-4">
@@ -82,7 +83,7 @@
 
     <!-- /// LA MODAL include la modal avec php /// -->
   <!-- data-bs-backdrop="static" -->
-  <div class="modal fade modal-sm" id="modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="message envoyé"
+  <!-- <div class="modal fade modal-sm" id="modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="message envoyé"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -95,10 +96,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <!-- <button type="button" class="btn btn-primary">Sauvegarder</button> -->
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <script type="module" src="../../../main.js"></script>
 </body>

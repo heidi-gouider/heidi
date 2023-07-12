@@ -267,23 +267,28 @@ import './style.css';
 
 //  variables je récupère mon formulaire //
 let form = document.querySelector(".validation");
+let nom = document.getElementsByName("nom");
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
-form.addEventListener("submit", (valider));
+form.addEventListener('submit', (valider));
 
 // let testNom =  /^[a-zA-Z-]{2,10}$/.test(form.nom.value);
-
+// let validNom= /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+let validNom= /^[a-zA-Z-]{2,10}$/;
+let invalidNom= document.querySelector('#nom-invalid');
 
 function valider(e) {
-    let testNom =  /^[a-zA-Z-]{2,10}$/.test(form.nom.value);
+    // let testNom =  /^[a-zA-Z-]{2,10}$/.test(form.nom.value);
 
-    if (form.checkValidity() === false){
+    if (form.checkValidity() == false){
         e.preventDefault();
     }
-    if (!testNom){
-        alert("erreur!")
+    
+    if (validNom.test(nom).trim()==false){
+        invalidNom.inertHtml="pas valide";
     }
     form.classList.add("was-validated");
+
 }
 // function valider() {
 //     if (form.checkValidity() == false) {

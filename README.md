@@ -2,9 +2,9 @@
 
 ## Description du projet :
 
--objectif
--fonctionnalités principales
--ce qu'il apporte.
+1. objectif
+1. fonctionnalités principales
+1. ce qu'il apporte.
 
 ### Installation :
 
@@ -31,7 +31,7 @@ ainsi que le processus de validation des contributions).
 
 (Licence : Indiquer clairement la licence sous laquelle le projet est publié.
 Cela aide les utilisateurs et les développeurs à comprendre les droits et les restrictions liés au code.)
-==============================================================
+
 Contact : Fournir mes coordonnées de contact pour que les utilisateurs et les contributeurs puissent me joindre en cas de questions, de commentaires ou de problèmes liés au projet.
-=============================================================
+
 Certaines images proviennent du site [Pixabay.com] https://pixabay.com/. Bien lire les conditions d'utilisations de ces images.

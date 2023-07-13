@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
-import { Carousel } from 'bootstrap';
+// import { Carousel } from 'bootstrap';
 
 import './style.css';
 
@@ -82,6 +82,26 @@ import './style.css';
 //  2- lors du slide, la 1ere img fait place à une 4eme qui prend la 3eme position
 //  3- l'img active centrale aura un effet zoom
 
+let carousel = document.querySelector(".carousel");
+// bouttons = document.querySelectorAll("button i");
+
+// let isSlideStart = false;
+// const slideStart = () => {
+//     isSlideStart = true;
+// };
+
+// let sliding = (e) => {
+//     if (!isSlideStart) return;
+//     e.preventDefault();
+//     carousel.scrollLeft = e.pageX;
+// };
+// let slideStop = () => {
+//     slideStart = false;
+// };
+
+// carousel.addEventListener("mousedown", slideStart);
+// carousel.addEventListener("mousemove", sliding);
+// carousel.addEventListener("mouseup", slideStop);
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
 // window.addEventListener('DOMContentLoaded', () => {
 
@@ -124,47 +144,47 @@ import './style.css';
 // je vais utiliser des evenement avec des propriétés de la classe carousel de bootstrap
 // La fonction de rappel sera exécutée à chaque fois que l'événement slide.bs.carousel est déclenché sur l'élément myCarousel.
 // carousel.addEventListener('slide.bs.carousel', event => {
-    // boutton.addEventListener('slide.bs.carousel', event => {
+// boutton.addEventListener('slide.bs.carousel', event => {
 
-    // Code exécuté lorsque l'événement slide.bs.carousel est déclenché
-    // let activeSlide = event.relatedTarget;
-    // let activeIndex = slides.indexOf(activeSlide);
+// Code exécuté lorsque l'événement slide.bs.carousel est déclenché
+// let activeSlide = event.relatedTarget;
+// let activeIndex = slides.indexOf(activeSlide);
 
 //   slides.forEach((slide) => {
-    // let firstSlide = slides.shift();
-    // firstSlide.push;
+// let firstSlide = slides.shift();
+// firstSlide.push;
 
 
 //   });
 
 
-    // activeSlide.classList.add('zoomed-item');
-    // Ajoutez la classe de zoom uniquement à l'image active
-    // slides.forEach((slide, index) => {
-    //     if (index === 1) {
-    //         slide.classList.add('zoomed-item');
-    //     } else {
-    //         slide.classList.remove('zoomed-item');
-    //     }
-    // });
+// activeSlide.classList.add('zoomed-item');
+// Ajoutez la classe de zoom uniquement à l'image active
+// slides.forEach((slide, index) => {
+//     if (index === 1) {
+//         slide.classList.add('zoomed-item');
+//     } else {
+//         slide.classList.remove('zoomed-item');
+//     }
+// });
 
-        // slide.classList.remove('zoomed-item');
+// slide.classList.remove('zoomed-item');
 
-    // Je déplace la première img à la fin du carousel
-    // puis je la remplace avec la deusième
-    // la troisème position une nouvelle item apparaitra
-    // slides = slides.map((slide, index) => {
-    //     let newIndex = (index - 1 + slides.length) % slides.length;
-    //     return slides[newIndex];
-    //   });
-      
-    // slides.forEach((slide, index) => {
-    //     // let newIndex = (index - 1 + slides.length) % slides.length;
-    //     let newIndex = (index - 1 + slides) % slides.length;
-    //     slides[0].push();
-    //     slides.splice(newIndex, 0, slide);
-    //     slides.pop();
-    //   });
+// Je déplace la première img à la fin du carousel
+// puis je la remplace avec la deusième
+// la troisème position une nouvelle item apparaitra
+// slides = slides.map((slide, index) => {
+//     let newIndex = (index - 1 + slides.length) % slides.length;
+//     return slides[newIndex];
+//   });
+
+// slides.forEach((slide, index) => {
+//     // let newIndex = (index - 1 + slides.length) % slides.length;
+//     let newIndex = (index - 1 + slides) % slides.length;
+//     slides[0].push();
+//     slides.splice(newIndex, 0, slide);
+//     slides.pop();
+//   });
 //     slides.forEach((slide, index) => {
 //     slides.push(slides[0]);
 //     slides[0].replaceWith(slides[1]);
@@ -172,7 +192,7 @@ import './style.css';
 //     let newSlide = slides[3];
 //     slides.splice(2, 0, newSlide);
 // });
-    // let newSlide = slides[3];
+// let newSlide = slides[3];
 
 // Ajoutez la classe de zoom uniquement à l'image active
 // slides.forEach((slide, index) => {
@@ -241,12 +261,12 @@ import './style.css';
 //     slide; classList.remove('zoomed-item');
 // });
 // activeSlide.classList.add('zoomed-item');
-    // Ajoutez la classe de zoom uniquement à l'image active
-    // slides.forEach((slide, index) => {
-    //     slide.classList.remove('zoomed-item');
-    //     if (index === activeIndex) {
-    //         slide.classList.add('zoomed-item');
-    //     }
+// Ajoutez la classe de zoom uniquement à l'image active
+// slides.forEach((slide, index) => {
+//     slide.classList.remove('zoomed-item');
+//     if (index === activeIndex) {
+//         slide.classList.add('zoomed-item');
+//     }
 // });
 // });
 
@@ -256,6 +276,7 @@ import './style.css';
 //     $('#carousel').carousel();
 // });
 // ------------------------------------------------------------------------------------------
+// FORMULAIRE
 
 //********* PAGE contact ***********//
 
@@ -267,28 +288,37 @@ import './style.css';
 
 //  variables je récupère mon formulaire //
 let form = document.querySelector(".validation");
-let nom = document.querySelector("#nom");
-let validNom= /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
-// let invalidNom= document.querySelector('#nom-invalid');
+let validForm = document.querySelector("#envoyer");
+let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+let invalidName= document.querySelectorAll('.invalidName');
+// let invalidName= document.querySelector('#nom placeholder');
 
-// j'ajoute un écouteur sur le formulaire pour l'évennement "submit"
-form.addEventListener('submit', (valider));
+// j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
+form.addEventListener('submit', valider);
+// validForm.addEventListener('click', valider);
 
 
-function valider() {
-
-    if (form.checkValidity() == false){
-        valider.preventDefault();
+function valider(e) {
+// si champ vide
+    if (form.checkValidity() == false) {
+        e.preventDefault();
+        console.log('formulaire invalide');
+    }
+    if (validName.test(form.nom.value) == false || validName.test(form.prenom.value) == false) {
+        // e.preventDefault();
+        // setCustomValidity("erreur!");
+        alert("erreur : Format invalide !");
+        // invalidName.innerHTML ="pas valide";
     }
     form.classList.add("was-validated");
 
-    if (validNom.test(nom.value)==false){
-        // invalidNom.inertHtml="pas valide";
-        alert("erreur");
-        valider.preventDefault();
-    }
-
 };
+
+//********* PAGE commande ***********//
+
+// let validFormAnim= document.querySelector(".btn-joke");
+
+// validFormAnim.addEventListener('click', valider);
 
 // function valider() {
 //     if (form.checkValidity() == false) {

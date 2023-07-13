@@ -24,25 +24,24 @@
 
 
   <div class="container d-flex justify-content-center m-5">
-
     <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
-
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
         <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom"  id="nom" utocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom</span><br>
-        <span id="nom-invalid"></span>
+        <span class="text-danger" invalidName></span>
       </div>
 
       <div class="col-md-6 mb-4">
-        <label for="prénom" class="form-label">Prénom
+        <label for="prenom" class="form-label">Prénom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Prénom" id="prénom" name="prénom"
+        <input type="text" class="form-control form-control-hover" placeholder="Prénom" id="prenom" name="prenom"
           autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner votre Prénom</span>
+                <span class="text-danger" invalidName></span>
         </div>
 
       <div class="col-md-6 mb-4">
@@ -74,8 +73,9 @@
         </div>
         
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>
+
       <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-primary" data-bs-toggle="modal" type="submit">Envoyer</button>
+        <button class="btn btn-primary" id="envoyer" type="submit">Envoyer</button>
         <!--  data-bs-toggle="modal" -->
       </div>
     </form>

@@ -10,7 +10,6 @@
 
 <body>
   <!-- include header.php -->
-  <h1>commande</h1>
   <a href="../../../index.html">Accueil</a>
   <a href="category.html">Catégories</a>
   <a href="plats.html">Plats</a>
@@ -22,7 +21,7 @@
   <h1 class="row col-12 fst-italic">Ma commande</h1>
 
   <!-- /// LA MODAL include la modal avec php /// -->
-  <div class="modal fade modal-sm" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <!-- <div class="modal fade modal-sm" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="message envoyé" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -35,15 +34,33 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <!-- <button type="button" class="btn btn-primary">Sauvegarder</button> -->
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- /// LES PLATS COMMANDÉS EN SCROLL HIDDEN/// -->
-  <div class="container m-5 overflow-y-scroll">
+  <div class="container m-5 overflow-hidden overflow-y-scroll" style="height: 20vh;cursor: pointer;">
+    <!-- <div class="row"> -->
+    <!-- <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
+    class="scrollspy-example" tabindex="0"> -->
+    <div class="row  m-3 justify-content-around">
+      <div class="card p-3 w-50 h-50 flex-row justify-content-between ">
+        <img class="col-4" src="/ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="image1" />
+        <div class="col-7">
+          <div class="card-title row justify-content-around">
+            <h5 class="col-6"> burger-du-chef</h5>
+            <i class="bi bi-basket col-1"></i>
+          </div>
+          <div class="card-body row justify-content-around">
+            <span class="col-4">quantité</span>
+            <span class="content col-2 border">2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-50 flex-row justify-content-between ">
         <img class="col-4" src="/ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="image1" />
@@ -56,45 +73,30 @@
             <span class="col-4">quantité</span>
             <span class="content col-2 border">2</span>
           </div>
-
-          <!-- ajouter un boutton pour modifier la commande -->
-
-          <!-- <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal"
-            data-bs-target="#modal">Ajouter au panier
-            <i class="bi bi-basket"></i>
-          </button> -->
         </div>
-
-        <!-- ajout de plusieurs plats à la suite => voir avec une méthode ou propriété bs pour cacher et scrowlé -->
-        <!-- <div class="row  m-3 justify-content-around">
-          <div class="card p-3 w-50 flex-row justify-content-between ">
-            <img class="col-4" src="../ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="image1" />
-            <div class="col-7">
-              <div class="card-title row justify-content-around">
-                <h5 class="col-6"> burger-du-chef</h5>
-                <i class="bi bi-basket col-1"></i>
-              </div>
-              <div class="card-body row justify-content-around">
-                <span class="col-4">quantité</span>
-                <span class="content col-2 border">2</span>
-              </div>
-            </div>
-          </div> -->
       </div>
     </div>
   </div>
-  </div>
+
+  <!-- ajouter un boutton pour modifier la commande -->
+
+  <!-- <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal"
+            data-bs-target="#modal">Ajouter au panier
+            <i class="bi bi-basket"></i>
+          </button> -->
+
+  <!-- ajout de plusieurs plats à la suite => voir avec une méthode ou propriété bs pour cacher et scrowlé -->
 
 
 
   <div class="container d-flex justify-content-center">
-    <form action="" method="post" class="validation row col-8 m-5 " novalidate>
+    <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-12">
-        <label for="fullName" class="form-label">
+        <label for="nom" class="form-label">
           Nom et Prénom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control" id="fullName" value="" required />
+        <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom" utocomplete="off" required />
         <span class="invalid-feedback">Veuillez renseigner votre Nom et votre prénom</span>
       </div>
 
@@ -105,7 +107,7 @@
         </label>
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
-          <input type="text" class="form-control" id="email" required />
+          <input type="text" class="form-control" id="email" name="email" utocomplete="off" required />
           <span class="invalid-feedback">Veuillez renseigner votre Email</span>
         </div>
       </div>
@@ -115,7 +117,7 @@
           Téléphone
           <span class="required text-danger">*</span>
         </label>
-        <input type="number" class="form-control" id="tel" value="" required />
+        <input type="number" class="form-control" id="tel" name="tel" utocomplete="off" required />
         <span class="invalid-feedback">Veuillez renseigner un téléphone</span>
       </div>
 
@@ -124,7 +126,7 @@
           Votre adresse
           <span class="required text-danger">*</span>
         </label>
-        <textarea class="form-control" id="adresse" rows="3" required></textarea>
+        <textarea class="form-control" id="adresse" rows="3" utocomplete="off" required></textarea>
         <span class="invalid-feedback">Veuillez renseigner votre adresse</span>
       </div>
 
@@ -137,12 +139,11 @@
       <!-- 3/ réaparition du btn classique => JS -->
 
       <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-primary btn-joke" type="submit">Envoyer</button>
+        <button class="btn btn-primary btn-joke" id="envoyer" type="submit">Envoyer</button>
       </div>
-
+    </form>
   </div>
-  </form>
-  </div>
+  <!-- </form> -->
   <script type="module" src="../../../main.js"></script>
 </body>
 

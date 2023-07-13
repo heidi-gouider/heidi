@@ -9,7 +9,7 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 * {
   font-family: 'Libre Baskerville', serif !important;
-  box-shadow: 0 0 2px red;
+  /* box-shadow: 0 0 2px red; */
 }
 
 body {
@@ -240,20 +240,26 @@ section{
 /* .category::after{
   background-color: #000;
 } */
-.wrapper {
+.main {
   min-height: 60vh;
   background-color: rgba(36,38,41,0.6);
   z-index: 2;
 }
 
-.wrapper .carousel {
+.main .carousel {
+  cursor: pointer;
   white-space: nowrap;
+  overflow: hidden;
   /* background-color: #242629; */
 }
 
 .carousel img {
   object-fit: cover;
-  width: calc(100% / 3);
+  width: calc(100% / 3)!important;
+}
+
+.carousel img:first-child{
+  margin-left: 0px !important;
 }
 
 /* .zoomed-item {
@@ -319,7 +325,7 @@ section{
 /* ******** page commande  ************* */
 
 /* :animation sur le btn 'submit' */
-@keyframes joke1 {
+/* @keyframes joke1 {
   from {
     transform: translateY(0);
   }
@@ -327,7 +333,7 @@ section{
   to {
     transform: translateY(-150px);
   }
-}
+} */
 
 /* @keyframes joke1 {
   from {
@@ -351,11 +357,12 @@ section{
 /* nom/durée/fonction-d'accélération/top-départ/ nb-répet-anim/ itération(normale ou inverse)/ animation-fill-mode (avec delay)? je test pour voir */
 /* } */
 
-.btn-joke:hover {
+/* .btn-joke:hover {
   animation: joke1 0.5s linear 0.5s 3 slidein;
   transform: translate(-150px, 70%);
-  /* transform: rotate(45deg); */
-}
+  transform: rotate(45deg);
+  animation-timing-function: ;
+} */
 
 /* ------------------------------------------------------------------------------------------------------------ */
 

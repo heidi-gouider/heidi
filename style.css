@@ -9,27 +9,14 @@ Utiliser la pseudo classe focus pour les utilisateurs qui naviguent au clavier
 
 * {
   font-family: 'Libre Baskerville', serif !important;
-  /* box-shadow: 0 0 2px red; */
+  box-shadow: 0 0 2px red;
 }
-
 
 body {
   height: 100%;
   min-height: 100vh;
 }
 
-/* ATTENTION LA POLICE NE S4APPLIQUE PAS!!! */
-
-/* @font-face {
-  font-family: "Libre Baskerville";
-  src: local("Libre Baskerville"),
-    url("/ASSETS/font/LibreBaskerville-Regular.ttf") format("ttf");
-} */
-
-/* @font-face {
-  font-family: "Libre Baskerville";
-  src: url("public\ASSETS\font\LibreBaskerville-Regular.ttf") format("truetype");
-} */
 
 /* ////////////// VARIABLES POUR LES COULEURS /////////////// */
 
@@ -131,33 +118,6 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   content: "";
 } */
 /* background-color: rgba(0, 0, 0, 0.5); */
-
-.video-container video {
-  min-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.9;
-  /* z-index: -1; */
-  background-color: var(--grisFonce);
-  cursor: pointer;
-}
-
-/********* Titre & Barre de recherche **********/
-#titre-accueil {
-  padding-top: 2%;
-  /* position: absolute; */
-  z-index: 2;
-}
-
-.search-bar {
-  position: absolute;
-  z-index: 2;
-}
-
-/* video ::before {
-  content: "";
-} */
-
 /* .video::after {
   content: "";
   width: 100%;
@@ -166,6 +126,29 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   background: linear-gradient(#970646, #4d0918);
   z-index: 3;
 } */
+
+
+.video-container video {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 1;
+  background-color: var(--grisFonce);
+  cursor: pointer;
+}
+
+/********* Titre & Barre de recherche **********/
+#titre-accueil {
+  padding-top: 2%;
+  position: absolute;
+  z-index: 2;
+}
+
+.search-bar {
+  position: absolute;
+  z-index: 2;
+}
 
 /* créer un évennement pause et play au clik
 si l'utilisateur ne veut plus que la vidéo joue */
@@ -234,6 +217,8 @@ si l'utilisateur ne veut plus que la vidéo joue */
 } */
 /* ------------------------------------------------------------------------------------------------------------ */
 
+/*  PAGE CATEGORY   */
+
 /* ******** page catégory / carousel ************* */
 section{
   min-height: 100vh;
@@ -243,7 +228,10 @@ section{
   background-size: cover;
   z-index: 1;
 } 
-
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  stroke-width: 5;
+  background-color: rgba(36,38,41,0.9);
+}
   /* background-attachment: scroll; */
 /* .category ::before {
   content: "";
@@ -276,9 +264,14 @@ section{
   transition: transform 0.3s ease-in-out;
 } */
 
-.boutton span {
+/* .boutton span {
   border-radius: 50%;
+} */
+.commande:hover{
+  /* font-style: var(--black)!important; */
+  background-color: #28a745 !important;
 }
+
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /*  PAGE PLATS   */
@@ -364,14 +357,6 @@ section{
   /* transform: rotate(45deg); */
 }
 
-/* ------------------------------------------------------------------------------------------------------------ */
-
-/*  PAGE CATEGORY   */
-
-.commande:hover{
-  /* font-style: var(--black)!important; */
-  background-color: #28a745 !important;
-}
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /*  LE FOOTER  */

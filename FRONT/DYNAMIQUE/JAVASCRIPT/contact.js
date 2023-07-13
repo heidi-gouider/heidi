@@ -37,13 +37,13 @@ form.addEventListener("submit", (valider));
 // $('.validation').on('click',valider);
 
 
-// function valider() {
-//     if (form.checkValidity() == false) {
-//         e.preventDefault();
-//     } else {
-//         $("#modal").modal("show");
-//     }
-//     form.classList.add("was-validated");
-// }
+function valider() {
+    if (form.checkValidity() == false) {
+        e.preventDefault();
+    } else {
+        $("#modal").modal("show");
+    }
+    form.classList.add("was-validated");
+}
 
 //il faut faire en sorte que l'event se declanche au click button et pas sur le onclick de la zone "votre message"

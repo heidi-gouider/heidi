@@ -14,13 +14,13 @@
   les commandes à exécuter,
   toutes les étapes importantes pour mettre en place l'environnement de développement.
 
-3/ Utilisation :
+1. Utilisation :
 
 -explication => comment utiliser le projet. 
 (Si c'est une bibliothèque ou un module, donner des exemples de code pour montrer comment l'utiliser.
 Si c'est une application, indiquer comment l'exécuter et décrire les fonctionnalités clés...)
 
-4/ Structure du projet : 
+1. Structure du projet : 
 
 -Si le projet est constitué de plusieurs fichiers ou dossiers, expliquer brièvement leur rôle et leur organisation.
 (Cela aide les autres développeurs à naviguer plus facilement dans le code.)

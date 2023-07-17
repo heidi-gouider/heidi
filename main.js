@@ -49,6 +49,10 @@ import './style.css';
 
 
 // section.style.backgroundImage.classList.toggle("change");
+// ------------------------------------------------------------------------------------------
+
+//********* PAGE accueil ***********//
+// - faire appraitre un texte de présentation savoureuse au survol de l'image => create element
 
 
 // ------------------------------------------------------------------------------------------
@@ -290,7 +294,7 @@ let carousel = document.querySelector(".carousel");
 let form = document.querySelector(".validation");
 let validForm = document.querySelector("#envoyer");
 let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
-let invalidName= document.querySelectorAll('.invalidName');
+let invalidName = document.querySelectorAll('.invalidName');
 // let invalidName= document.querySelector('#nom placeholder');
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
@@ -299,7 +303,7 @@ form.addEventListener('submit', valider);
 
 
 function valider(e) {
-// si champ vide
+    // si champ vide
     if (form.checkValidity() == false) {
         e.preventDefault();
         console.log('formulaire invalide');

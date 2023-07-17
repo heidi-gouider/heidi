@@ -197,6 +197,55 @@ si l'utilisateur ne veut plus que la vidéo joue */
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /*  ANIMATION */
+@keyframes move-titre {
+  from {
+    margin-left: 0;
+    font-size: x-small;
+  }
+
+  25% {
+    font-size: 0.5rem;
+  }
+
+  50% {
+    font-size: 1rem;
+  }
+
+  75% {
+    font-size: 1.5rem;
+  }
+
+  to {
+    margin-left: 70%;
+    /* font-style: normal; */
+    font-size: 2rem;
+  }
+}
+
+/* je choisie un effet parallax simple en css et non pas une librairie qui sera trop lourde pour cette animation simple */
+h1 {
+  animation: move-titre 1s ease-in-out both;
+  /* font-style: italic !important; */
+}
+
+h1::after {
+  content: "";
+  /* width: 100%; */
+  height: 0.2rem;
+  transform: translateY(2.2rem);
+  background-color: var(--black);
+}
+
+
+/* h1 .titre {
+  border-bottom: solid 2px #000;
+} */
+
+/* h1 .titre::after {
+  content: "";
+  transform: translateY(1rem);
+  background-color: var(--black);
+} */
 
 /* **** page accueil  **** */
 
@@ -287,37 +336,6 @@ section {
 
 /*  PAGE PLATS   */
 
-@keyframes move-titre {
-  from {
-    margin-left: 0;
-    font-size: x-small;
-  }
-
-  25% {
-    font-size: 0.5rem;
-  }
-
-  50% {
-    font-size: 1rem;
-  }
-
-  75% {
-    font-size: 1.5rem;
-  }
-
-  to {
-    margin-left: 70%;
-    /* font-style: normal; */
-    font-size: 2rem;
-  }
-}
-
-h1 {
-  animation: move-titre 1s ease-in-out both;
-  /* font-style: italic !important; */
-
-
-}
 
 .card-header {
   position: relative;

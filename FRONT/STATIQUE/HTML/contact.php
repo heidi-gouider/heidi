@@ -17,7 +17,11 @@
     <i class="bi bi-basket"></i>
     Ma commande
   </a>
-
+  <header>
+    <?php
+    require './header.php';
+    ?>
+  </header>
 
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <h1 class="row col-12 fst-italic">Nous contacter
@@ -30,19 +34,17 @@
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" id="nom"
-          utocomplete="off" required>
+        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" id="nom" utocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom
         </span>
-      <div class="erreur text-danger"  id="erreur"></div>
+        <div class="erreur text-danger" id="erreur"></div>
       </div>
 
       <div class="col-md-6 mb-4">
         <label for="prenom" class="form-label">Prénom
           <!-- <span class="required text-danger">*</span> -->
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Prénom" id="prenom" name="prenom"
-          autocomplete="off">
+        <input type="text" class="form-control form-control-hover" placeholder="Prénom" id="prenom" name="prenom" autocomplete="off">
         <!-- <span class="invalid-feedback">Veuillez renseigner votre Prénom</span> -->
         <!-- <span class="erreur text-danger"></span> -->
       </div>
@@ -53,10 +55,9 @@
         </label>
         <div class="input-group has-validation">
           <span class="input-group-text">@</span>
-          <input type="text" class="form-control form-control-hover" placeholder="Email" id="email" name="email"
-            autocomplete="off" required>
+          <input type="text" class="form-control form-control-hover" placeholder="Email" id="email" name="email" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner un email</span>
-          <div class="erreurMail text-danger"  id="erreurMail"></div>
+          <div class="erreurMail text-danger" id="erreurMail"></div>
         </div>
       </div>
 
@@ -64,9 +65,9 @@
         <label for="tel" class="form-label">Téléphone
           <!-- <span class="required text-danger">*</span> -->
         </label>
-        <input type="tel" class="form-control form-control-hover" placeholder="00\/21\/34\/56\/78" id="tel" name="tel" autocomplete="off" >
+        <input type="tel" class="form-control form-control-hover" placeholder="00\/21\/34\/56\/78" id="tel" name="tel" autocomplete="off">
         <!-- <span class="invalid-feedback">Veuillez renseigner un numéro de téléphone</span> -->
-        <div class="erreurTel text-danger"  id="erreurTel"></div>
+        <div class="erreurTel text-danger" id="erreurTel"></div>
       </div>
 
 
@@ -74,10 +75,9 @@
         <label for="message" class="form-label">Votre message
           <span class="required text-danger">*</span>
         </label>
-        <textarea class="form-control form-control-hover" placeholder="Mon message" rows="10" id="message"
-          name="message" autocomplete="off" required></textarea>
+        <textarea class="form-control form-control-hover" placeholder="Mon message" rows="10" id="message" name="message" autocomplete="off" required></textarea>
         <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
-        <div class="erreur text-danger"  id="erreur"></div>
+        <div class="erreur text-danger" id="erreur"></div>
       </div>
 
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>

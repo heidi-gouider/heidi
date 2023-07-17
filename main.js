@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-// import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
 
@@ -86,7 +86,7 @@ import './style.css';
 //  2- lors du slide, la 1ere img fait place à une 4eme qui prend la 3eme position
 //  3- l'img active centrale aura un effet zoom
 
-let carousel = document.querySelector(".carousel");
+// let carousel = document.querySelector(".carousel");
 // bouttons = document.querySelectorAll("button i");
 
 // let isSlideStart = false;
@@ -108,7 +108,7 @@ let carousel = document.querySelector(".carousel");
 // carousel.addEventListener("mouseup", slideStop);
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
 // window.addEventListener('DOMContentLoaded', () => {
-
+// ------------------------------------------------------------------------------------------
 
 //     let carouselInstance = new Carousel(carousel, {
 //         interval: 3000,
@@ -288,14 +288,21 @@ let carousel = document.querySelector(".carousel");
 // j'utilise la méthode "checkValidity()" pour vérifier la validité du formulaire
 // et la méthode "preventDefault()" pour empêcher l'envoi du formulaire si la validatin échoue
 // j'ajoute la class bootstrap "was-validated" pour activer les styles de validation propre à la bibliothèque bs
-// J'utilise la fonction "modal()" de jQuery pour afficher une modal
 
 //  variables je récupère mon formulaire //
-let form = document.querySelector(".validation");
-let validForm = document.querySelector("#envoyer");
+let form = document.querySelector("#valid");
+// let validForm = document.querySelector("#envoyer");
 let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
-let invalidName = document.querySelectorAll('.invalidName');
-// let invalidName= document.querySelector('#nom placeholder');
+let validMail = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+let validTel = 	/^(\d{2}\/){4}\d{2}$/;
+// tel = document.querySelector('#tel.value');
+// form.tel.value.match(/\d{2}/g).join('-');
+let messErreur= document.querySelector('.erreur');
+let messErreurMail= document.querySelector('.erreurMail');
+let messErreurTel= document.querySelectorAll('.erreurTel');
+let messErreurMess= document.querySelectorAll('.erreurMess');
+
+// const inputNom = document.querySelector('#nom');
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
 form.addEventListener('submit', valider);
@@ -304,16 +311,29 @@ form.addEventListener('submit', valider);
 
 function valider(e) {
     // si champ vide
-    if (form.checkValidity() == false) {
+    if (!form.checkValidity()) {
         e.preventDefault();
-        console.log('formulaire invalide');
+        e.stopPropagation()
+        // console.log('formulaire invalide');
     }
-    if (validName.test(form.nom.value) == false || validName.test(form.prenom.value) == false) {
-        // e.preventDefault();
-        // setCustomValidity("erreur!");
-        alert("erreur : Format invalide !");
-        // invalidName.innerHTML ="pas valide";
+    if (!validName.test(form.nom.value)){
+        e.preventDefault();
+        // inputNom.value="";
+        messErreur.innerHTML='Format invalide !'
+        // messErreur.textContent= "Texte modifié";
+        // alert("erreur : Format nom invalide !");
     }
+    if (! validMail.test(form.email.value)){
+        e.preventDefault();
+        // messErreurMail.innerHTML='Email invalide !'
+        // alert("Format Email invalide !")
+    }
+    if (! validTel.test(form.tel.value)){
+        e.preventDefault();
+        // messErreurTel.innerHTML='Format téléphone invalide !'
+        // alert("Format Email invalide !")
+    }
+
     form.classList.add("was-validated");
 
 };

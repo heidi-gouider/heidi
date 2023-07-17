@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <!-- ------------------------------------------------------- -->
+    <!-- UTILISER DES TEMPLATES POUR S2PARER LE CODE PHP!!!!! -->
+    <!-- ------------------------------------------------------- -->
 
     <!-- <?php require or include 'header.php'; ?>  -->
     <!-- le header -->
@@ -67,7 +70,7 @@
                         <a class="nav-link nav-link-custom" href="FRONT/STATIQUE/HTML/plats.html">Plats</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="FRONT/STATIQUE/HTML/contact.html">Contact <i
+                        <a class="nav-link nav-link-custom" href="FRONT/STATIQUE/HTML/contact.php">Contact <i
                                 class="bi bi-envelope"></i></a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
@@ -75,10 +78,11 @@
                     </li>
                     <!-- <li class="nav-item" id="commande"> -->
                     <li class="nav-link" data-bs-toggle="collapse" href="FRONT/STATIQUE/HTML/commande.html"
-                    role="button">
-                    <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
-                        Ma commande <i class="bi bi-basket btn-icon"></i>
-                    </button>
+                        role="button">
+                        <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center"
+                            id="commande">
+                            Ma commande <i class="bi bi-basket btn-icon"></i>
+                        </button>
                         <!-- <a class="btn btn-order rounded-0"  href="FRONT/STATIQUE/HTML/commande.html"> -->
                         <!-- <a class="nav-link" data-bs-toggle="collapse" href="FRONT/STATIQUE/HTML/commande.html"
                             role="button">
@@ -92,21 +96,21 @@
     </nav>
 
     <!-- <div class="container-fluid video-container"> -->
-        <div class="row video-container">
-            <div class="text-white" id="titre-accueil">
-                <h1 >The District</h1>
-            </div>
-            <div class="row  justify-content-center">
-                <div class=" input-group search-bar w-25 ">
-                    <input class="form-control " type="search" placeholder="Recherche" aria-label="Search">
-                    <button class="btn text-light bg-dark" type=""><i class="bi bi-search"></i></button>
-                </div>
-            </div>
-            <video controls="controls" class="" loop="loop" autoplay="autoplay" muted>
-                <!-- <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay" muted> -->
-                <source src="/ASSETS/VIDEO/video2.mp4">
-            </video>
+    <div class="row video-container">
+        <div class="text-white" id="titre-accueil">
+            <h1>The District</h1>
         </div>
+        <div class="row  justify-content-center">
+            <div class=" input-group search-bar w-25 ">
+                <input class="form-control " type="search" placeholder="Recherche" aria-label="Search">
+                <button class="btn text-light bg-dark" type=""><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <video controls="controls" class="" loop="loop" autoplay="autoplay" muted>
+            <!-- <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay" muted> -->
+            <source src="/ASSETS/VIDEO/video2.mp4">
+        </video>
+    </div>
     <!-- </div> -->
 
     <!-- <h2>Bienvenue au restaurant</h2> -->

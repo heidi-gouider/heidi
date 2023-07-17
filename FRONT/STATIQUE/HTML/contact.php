@@ -17,11 +17,9 @@
     <i class="bi bi-basket"></i>
     Ma commande
   </a>
-  <header>
-    <?php
-    require './header.php';
-    ?>
-  </header>
+  <?php
+  require 'FRONT\html_partials\header.php';
+  ?>
 
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <h1 class="row col-12 fst-italic">Nous contacter

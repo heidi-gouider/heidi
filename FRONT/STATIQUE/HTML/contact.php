@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact</title>
-</head>
-
-<body>
-  <a href="../../../index.html">Accueil</a>
-  <a href="category.html">Catégories</a>
-  <a href="plats.html">Plats</a>
-  <a href="contact.html">Contact</a>
-  <a href="commande.html">
-    <i class="bi bi-basket"></i>
-    Ma commande
-  </a>
-  <?php
-  require 'FRONT\html_partials\header.php';
+<?php
+  include '/FRONT/partials/header.php';
   ?>
-
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <h1 class="row col-12 fst-italic">Nous contacter
     <span class="titre"></span>
@@ -89,8 +69,7 @@
 
   <!-- /// LA MODAL include la modal avec php /// -->
   <!-- </div> -->
-  <script type="module" src="../../../main.js"></script>
-  <!-- <script type="module" src="/FRONT/DYNAMIQUE/JAVASCRIPT/contact.js"></script> -->
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

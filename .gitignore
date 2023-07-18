@@ -3,3 +3,8 @@ node_modules/
 
 # Ignorer le répertoire vendor
 vendor/
+
+# Ignorer le répertoire composer
+composer.json/
+
+composer.lock/

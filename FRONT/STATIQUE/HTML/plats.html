@@ -2,9 +2,9 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nos Plats</title>
 
 </head>
@@ -32,13 +32,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title rounded p-3">Ma commande</h5>
-          <button type=" button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body bg-secondary" aria-describedby="content">
+        <div class="modal-body bg-secondary" aria-describedby="quantité">
           <div class="dropdown">
             <!-- <button class="btn btn-secondary dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"> -->
             <label for="quantité" class="lead text-white">Combien de burgers désirez-vous</label>
-            <input type="number" id="number" name="amount" value="1" min="1" max="10">
+            <input type="number" id="quantité" name="amount" value="1" min="1" max="10">
             <!-- </button> -->
             <!-- <select class="dropdown-menu">
               <option> -->
@@ -64,7 +64,7 @@
           <button type="button" class="btn text-white">
             <i class="bi bi-plus"></i>
           </button>
-          <img src="/ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="image1" />
+          <img src="/ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="image1">
         </div>
         <div class="card-title">
           <h5>fromage</h5>
@@ -85,7 +85,12 @@
       </div>
 
       <div class="card p-3 w-25">
-        <img src="/ASSETS/IMG/food/veggie-burger.jpg" alt="image burger" id="image1" />
+        <div class="card-header ">
+          <button type="button" class="btn text-white">
+            <i class="bi bi-plus"></i>
+          </button>
+        <img src="/ASSETS/IMG/food/veggie-burger.jpg" alt="image veggie burger" id="image2">
+        </div>
         <div class="card-title">
           <h5>le végé</h5>
         </div>
@@ -104,7 +109,7 @@
 
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-25">
-        <img src="/ASSETS/IMG/food/hamburger.jpg" alt="image hamburger" id="image1" />
+        <img src="/ASSETS/IMG/food/hamburger.jpg" alt="image hamburger" id="image3">
         <div class="card-title">
           <h5>classique</h5>
         </div>
@@ -121,7 +126,7 @@
       </div>
 
       <div class="card p-3 w-25">
-        <img src="/ASSETS/IMG/food/burger-du-chef.jpg" alt="image hamburger" id="image2" />
+        <img src="/ASSETS/IMG/food/burger-du-chef.jpg" alt="image burger du chef" id="image4">
         <div class="card-title">
           <h5>burger du chef</h5>
         </div>
@@ -136,11 +141,13 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
 
-      <footer>
-        <h2>le footer</h2>
-      </footer>
-      <script type="module" src="../../../main.js"></script>
+    <footer>
+      <h2>le footer</h2>
+    </footer>
+    <script type="module" src="../../../main.js"></script>
 </body>
 
 </html>

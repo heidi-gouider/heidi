@@ -95,13 +95,13 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 .btn-danger {
   color: #fff;
   background-color: #dc3545;
-  border-color: #dc3545;
+  /* border-color: #dc3545; */
 }
 
 .btn-success {
   color: #fff;
   background-color: #28a745;
-  border-color: #28a745;
+  /* border-color: #28a745; */
 }
 
 /* ------------------------------------------------------------------------------------------------------------ *
@@ -188,7 +188,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
 /* revoir les animations pour un effet plus doux sur la disparition de la bordure */
 #images img:hover {
   transform: scale(1.1);
-  translate: 1s;
+  /* translate: 1s; */
   border: none;
   transition: 2s ease-in-out;
   /* border-radius: 50%; */
@@ -335,11 +335,12 @@ section {
 /*  PAGE PLATS   */
 
 
-.card-header {
+/* .card-header {
   position: relative;
-}
+} */
 
-.card-header .btn {
+.card-header button  {
+  /* z-index: 1; */
   position: absolute;
 }
 

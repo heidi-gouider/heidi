@@ -32,10 +32,10 @@
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" id="nom" utocomplete="off" required>
+        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" id="nom" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom
         </span>
-        <div class="erreur text-danger" id="erreur"></div>
+        <div class="erreur text-danger" id="erreurNom"></div>
       </div>
 
       <div class="col-md-6 mb-4">
@@ -75,7 +75,7 @@
         </label>
         <textarea class="form-control form-control-hover" placeholder="Mon message" rows="10" id="message" name="message" autocomplete="off" required></textarea>
         <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
-        <div class="erreur text-danger" id="erreur"></div>
+        <div class="erreur text-danger" id="erreurMess"></div>
       </div>
 
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>
@@ -88,24 +88,7 @@
   </div>
 
   <!-- /// LA MODAL include la modal avec php /// -->
-  <!-- data-bs-backdrop="static" -->
-  <!-- <div class="modal fade modal-sm" id="modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="message envoyé"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-success">Message envoyer !</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Votre message a bien été envoyé !</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        </div>
-      </div>
-    </div> -->
-  </div>
+  <!-- </div> -->
   <script type="module" src="../../../main.js"></script>
   <!-- <script type="module" src="/FRONT/DYNAMIQUE/JAVASCRIPT/contact.js"></script> -->
 </body>

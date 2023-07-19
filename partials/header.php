@@ -31,7 +31,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center text-sm">
                     <li class="nav-item pe-4 pt-2">
                         <a class="nav-link active nav-link-custom" id="link-active" aria-current="page"
-                            href="index.html">Accueil</a>
+                            href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="PAGES/category.html">Catégories</a>
@@ -40,7 +40,7 @@
                         <a class="nav-link nav-link-custom" href="PAGES/plats.php">Plats</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="PAGES/plats.php">Contact <i
+                        <a class="nav-link nav-link-custom" href="PAGES/contact.php">Contact <i
                                 class="bi bi-envelope"></i></a>
                     </li>
                     <!-- <li class="nav-item pe-4 pt-2">

@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notre carte</title>
-</head>
-
-<body>
-  <!-- include header.php -->
-  <a class="col-3 p-3" href="../../../index.html">
-    <img src="ASSETS/IMG/logo/logo.png" alt="logo" style="width: 65%; border-radius: 60%;">
-</a>
-  <a href="../../../index.html">Accueil</a>
-  <a href="category.html">Catégories</a>
-  <a href="carousel.html">Carousel</a>
-  <a href="plats.html">Plats</a>
-  <a href="contact.html">Contact</a>
-  <a href="commande.html">
-    <i class="bi bi-basket"></i>
-    Ma commande
-  </a>
+<?php
+$title="Catégories";
+  include ('partials/header.php');
+  ?>
 
 
 
@@ -40,7 +21,7 @@
       <!-- CAROUSEL -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/ASSETS/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
+          <img src="dist/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos burgers</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -48,7 +29,7 @@
         </div>
 
         <div class="carousel-item">
-          <img src="/ASSETS/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
+          <img src="dist/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos pizzas</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -56,7 +37,7 @@
         </div>
 
         <div class="carousel-item">
-          <img src="/ASSETS/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
+          <img src="dist/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos menu d'asie</a>
             <p>description et commentaire.</p>
@@ -72,14 +53,14 @@
         </div>
 
         <div class="carousel-item">
-          <img src="/ASSETS/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
+          <img src="dist/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos salades</a>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/ASSETS/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
+          <img src="dist/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
         </div>
       </div>
       <!-- CONTROL DU CAROUSEL -->
@@ -97,12 +78,12 @@
       </button>
     </div>
   </div>
-  <a class="nav-link commande btn mx-auto bg-danger col-2 " href="commande.html"
+  <a class="nav-link commande btn mx-auto bg-danger col-2 " href="PAGES/commande.php"
   role="button">
   <span class="d-sm-none d-md-inline">commander</span>
   <i class="bi bi-basket btn-icon"></i></a>
 
-  <script type="module" src="../../../main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,5 @@ node_modules/
 vendor/
 
 # Ignorer le répertoire composer
-composer.json/
+dist/
 
-composer.lock/

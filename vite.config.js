@@ -14,11 +14,11 @@ export default defineConfig({
     },
   },
   // test de solution pour le problème de récupération des icones bs
-  root: path.resolve(__dirname, 'src'),
-  resolve: {
-    alias: {
-      '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-    },
-  },
+  // root: path.resolve(__dirname, 'src'),
+  // resolve: {
+  //   alias: {
+  //     '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+  //   },
+  // },
 
 });

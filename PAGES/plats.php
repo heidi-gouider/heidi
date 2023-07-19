@@ -42,7 +42,7 @@ include('partials/header.php');
         <button type="button" class="btn text-white">
           <i class="bi bi-plus"></i>
         </button>
-        <img src="dist/IMG/food/cheesburger.jpg" alt="image burger" id="image1">
+        <img src="public/IMG/food/cheesburger.jpg" alt="image burger" id="image1">
       </div>
       <div class="card-title">
         <h5>fromage</h5>
@@ -66,7 +66,7 @@ include('partials/header.php');
         <button type="button" class="btn text-white">
           <i class="bi bi-plus"></i>
         </button>
-        <img src="dist/IMG/food/veggie-burger.jpg" alt="image veggie burger" id="image2">
+        <img src="public/IMG/food/veggie-burger.jpg" alt="image veggie burger" id="image2">
       </div>
       <div class="card-title">
         <h5>le végé</h5>
@@ -85,7 +85,7 @@ include('partials/header.php');
 
   <div class="row  m-3 justify-content-around">
     <div class="card p-3 w-25">
-      <img src="dist/IMG/food/hamburger.jpg" alt="image hamburger" id="image3">
+      <img src="public/IMG/food/hamburger.jpg" alt="image hamburger" id="image3">
       <div class="card-title">
         <h5>classique</h5>
       </div>
@@ -101,7 +101,7 @@ include('partials/header.php');
     </div>
 
     <div class="card p-3 w-25">
-      <img src="dist/IMG/food/burger-du-chef.jpg" alt="image burger du chef" id="image4">
+      <img src="public/IMG/food/burger-du-chef.jpg" alt="image burger du chef" id="image4">
       <div class="card-title">
         <h5>burger du chef</h5>
       </div>
@@ -121,7 +121,7 @@ include('partials/header.php');
 <footer>
   <h2>le footer</h2>
 </footer>
-<script type="module" src="main.js"></script>
+<script type="module" src="dist/assets/index.js"></script>
 </body>
 
 </html>

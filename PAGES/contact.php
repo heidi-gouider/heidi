@@ -70,7 +70,7 @@ $title="Contact";
 
   <!-- /// LA MODAL include la modal avec php /// -->
   <!-- </div> -->
-  <script type="module" src="main.js"></script>
+  <script type="module" src="dist/assets/index.js"></script>
 </body>
 
 </html>

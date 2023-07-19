@@ -21,7 +21,7 @@ $title="Catégories";
       <!-- CAROUSEL -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="dist/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
+          <img src="public/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos burgers</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -29,7 +29,7 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="dist/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
+          <img src="public/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos pizzas</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -37,7 +37,7 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="dist/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
+          <img src="public/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos menu d'asie</a>
             <p>description et commentaire.</p>
@@ -45,7 +45,7 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="/ASSETS/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates">
+          <img src="public/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos pates</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -53,14 +53,14 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="dist/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
+          <img src="public/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos salades</a>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="dist/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
+          <img src="public/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
         </div>
       </div>
       <!-- CONTROL DU CAROUSEL -->
@@ -83,7 +83,7 @@ $title="Catégories";
   <span class="d-sm-none d-md-inline">commander</span>
   <i class="bi bi-basket btn-icon"></i></a>
 
-  <script type="module" src="main.js"></script>
+  <script type="module" src="dist/assets/index.js"></script>
 </body>
 
 </html>

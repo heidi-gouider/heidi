@@ -151,6 +151,11 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   position: absolute;
   z-index: 1;
 }
+#search-bar {
+  padding-top: 10%;
+  position: absolute;
+  z-index: 1;
+}
 
 /* créer un évennement pause et play au clik
 si l'utilisateur ne veut plus que la vidéo joue */

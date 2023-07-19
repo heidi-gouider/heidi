@@ -305,7 +305,7 @@ let messErreurMess= document.querySelectorAll('.erreurMess');
 // const inputNom = document.querySelector('#nom');
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
-form.addEventListener('submit', valider);
+form.addEventListener('submit', valider(e));
 // validForm.addEventListener('click', valider);
 
 

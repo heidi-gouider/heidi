@@ -35,7 +35,7 @@ $title="Commande";
     class="scrollspy-example" tabindex="0"> -->
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-50 h-50 flex-row justify-content-between ">
-        <img class="col-4" src="/ASSETS/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
+        <img class="col-4" src="public/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
         <div class="col-7">
           <div class="card-title row justify-content-around">
             <h5 class="col-6"> burger-du-chef</h5>
@@ -51,7 +51,7 @@ $title="Commande";
 
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-50 flex-row justify-content-between ">
-        <img class="col-4" src="/ASSETS/IMG/food/cheesburger.jpg" alt="image cheesburger" id="img2">
+        <img class="col-4" src="public/IMG/food/cheesburger.jpg" alt="image cheesburger" id="img2">
         <div class="col-7">
           <div class="card-title row justify-content-around">
             <h5 class="col-6"> burger-du-chef</h5>
@@ -133,7 +133,7 @@ $title="Commande";
     </form>
   </div>
   <!-- </form> -->
-  <script type="module" src="main.js"></script>
+  <script type="module" src="dist/assets/index.js"></script>
 </body>
 
 </html>

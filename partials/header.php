@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg search-bar">
         <div class="container-fluid m-auto fixed-top mb-4" id="menu">
             <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="index.html">
-                <img src="dist/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
+                <img src="public/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
             </a>
 
             <!-- je regroupe et cache les éléments pour le responsive -->
@@ -35,7 +35,7 @@
                             href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="PAGES/category.html">Catégories</a>
+                        <a class="nav-link nav-link-custom" href="PAGES/category.php">Catégories</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="PAGES/plats.php">Plats</a>

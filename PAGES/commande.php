@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Le District</title>
-</head>
-
-<body>
-  <!-- include header.php -->
-  <a href="../../../index.html">Accueil</a>
-  <a href="category.html">Catégories</a>
-  <a href="plats.html">Plats</a>
-  <a href="contact.html">Contact</a>
+<?php
+$title="Commande";
+  include ('partials/header.php');
+  ?>
 
   <!-- PENSER A AJOUTER UNE CONNEXION... -->
 
@@ -145,7 +133,7 @@
     </form>
   </div>
   <!-- </form> -->
-  <script type="module" src="../../../main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

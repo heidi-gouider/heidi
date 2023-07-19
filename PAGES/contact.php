@@ -1,5 +1,6 @@
 <?php
-  include '/FRONT/partials/header.php';
+$title="Contact";
+  include ('partials/header.php');
   ?>
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <h1 class="row col-12 fst-italic">Nous contacter
@@ -69,7 +70,7 @@
 
   <!-- /// LA MODAL include la modal avec php /// -->
   <!-- </div> -->
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

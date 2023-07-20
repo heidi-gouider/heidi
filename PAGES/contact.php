@@ -1,13 +1,14 @@
 <?php
 $title="Contact";
-  include ('partials/header.php');
+  include ('../partials/header.php');
   ?>
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+  <div class="contenu">
   <h1 class="row col-12 fst-italic">Nous contacter
     <span class="titre"></span>
   </h1>
 
-  <div class="container d-flex justify-content-center m-5">
+  <div class="container d-flex justify-content-center mx-auto">
     <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
@@ -67,10 +68,15 @@ $title="Contact";
       </div>
     </form>
   </div>
+  </div>
+
+  <?php
+include('../partials/footer.php');
+?>
 
   <!-- /// LA MODAL include la modal avec php /// -->
   <!-- </div> -->
-  <script type="module" src="dist/assets/index.js"></script>
+  <script type="module" src="/dist/assets/index.js"></script>
 </body>
 
 </html>

@@ -31,24 +31,11 @@ include('partials/header.php');
     </div>
 </div>
 
+<?php
+include('partials/footer.php');
+?>
 
-<footer class="footer ">
-    <h3>Pour nous suivre !</h3>
-    <div class="container">
-        <ul class="list-inline text-center">
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-geo-alt"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-instagram"></i></a>
-            </li>
-        </ul>
-    </div>
-    <h4>Nous contacter</h4>
-</footer>
+
 <script type="module" src="dist/assets/index.js"></script>
 
 </body>

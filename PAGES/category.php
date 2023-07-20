@@ -1,14 +1,15 @@
 <?php
 $title="Catégories";
-  include ('partials/header.php');
+  include ('../partials/header.php');
   ?>
 
 
 
-  <h1 class="row col-12 fst-italic">Notre carte</h1>
-
-  <div class="container d-flex justify-content-center">
-    <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
+  <!-- <h1 class="row col-12 fst-italic">Notre carte</h1> -->
+<div class="contenu">
+      <h1 class="row col-12 fst-italic">Notre carte</h1> 
+  <div class="container d-flex justify-content-center" id="section">
+  <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
       <!-- Indicateurs -->
       <ul class="carousel-indicators mx-auto">
              <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
@@ -21,15 +22,15 @@ $title="Catégories";
       <!-- CAROUSEL -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="public/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
+          <img src="/public/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
           <div class="carousel-caption d-none d-md-block">
-            <a href="plats.html">Nos burgers</a>
+            <!-- <a href="plats.html">Nos burgers</a> -->
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="public/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
+          <img src="/public/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos pizzas</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -37,7 +38,7 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="public/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
+          <img src="/public/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos menu d'asie</a>
             <p>description et commentaire.</p>
@@ -45,7 +46,7 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="public/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates">
+          <img src="/public/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos pates</a>
             <p>Some representative placeholder content for the third slide.</p>
@@ -53,14 +54,14 @@ $title="Catégories";
         </div>
 
         <div class="carousel-item">
-          <img src="public/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
+          <img src="/public/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
           <div class="carousel-caption d-none d-md-block">
             <a href="plats.html">Nos salades</a>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="public/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
+          <img src="/public/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
         </div>
       </div>
       <!-- CONTROL DU CAROUSEL -->
@@ -82,8 +83,13 @@ $title="Catégories";
   role="button">
   <span class="d-sm-none d-md-inline">commander</span>
   <i class="bi bi-basket btn-icon"></i></a>
+</div>
 
-  <script type="module" src="dist/assets/index.js"></script>
+<?php
+include('../partials/footer.php');
+?>
+
+  <script type="module" src="/dist/assets/index.js"></script>
 </body>
 
 </html>

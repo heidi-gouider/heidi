@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+$title="Commande";
+include ('../partials/header.php');
+?>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Notre carte</title>
-
-</head>
-
-<body>
-    <!-- include header.php -->
-    <a href="index.html">Accueil</a>
-    <a href="header.html">header</a>
-    <a href="category.html">Catégories</a>
-    <a href="plats.html">Plats</a>
-    <a href="contact.html">Contact</a>
-    <a href="commande.html">
-        <i class="bi bi-basket"></i>
-        Ma commande
-    </a>
+  <div class="contenu">
     <h1 class="row col-12">Notre carte</h1>
-
     <section class="category">
         <div class="main d-flex align-items-center justify-content-center m-3">
             <!-- <div id="carousel" class="carousel slide" data-ride="carousel"> -->
@@ -104,6 +88,12 @@
                       </button>
                     </div>
                   </div> -->
+  </div>
+
+  <?php
+include('../partials/footer.php');
+?>
+
     <script type="module" src="../../../main.js"></script>
 
 </body>

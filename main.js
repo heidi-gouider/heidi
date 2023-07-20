@@ -1,11 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
 
 import './style.css';
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 // menu responsive //
@@ -305,15 +304,15 @@ let messErreurMess= document.querySelectorAll('.erreurMess');
 // const inputNom = document.querySelector('#nom');
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
-form.addEventListener('submit', valider(e));
+form.addEventListener('submit', valider);
 // validForm.addEventListener('click', valider);
 
 
-function valider(e) {
+function valider() {
     // si champ vide
     if (!form.checkValidity()) {
-        e.preventDefault();
-        e.stopPropagation()
+        preventDefault();
+        stopPropagation()
         // console.log('formulaire invalide');
     }
     if (!validName.test(form.nom.value)){

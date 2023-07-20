@@ -273,10 +273,21 @@ h1 {
 
 /*  PAGE CATEGORY   */
 
-/* ******** page catégory / carousel ************* */
+/* ******** page catégory */ 
+.contenu{
+  margin-top: 20vh;
+  min-height: 100vh;
+  background-image: url('/public/IMG/fond/bg3.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 1;
+}
+
+/*carousel ************* */
 section {
   min-height: 100vh;
-  background-image: url(/ASSETS/IMG/fond/bg3.jpeg);
+  background-image: url('/public/IMG/fond/bg3.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

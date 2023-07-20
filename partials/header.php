@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="dist/assets/index.css">
+    <link rel="stylesheet" href="../dist/assets/index.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg search-bar">
         <div class="container-fluid m-auto fixed-top mb-4" id="menu">
             <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="index.html">
-                <img src="public/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
+                <img src="/public/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
             </a>
 
             <!-- je regroupe et cache les éléments pour le responsive -->
@@ -29,23 +29,23 @@
                 <!-- <ul class="nav-fill justify-content-end"> -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center text-sm">
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link active nav-link-custom" id="link-active" aria-current="page" href="index.php">Accueil</a>
+                        <a class="nav-link active nav-link-custom" id="link-active" aria-current="page" href="/index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="PAGES/category.php">Catégories</a>
+                        <a class="nav-link nav-link-custom" href="/PAGES/category.php">Catégories</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="PAGES/plats.php">Plats</a>
+                        <a class="nav-link nav-link-custom" href="/PAGES/plats.php">Plats</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="PAGES/contact.php">Contact <i class="bi bi-envelope"></i></a>
+                        <a class="nav-link nav-link-custom" href="/PAGES/contact.php">Contact <i class="bi bi-envelope"></i></a>
                     </li>
                     <!-- <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="">Mon compte</a>
                     </li> -->
                     <!-- <li class="nav-item" id="commande"> -->
                     <li class="nav-link" data-bs-toggle="collapse">
-                        <a data-bs-toggle="collapse" href="PAGES/commande.php" role="button">
+                        <a data-bs-toggle="collapse" href="/PAGES/commande.php" role="button">
                             <span class="d-md-inline text-wrap">Ma commande</span>
                             <i class="bi bi-basket btn-icon"></i>
                         </a>

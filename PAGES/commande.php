@@ -1,11 +1,12 @@
 <?php
 $title="Commande";
-  include ('partials/header.php');
-  ?>
+include ('../partials/header.php');
+?>
 
   <!-- PENSER A AJOUTER UNE CONNEXION... -->
 
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+  <div class="contenu">
   <h1 class="row col-12 fst-italic">Ma commande</h1>
 
   <!-- /// LA MODAL include la modal avec php /// -->
@@ -132,7 +133,13 @@ $title="Commande";
       </div>
     </form>
   </div>
+  </div>
   <!-- </form> -->
+
+  <?php
+include('../partials/footer.php');
+?>
+
   <script type="module" src="dist/assets/index.js"></script>
 </body>
 

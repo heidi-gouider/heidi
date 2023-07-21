@@ -84,7 +84,7 @@ include('../partials/header.php');
   </button>
   <!-- <a class="btn btn-order rounded-0" href="/PAGES/commande.php"> -->
 
-    <!-- <a class="nav-link commande btn mx-auto bg-danger col-2 " href="/PAGES/commande.php" role="button">
+  <!-- <a class="nav-link commande btn mx-auto bg-danger col-2 " href="/PAGES/commande.php" role="button">
       <span class="d-sm-none d-md-inline">commander</span>
     <i class="bi bi-basket btn-icon"></i></a> -->
 </div>
@@ -93,7 +93,7 @@ include('../partials/header.php');
 include('../partials/footer.php');
 ?>
 
-<script type="module" src="/dist/assets/index.js"></script>
+<script type="module" src="../dist/assets/index.js"></script>
 </body>
 
 </html>

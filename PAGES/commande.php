@@ -1,13 +1,13 @@
 <?php
-$title="Commande";
-include ('../partials/header.php');
+$title = "Commande";
+include('../partials/header.php');
 ?>
 
-  <!-- PENSER A AJOUTER UNE CONNEXION... -->
+<!-- PENSER A AJOUTER UNE CONNEXION... -->
 
-  <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
-  <div class="contenu">
-  <h1 class="row col-12 fst-italic">Ma commande</h1>
+<!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+<div class="contenu">
+  <h1 class="fst-italic">Ma commande</h1>
 
   <!-- /// LA MODAL include la modal avec php /// -->
   <!-- <div class="modal fade modal-sm" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -30,12 +30,12 @@ include ('../partials/header.php');
 
 
   <!-- /// LES PLATS COMMANDÉS EN SCROLL HIDDEN/// -->
-  <div class="container overflow-hidden overflow-y-scroll" style="height: 23vh;cursor: pointer;">
+  <div class="container overflow-hidden overflow-y-auto" style="height: 23vh;cursor: pointer;">
     <!-- <div class="row"> -->
     <!-- <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
     class="scrollspy-example" tabindex="0"> -->
     <div class="row  m-3 justify-content-around">
-      <div class="card p-3 w-50 h-50 flex-row justify-content-between ">
+      <div class="card p-3 w-50 h-50 flex-row justify-content-between">
         <img class="col-4" src="/public/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
         <div class="col-7">
           <div class="card-title row justify-content-around">
@@ -85,8 +85,7 @@ include ('../partials/header.php');
           Nom et Prénom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom" autocomplete="off"
-          required>
+        <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom et votre prénom</span>
       </div>
 
@@ -133,14 +132,14 @@ include ('../partials/header.php');
       </div>
     </form>
   </div>
-  </div>
-  <!-- </form> -->
+</div>
+<!-- </form> -->
 
-  <?php
+<?php
 include('../partials/footer.php');
 ?>
 
-  <script type="module" src="dist/assets/index.js"></script>
+<script type="module" src="../dist/assets/index.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 
             <!-- je regroupe et cache les éléments pour le responsive -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"style="z-index-1"></span>
+                <span class="navbar-toggler-icon" style="z-index:1"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,11 +50,10 @@
                             <i class="bi bi-basket btn-icon"></i>
                         </a>
                     </li> -->
-                    <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" href="/PAGES/commande.php"
-                            id="commande">
-                            Ma commande <i class="bi bi-basket btn-icon"></i>
-                        </button>
-                    <a class="btn btn-order rounded-0"  href="/PAGES/commande.php">
+                    <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" href="/PAGES/commande.php" id="commande">
+                        Ma commande <i class="bi bi-basket btn-icon"></i>
+                    </button>
+                    <a class="btn btn-order rounded-0" href="/PAGES/commande.php">
                 </ul>
             </div>
         </div>

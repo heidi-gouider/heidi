@@ -130,12 +130,12 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
 
 .video-container video {
   height: 100%;
-    position: relative;
+  position: relative;
   object-fit: cover;
   opacity: 0.9;
   /* z-index: 1; */
   cursor: pointer;
-    /* background-color: var(--grisFonce); */
+  /* background-color: var(--grisFonce); */
 }
 
 /********* Titre & Barre de recherche **********/
@@ -151,6 +151,7 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   position: absolute;
   z-index: 1;
 }
+
 #search-bar {
   padding-top: 10%;
   position: absolute;
@@ -233,7 +234,7 @@ h1 {
   z-index: 1;
   color: white;
   padding-top: 5%;
-} 
+}
 
 /* h1::after {
   content: "";
@@ -276,8 +277,8 @@ h1 {
 
 /*  PAGE CATEGORY   */
 
-/* ******** page catégory */ 
-.contenu{
+/* ******** page catégory */
+.contenu {
   margin-top: 15vh;
   min-height: 100vh;
   /* padding-top: 10%; */
@@ -359,7 +360,7 @@ section {
   position: relative;
 } */
 
-.card-header button  {
+.card-header button {
   /* z-index: 1; */
   position: absolute;
 }
@@ -409,11 +410,11 @@ section {
 
 /*  PAGE FORMULAIRE  */
 
-#formulaire{
+#formulaire {
   background-color: rgba(36, 38, 41, 0.6);
 }
 
-#formulaire label{
+#formulaire label {
   color: #e2e2e2;
   /* background-color: rgba(178, 181, 187, 0.3); */
 }

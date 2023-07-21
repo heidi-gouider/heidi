@@ -293,15 +293,15 @@ let form = document.querySelector("#valid");
 // let validForm = document.querySelector("#envoyer");
 let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 let validMail = /[^\s@]+@[^\s@]+\.[^\s@]+/;
-let validTel = 	/^(\d{2}\/){4}\d{2}$/;
+let validTel = /^(\d{2}\/){4}\d{2}$/;
 // tel = document.querySelector('#tel.value');
 // form.tel.value.match(/\d{2}/g).join('-');
-let messErreur= document.querySelector('.erreur');
+let messErreur = document.querySelector('.erreur');
 // let messErreurMail= document.querySelector('.erreurMail');
 // let messErreurTel= document.querySelectorAll('.erreurTel');
 // let messErreurMess= document.querySelectorAll('.erreurMess');
 // const inputNom = document.querySelector('#nom');
-const formInputs = form.querySelectorAll('input');
+let formInputs = form.querySelectorAll('input');
 
 // J'ajoute un écouteur "input" pour les champs du formulaire
 formInputs.forEach(input => {
@@ -309,11 +309,11 @@ formInputs.forEach(input => {
         // Je supprime la classe "was-validated" lorsqu'un champ est modifié
         form.classList.remove("was-validated");
 
-         // Je masque le message d'erreur associé au champ modifié
-         const errorElement = input.parentElement.querySelector('.erreur');
-         if (errorElement) {
-             errorElement.innerHTML = '';
-         }
+        // Je masque le message d'erreur associé au champ modifié
+        const errorElement = input.parentElement.querySelector('.erreur');
+        if (errorElement) {
+            errorElement.innerHTML = '';
+        }
     });
 });
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
@@ -326,29 +326,29 @@ function valider(e) {
         e.preventDefault();
         e.stopPropagation()
         // console.log('formulaire invalide');
-//         form.classList.add("was-validated");
-// return;
+        //         form.classList.add("was-validated");
+        // return;
     }
-    if (!validName.test(form.nom.value)){
+    if (!validName.test(form.nom.value)) {
         e.preventDefault();
         // inputNom.value="";
-        messErreur.innerHTML='Format invalide !'
+        messErreur.innerHTML = 'Format invalide !'
         // messErreur.textContent= "Texte modifié";
         // alert("erreur : Format nom invalide !");
     }
-    if (! validMail.test(form.email.value)){
+    if (!validMail.test(form.email.value)) {
         e.preventDefault();
         // messErreurMail.innerHTML='Email invalide !'
         // alert("Format Email invalide !")
     }
-    if (! validTel.test(form.tel.value)){
+    if (!validTel.test(form.tel.value)) {
         e.preventDefault();
         // messErreurTel.innerHTML='Format téléphone invalide !'
         // alert("Format Email invalide !")
     }
 
     form.classList.add("was-validated");
-return;
+    return;
 };
 
 //********* PAGE commande ***********//

@@ -288,7 +288,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 // et la méthode "preventDefault()" pour empêcher l'envoi du formulaire si la validatin échoue
 // j'ajoute la class bootstrap "was-validated" pour activer les styles de validation propre à la bibliothèque bs
 
-//  variables je récupère mon formulaire //
+//  VARIABLES //
 let form = document.querySelector("#valid");
 // let validForm = document.querySelector("#envoyer");
 let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
@@ -297,16 +297,28 @@ let validTel = 	/^(\d{2}\/){4}\d{2}$/;
 // tel = document.querySelector('#tel.value');
 // form.tel.value.match(/\d{2}/g).join('-');
 let messErreur= document.querySelector('.erreur');
-let messErreurMail= document.querySelector('.erreurMail');
-let messErreurTel= document.querySelectorAll('.erreurTel');
-let messErreurMess= document.querySelectorAll('.erreurMess');
-
+// let messErreurMail= document.querySelector('.erreurMail');
+// let messErreurTel= document.querySelectorAll('.erreurTel');
+// let messErreurMess= document.querySelectorAll('.erreurMess');
 // const inputNom = document.querySelector('#nom');
+const formInputs = form.querySelectorAll('input');
 
+// J'ajoute un écouteur "input" pour les champs du formulaire
+formInputs.forEach(input => {
+    input.addEventListener('input', () => {
+        // Je supprime la classe "was-validated" lorsqu'un champ est modifié
+        form.classList.remove("was-validated");
+
+         // Je masque le message d'erreur associé au champ modifié
+         const errorElement = input.parentElement.querySelector('.erreur');
+         if (errorElement) {
+             errorElement.innerHTML = '';
+         }
+    });
+});
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
 form.addEventListener('submit', valider);
 // validForm.addEventListener('click', valider);
-
 
 function valider(e) {
     // si champ vide

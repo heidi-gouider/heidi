@@ -44,17 +44,17 @@
                         <a class="nav-link nav-link-custom" href="">Mon compte</a>
                     </li> -->
                     <!-- <li class="nav-item" id="commande"> -->
-                    <li class="nav-link" data-bs-toggle="collapse">
+                    <!-- <li class="nav-link" data-bs-toggle="collapse">
                         <a data-bs-toggle="collapse" href="/PAGES/commande.php" role="button">
                             <span class="d-md-inline text-wrap">Ma commande</span>
                             <i class="bi bi-basket btn-icon"></i>
                         </a>
-                    </li>
-                    <!-- <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center"
+                    </li> -->
+                    <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" href="/PAGES/commande.php"
                             id="commande">
                             Ma commande <i class="bi bi-basket btn-icon"></i>
-                        </button> -->
-                    <!-- <a class="btn btn-order rounded-0"  href="FRONT/STATIQUE/HTML/commande.html"> -->
+                        </button>
+                    <a class="btn btn-order rounded-0"  href="/PAGES/commande.php">
                 </ul>
             </div>
         </div>

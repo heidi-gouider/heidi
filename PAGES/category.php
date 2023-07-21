@@ -1,24 +1,24 @@
 <?php
-$title="Catégories";
-  include ('../partials/header.php');
-  ?>
+$title = "Catégories";
+include('../partials/header.php');
+?>
 
 
 
-  <!-- <h1 class="row col-12 fst-italic">Notre carte</h1> -->
+<!-- <h1 class="row col-12 fst-italic">Notre carte</h1> -->
 <div class="contenu">
-      <h1 class="row text-white col-12 fst-italic">Notre carte</h1> 
+  <h1 class="fst-italic">Notre carte</h1>
   <div class="container d-flex justify-content-center" id="section">
-  <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
+    <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
       <!-- Indicateurs -->
       <ul class="carousel-indicators mx-auto">
-             <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
-             <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
-             <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
-             <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
-             <li data-bs-target="#carousel" data-bs-slide-to="4"></li>
-             <li data-bs-target="#carousel" data-bs-slide-to="5"></li>
-         </ul>
+        <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
+        <li data-bs-target="#carousel" data-bs-slide-to="4"></li>
+        <li data-bs-target="#carousel" data-bs-slide-to="5"></li>
+      </ul>
       <!-- CAROUSEL -->
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -79,17 +79,21 @@ $title="Catégories";
       </button>
     </div>
   </div>
-  <a class="nav-link commande btn mx-auto bg-danger col-2 " href="PAGES/commande.php"
-  role="button">
-  <span class="d-sm-none d-md-inline">commander</span>
-  <i class="bi bi-basket btn-icon"></i></a>
+  <button type="button" class="btn btn-order bg-danger col-3 col-md-4 col-lg-3" href="/PAGES/commande.php">
+    Ma commande <i class="bi bi-basket btn-icon"></i>
+  </button>
+  <!-- <a class="btn btn-order rounded-0" href="/PAGES/commande.php"> -->
+
+    <!-- <a class="nav-link commande btn mx-auto bg-danger col-2 " href="/PAGES/commande.php" role="button">
+      <span class="d-sm-none d-md-inline">commander</span>
+    <i class="bi bi-basket btn-icon"></i></a> -->
 </div>
 
 <?php
 include('../partials/footer.php');
 ?>
 
-  <script type="module" src="/dist/assets/index.js"></script>
+<script type="module" src="/dist/assets/index.js"></script>
 </body>
 
 </html>

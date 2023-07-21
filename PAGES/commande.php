@@ -30,13 +30,13 @@ include ('../partials/header.php');
 
 
   <!-- /// LES PLATS COMMANDÉS EN SCROLL HIDDEN/// -->
-  <div class="container m-5 overflow-hidden overflow-y-scroll" style="height: 20vh;cursor: pointer;">
+  <div class="container overflow-hidden overflow-y-scroll" style="height: 23vh;cursor: pointer;">
     <!-- <div class="row"> -->
     <!-- <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
     class="scrollspy-example" tabindex="0"> -->
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-50 h-50 flex-row justify-content-between ">
-        <img class="col-4" src="public/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
+        <img class="col-4" src="/public/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
         <div class="col-7">
           <div class="card-title row justify-content-around">
             <h5 class="col-6"> burger-du-chef</h5>
@@ -52,7 +52,7 @@ include ('../partials/header.php');
 
     <div class="row  m-3 justify-content-around">
       <div class="card p-3 w-50 flex-row justify-content-between ">
-        <img class="col-4" src="public/IMG/food/cheesburger.jpg" alt="image cheesburger" id="img2">
+        <img class="col-4" src="/public/IMG/food/cheesburger.jpg" alt="image cheesburger" id="img2">
         <div class="col-7">
           <div class="card-title row justify-content-around">
             <h5 class="col-6"> burger-du-chef</h5>
@@ -78,9 +78,9 @@ include ('../partials/header.php');
 
 
 
-  <div class="container d-flex justify-content-center">
+  <div class="container d-flex justify-content-center" id="formulaire">
     <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
-      <div class="col-md-12">
+      <div class="col-md-12 mb-5">
         <label for="nom" class="form-label">
           Nom et Prénom
           <span class="required text-danger">*</span>
@@ -90,7 +90,7 @@ include ('../partials/header.php');
         <span class="invalid-feedback">Veuillez renseigner votre Nom et votre prénom</span>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 mb-5">
         <label for="email" class="form-label">
           Email
           <span class="required text-danger">*</span>

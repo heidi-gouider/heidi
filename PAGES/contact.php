@@ -4,7 +4,7 @@ $title="Contact";
   ?>
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <div class="contenu">
-  <h1 class="row col-6 fst-italic">Nous contacter
+  <h1 class="fst-italic">Nous contacter
     <span class="titre"></span>
   </h1>
 
@@ -37,7 +37,7 @@ $title="Contact";
           <span class="input-group-text">@</span>
           <input type="text" class="form-control form-control-hover" placeholder="Email" id="email" name="email" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner un email</span>
-          <div class="erreurMail text-danger" id="erreurMail"></div>
+          <div class="erreur text-danger" id="erreurMail"></div>
         </div>
       </div>
 

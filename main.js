@@ -308,12 +308,14 @@ form.addEventListener('submit', valider);
 // validForm.addEventListener('click', valider);
 
 
-function valider() {
+function valider(e) {
     // si champ vide
     if (!form.checkValidity()) {
-        preventDefault();
-        stopPropagation()
+        e.preventDefault();
+        e.stopPropagation()
         // console.log('formulaire invalide');
+//         form.classList.add("was-validated");
+// return;
     }
     if (!validName.test(form.nom.value)){
         e.preventDefault();
@@ -334,7 +336,7 @@ function valider() {
     }
 
     form.classList.add("was-validated");
-
+return;
 };
 
 //********* PAGE commande ***********//

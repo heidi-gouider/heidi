@@ -4,7 +4,7 @@ include('partials/header.php');
 ?>
 
 <div class="row video-container">
-    <div class="text-white" id="titre-accueil">
+    <div class="text-white fst-italic" id="titre-accueil">
         <h1>The District</h1>
     </div>
 

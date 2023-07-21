@@ -36,15 +36,15 @@ include('../partials/header.php');
 </div>
 
 <!-- /// LES PLATS /// -->
-<div class="container m-5" id="cards">
+<div class="container m-5 pt-3" id="cards">
   <div class="row  m-3 justify-content-around" id="row1-burger">
     <div class="card p-3 w-25">
-      <div class="card-header ">
+      <!-- <div class="card-header ">
         <button type="button" class="btn text-white">
           <i class="bi bi-plus"></i>
-        </button>
+        </button> -->
         <img src="/public/IMG/food/cheesburger.jpg" alt="image burger" id="image1">
-      </div>
+      <!-- </div> -->
       <div class="card-title">
         <h5>fromage</h5>
       </div>
@@ -63,12 +63,12 @@ include('../partials/header.php');
     </div>
 
     <div class="card p-3 w-25">
-      <div class="card-header ">
+      <!-- <div class="card-header ">
         <button type="button" class="btn text-white">
           <i class="bi bi-plus"></i>
-        </button>
+        </button> -->
         <img src="/public/IMG/food/veggie-burger.jpg" alt="image veggie burger" id="image2">
-      </div>
+      <!-- </div> -->
       <div class="card-title">
         <h5>le végé</h5>
       </div>
@@ -84,7 +84,7 @@ include('../partials/header.php');
     </div>
   </div>
 
-  <div class="row  m-3 justify-content-around">
+  <div class="row  m-3 pt-5 justify-content-around">
     <div class="card p-3 w-25">
       <img src="/public/IMG/food/hamburger.jpg" alt="image hamburger" id="image3">
       <div class="card-title">

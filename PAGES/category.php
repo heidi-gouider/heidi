@@ -7,7 +7,7 @@ $title="Catégories";
 
   <!-- <h1 class="row col-12 fst-italic">Notre carte</h1> -->
 <div class="contenu">
-      <h1 class="row col-12 fst-italic">Notre carte</h1> 
+      <h1 class="row text-white col-12 fst-italic">Notre carte</h1> 
   <div class="container d-flex justify-content-center" id="section">
   <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
       <!-- Indicateurs -->

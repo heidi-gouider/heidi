@@ -4,11 +4,11 @@ $title="Contact";
   ?>
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <div class="contenu">
-  <h1 class="row col-12 fst-italic">Nous contacter
+  <h1 class="row col-6 fst-italic">Nous contacter
     <span class="titre"></span>
   </h1>
 
-  <div class="container d-flex justify-content-center mx-auto">
+  <div class="container d-flex justify-content-center mx-auto" id="formulaire">
     <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
@@ -45,7 +45,7 @@ $title="Contact";
         <label for="tel" class="form-label">Téléphone
           <!-- <span class="required text-danger">*</span> -->
         </label>
-        <input type="tel" class="form-control form-control-hover" placeholder="00\/21\/34\/56\/78" id="tel" name="tel" autocomplete="off">
+        <input type="tel" class="form-control form-control-hover" placeholder="Téléphone" id="tel" name="tel" autocomplete="off">
         <!-- <span class="invalid-feedback">Veuillez renseigner un numéro de téléphone</span> -->
         <div class="erreurTel text-danger" id="erreurTel"></div>
       </div>

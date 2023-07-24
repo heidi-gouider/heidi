@@ -124,7 +124,7 @@ include('../partials/header.php');
 include('../partials/footer.php');
 ?>
 
-<script type="module" src="../dist/assets/index.js"></script>
+<!-- <script type="module" src="../dist/assets/index.js"></script> -->
 </body>
 
 </html>

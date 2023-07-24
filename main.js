@@ -305,7 +305,9 @@ let formInputs = form.querySelectorAll('input');
 
 // J'ajoute un écouteur "input" pour les champs du formulaire
 formInputs.forEach(input => {
-    input.addEventListener('input', () => {
+    // input.addEventListener('input', () => {
+        input.addEventListener('blur', () => {
+
         // Je supprime la classe "was-validated" lorsqu'un champ est modifié
         form.classList.remove("was-validated");
 
@@ -324,31 +326,49 @@ function valider(e) {
     // si champ vide
     if (!form.checkValidity()) {
         e.preventDefault();
-        e.stopPropagation()
+        // e.stopPropagation()
         // console.log('formulaire invalide');
         //         form.classList.add("was-validated");
-        // return;
+        return;
     }
     if (!validName.test(form.nom.value)) {
-        e.preventDefault();
         // inputNom.value="";
-        messErreur.innerHTML = 'Format invalide !'
+        messErreur.innerHTML = 'Format Nom invalide !';
+        e.preventDefault();
+        return;
+
         // messErreur.textContent= "Texte modifié";
         // alert("erreur : Format nom invalide !");
     }
     if (!validMail.test(form.email.value)) {
+        messErreurMail.innerHTML='Email invalide !';
         e.preventDefault();
-        // messErreurMail.innerHTML='Email invalide !'
+        return;
+
         // alert("Format Email invalide !")
     }
     if (!validTel.test(form.tel.value)) {
+        messErreurTel.innerHTML='Format téléphone invalide !';
         e.preventDefault();
-        // messErreurTel.innerHTML='Format téléphone invalide !'
+        return;
+
         // alert("Format Email invalide !")
     }
 
+        // alert("Le formulaire a été soumis avec succès !");
     form.classList.add("was-validated");
     return;
+
+    // if (form.checkValidity() && validName.test(form.nom.value) && validMail.test(form.email.value) && validTel.test(form.tel.value)) {
+        // Le formulaire est valide et prêt à être soumis
+
+        // Afficher un message de succès
+    //     alert("Le formulaire a été soumis avec succès !");
+    // } else {
+        // Le formulaire n'est pas valide, empêche la soumission
+    //     e.preventDefault();
+    // }
+   
 };
 
 //********* PAGE commande ***********//

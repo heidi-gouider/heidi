@@ -5,25 +5,30 @@ de récupérer et afficher toutes les données saisies sous forme de tableau -->
 <!-- 2/ Je récupère des données du form avec la superglobale $_SERVER-->
 
 <?PHP
-$cheminTarget = __DIR__ . "/target.txt";
+// $cheminTarget = __DIR__ . "/target.txt";
 
-if ($_SERVER['REQUEST-METHOD'] === "POST") {
+// if ($_SERVER['REQUEST-METHOD'] === "POST") {
 
-    // elements à afficher
-    $datas = $_POST;
-    // chemin du fichier vers lequel les données récupérés vont être affiché
-    // $cheminTarget = "target.txt";
-    // le fichier cheminTarget contient les valeurs de la variable datas/ "a"=append
-    $fp = fopen($cheminTarget, "a");
-    // Parcours des données et écriture dans le fichier txt
-    // foreach ($REQUEST as $data=>$valeur)
-    foreach ($datas as $champ => $valeur) {
-        fwrite($fp, $champ . ":" . $valeur . "\n");
-        // fputs($fp, $datas .":". $valeur . "\n");
+// elements à afficher
+$datas = $_POST;
+// Je stocke le chemin du fichier vers lequel les données récupérés vont être affiché dans une variables
+$cheminTarget = "target.txt";
 
-    }
-    fclose($fp);
+// le fichier cheminTarget contient les valeurs de la variable datas/ "a"=append
+// La fonction fopen() = file open > permet d'ouvrir un fichier à l'intérieur d'une page php
+// les paramètres de cette fonction sont (nom du fichier à ouvrir, mode d'ouverture du dit fichier)
+$fp = fopen($cheminTarget, "r+");
+
+// Parcours des données et écriture dans le fichier txt
+// foreach ($REQUEST as $data=>$valeur)
+foreach ($datas as $champ => $valeur) {
+    //    $afficheDatas = fread($fp, 1000);
+    fwrite($fp, $champ . ":" . $valeur . "\n");
+    // fputs($fp, $datas .":". $valeur . "\n");
+
 }
+fclose($fp);
+// }
 
 var_dump($_POST); // Affiche le contenu des données du formulaire
 

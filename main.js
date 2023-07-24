@@ -305,8 +305,8 @@ let formInputs = form.querySelectorAll('input');
 
 // J'ajoute un écouteur "input" pour les champs du formulaire
 formInputs.forEach(input => {
-    // input.addEventListener('input', () => {
-        input.addEventListener('blur', () => {
+    input.addEventListener('input', () => {
+        // input.addEventListener('blur', () => {
 
         // Je supprime la classe "was-validated" lorsqu'un champ est modifié
         form.classList.remove("was-validated");
@@ -328,14 +328,14 @@ function valider(e) {
         e.preventDefault();
         // e.stopPropagation()
         // console.log('formulaire invalide');
-        //         form.classList.add("was-validated");
-        return;
+                form.classList.add("was-validated");
+        // return;
     }
     if (!validName.test(form.nom.value)) {
         // inputNom.value="";
         messErreur.innerHTML = 'Format Nom invalide !';
         e.preventDefault();
-        return;
+        // return;
 
         // messErreur.textContent= "Texte modifié";
         // alert("erreur : Format nom invalide !");
@@ -343,14 +343,14 @@ function valider(e) {
     if (!validMail.test(form.email.value)) {
         messErreurMail.innerHTML='Email invalide !';
         e.preventDefault();
-        return;
+        // return;
 
         // alert("Format Email invalide !")
     }
     if (!validTel.test(form.tel.value)) {
         messErreurTel.innerHTML='Format téléphone invalide !';
         e.preventDefault();
-        return;
+        // return;
 
         // alert("Format Email invalide !")
     }

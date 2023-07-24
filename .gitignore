@@ -7,3 +7,5 @@ vendor/
 # Ignorer le répertoire composer
 dist/
 
+# Ignorer le répertoire composer
+#dist/assets/

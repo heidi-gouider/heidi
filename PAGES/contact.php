@@ -9,7 +9,7 @@ $title="Contact";
   </h1>
 
   <div class="container d-flex justify-content-center mx-auto" id="formulaire">
-    <form action="target.php" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="/PAGES/traitementData.php" method="post" onsubmit="return validerForm(event)" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>

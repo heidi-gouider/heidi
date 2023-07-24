@@ -9,12 +9,12 @@ $title="Contact";
   </h1>
 
   <div class="container d-flex justify-content-center mx-auto" id="formulaire">
-    <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="target.php" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
         </label>
-        <input type="text" class="form-control form-control-hover" placeholder="Nom" name="nom" id="nom" autocomplete="off" required>
+        <input type="text" class="form-control form-control-hover champ" placeholder="Nom" name="nom" id="nom" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom
         </span>
         <div class="erreur text-danger" id="erreurNom"></div>
@@ -35,7 +35,7 @@ $title="Contact";
         </label>
         <div class="input-group has-validation">
           <span class="input-group-text">@</span>
-          <input type="text" class="form-control form-control-hover" placeholder="Email" id="email" name="email" autocomplete="off" required>
+          <input type="text" class="form-control form-control-hover champ" placeholder="Email" id="email" name="email" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner un email</span>
           <div class="erreur text-danger" id="erreurMail"></div>
         </div>
@@ -45,7 +45,7 @@ $title="Contact";
         <label for="tel" class="form-label">Téléphone
           <!-- <span class="required text-danger">*</span> -->
         </label>
-        <input type="tel" class="form-control form-control-hover" placeholder="Téléphone" id="tel" name="tel" autocomplete="off">
+        <input type="tel" class="form-control form-control-hover champ" placeholder="Téléphone" id="tel" name="tel" autocomplete="off">
         <!-- <span class="invalid-feedback">Veuillez renseigner un numéro de téléphone</span> -->
         <div class="erreurTel text-danger" id="erreurTel"></div>
       </div>
@@ -55,7 +55,7 @@ $title="Contact";
         <label for="message" class="form-label">Votre message
           <span class="required text-danger">*</span>
         </label>
-        <textarea class="form-control form-control-hover" placeholder="Mon message" rows="10" id="message" name="message" autocomplete="off" required></textarea>
+        <textarea class="form-control form-control-hover champ" placeholder="Mon message" rows="10" id="message" name="message" autocomplete="off" required></textarea>
         <span class="invalid-feedback">Veuillez renseigner votre Nom</span>
         <div class="erreur text-danger" id="erreurMess"></div>
       </div>

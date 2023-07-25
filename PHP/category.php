@@ -1,0 +1,7 @@
+/**
+     * objet catégories
+     */
+class category
+{
+
+}

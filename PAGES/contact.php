@@ -9,7 +9,7 @@ $title="Contact";
   </h1>
 
   <div class="container d-flex justify-content-center mx-auto" id="formulaire">
-    <form action="/PAGES/traitementData.php" method="post" onsubmit="return validerForm(event)" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="traitementData.php" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
@@ -63,7 +63,7 @@ $title="Contact";
       <h6 class="row p-3 text-danger">*Champs obligatoires</h6>
 
       <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-primary" id="envoyer" type="submit">Envoyer</button>
+        <button class="btn btn-primary" onclick="valider(event)" id="envoyer" type="submit">Envoyer</button>
         <!--  data-bs-toggle="modal" -->
       </div>
     </form>

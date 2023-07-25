@@ -323,6 +323,8 @@ form.addEventListener('submit', valider);
 // validForm.addEventListener('click', valider);
 
 function valider(e) {
+    // e.preventDefault();
+
     // si champ vide
     if (!form.checkValidity()) {
         e.preventDefault();

@@ -79,7 +79,7 @@ include('../partials/header.php');
 
 
   <div class="container d-flex justify-content-center" id="formulaire">
-    <form action="#" method="post" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="#" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-12 mb-5">
         <label for="nom" class="form-label">
           Nom et Prénom
@@ -87,6 +87,7 @@ include('../partials/header.php');
         </label>
         <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner votre Nom et votre prénom</span>
+        <div class="erreur text-danger" id="erreurNom"></div>
       </div>
 
       <div class="col-md-6 mb-5">
@@ -98,6 +99,7 @@ include('../partials/header.php');
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
           <input type="text" class="form-control" id="email" name="email" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner votre Email</span>
+          <div class="erreur text-danger" id="erreurMail"></div>
         </div>
       </div>
 
@@ -108,6 +110,7 @@ include('../partials/header.php');
         </label>
         <input type="number" class="form-control" id="tel" name="tel" autocomplete="off" required>
         <span class="invalid-feedback">Veuillez renseigner un téléphone</span>
+        <div class="erreurTel text-danger" id="erreurTel"></div>
       </div>
 
       <div class="mb-3">

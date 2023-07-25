@@ -330,7 +330,7 @@ function valider(e) {
         e.preventDefault();
         // e.stopPropagation()
         // console.log('formulaire invalide');
-                form.classList.add("was-validated");
+        form.classList.add("was-validated");
         // return;
     }
     if (!validName.test(form.nom.value)) {
@@ -343,35 +343,37 @@ function valider(e) {
         // alert("erreur : Format nom invalide !");
     }
     if (!validMail.test(form.email.value)) {
-        messErreurMail.innerHTML='Email invalide !';
+        messErreurMail.innerHTML = 'Email invalide !';
         e.preventDefault();
         // return;
 
         // alert("Format Email invalide !")
     }
     if (!validTel.test(form.tel.value)) {
-        messErreurTel.innerHTML='Format téléphone invalide !';
+        messErreurTel.innerHTML = 'Format téléphone invalide !';
         e.preventDefault();
         // return;
 
         // alert("Format Email invalide !")
     }
 
-        // alert("Le formulaire a été soumis avec succès !");
+    // alert("Le formulaire a été soumis avec succès !");
     form.classList.add("was-validated");
     return;
-    
-    // if (form.checkValidity() && validName.test(form.nom.value) && validMail.test(form.email.value) && validTel.test(form.tel.value)) {
-        // Le formulaire est valide et prêt à être soumis
 
-        // Afficher un message de succès
+    // if (form.checkValidity() && validName.test(form.nom.value) && validMail.test(form.email.value) && validTel.test(form.tel.value)) {
+    // Le formulaire est valide et prêt à être soumis
+
+    // Afficher un message de succès
     //     alert("Le formulaire a été soumis avec succès !");
     // } else {
-        // Le formulaire n'est pas valide, empêche la soumission
+    // Le formulaire n'est pas valide, empêche la soumission
     //     e.preventDefault();
     // }
-   
+
 };
+
+
 
 //********* PAGE commande ***********//
 

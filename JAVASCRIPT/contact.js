@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
-// import $ from 'jquery';
+import $ from 'jquery';
 
 import '/FRONT/STATIQUE/CSS/contact.css'
 
@@ -15,6 +15,22 @@ import '/FRONT/STATIQUE/CSS/contact.css'
 // FORMULAIRE
 
 //********* PAGE contact ***********//
+// AFFICHAGE MODAL //
+$('#valid').on('submit', valider);
+$('.validation').on('submit', valider);
+
+const myModal = document.querySelector('#Modal');
+const myInput = document.getElementById('myInput');
+
+myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus();
+});
+
+myModal.addEventListener('hidden.bs.modal', () => {
+    // Remplacez "votre_page_redirection.php" par le nom du fichier PHP vers lequel vous souhaitez rediriger l'utilisateur.
+    window.location.href = 'votre_page_redirection.php';
+});
+
 
 // la fonction "valider (e)" est appelée quand la soumission du formulaire est déclenchée
 // j'utilise la méthode "checkValidity()" pour vérifier la validité du formulaire
@@ -23,32 +39,28 @@ import '/FRONT/STATIQUE/CSS/contact.css'
 // J'utilise la fonction "modal()" de jQuery pour afficher une modal
 
 //  variables je récupère mon formulaire //
-let form = document.querySelector(".validation");
-let validForm = document.querySelector("#envoyer");
-let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
-let invalidName = document.querySelectorAll('.invalidName');
+// let form = document.querySelector(".validation");
+// let validForm = document.querySelector("#envoyer");
+// let validName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+// let invalidName = document.querySelectorAll('.invalidName');
 // let invalidName= document.querySelector('#nom placeholder');
 
 // j'ajoute un écouteur sur le formulaire pour l'évennement "submit"ou "click" ma fonction valider est appelé
-form.addEventListener('submit', valider);
+// form.addEventListener('submit', valider);
 // validForm.addEventListener('click', valider);
 
 
-function valider(e) {
-    // si champ vide
-    if (form.checkValidity() == false) {
-        e.preventDefault();
-        console.log('formulaire invalide');
-    }
-    if (validName.test(form.nom.value) == false || validName.test(form.prenom.value) == false) {
-        // e.preventDefault();
-        // setCustomValidity("erreur!");
-        alert("erreur : Format invalide !");
-        // invalidName.innerHTML ="pas valide";
-    }
-    form.classList.add("was-validated");
+// function valider(e) {
+//     if (form.checkValidity() == false) {
+//         e.preventDefault();
+//         console.log('formulaire invalide');
+//     }
+//     if (validName.test(form.nom.value) == false || validName.test(form.prenom.value) == false) {
+//         alert("erreur : Format invalide !");
+//     }
+//     form.classList.add("was-validated");
 
-};
+// };
 
 // let form = document.querySelector(".validation");
 

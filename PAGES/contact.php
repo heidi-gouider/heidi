@@ -1,15 +1,15 @@
 <?php
-$title="Contact";
-  include ('../partials/header.php');
-  ?>
-  <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
-  <div class="contenu">
+$title = "Contact";
+include('../partials/header.php');
+?>
+<!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+<div class="contenu">
   <h1 class="fst-italic">Nous contacter
     <span class="titre"></span>
   </h1>
 
   <?php
-  include ('PAGES/modal.php');
+  include('PAGES/modal.php');
   ?>
 
   <div class="container d-flex justify-content-center mx-auto" id="formulaire">
@@ -72,16 +72,17 @@ $title="Contact";
       </div>
     </form>
   </div>
-  </div>
+</div>
 
-  <?php
+<?php
 include('../partials/footer.php');
 ?>
 
-  <!-- /// LA MODAL include la modal avec php /// -->
-  <!-- </div> -->
+<!-- /// LA MODAL include la modal avec php /// -->
 
-  <script type="module" src="/dist/assets/index.js"></script>
+<script type="module" src="/dist/assets/index.js"></script>
+<script src="JAVASCRIPT\contact.js"></script>
+
 </body>
 
 </html>

@@ -12,6 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // elements à afficher
     $datas = $_POST;
 
+    // Ajout de la date (heure d'envoi) aux données
+    $datas['timestamp'] = date('Y-m-d H:i:s');
+
     // Je stocke le chemin du fichier vers lequel les données récupérés vont être affiché dans une variables
     $cheminTarget = "target.txt";
     // $cheminTarget = "target.txt";
@@ -20,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // le fichier cheminTarget contient les valeurs de la variable datas/ "a"=append
     // La fonction fopen() = file open > permet d'ouvrir un fichier à l'intérieur d'une page php
     // les paramètres de cette fonction sont (nom du fichier à ouvrir, mode d'ouverture du dit fichier)
-    $fp = fopen($cheminTarget, "w");
+    $fp = fopen($cheminTarget, "a");
 
     // Parcours des données et écriture dans le fichier txt
     // foreach ($REQUEST as $data=>$valeur){
@@ -31,36 +34,42 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         // }
 
-        fclose($fp);
+        // fclose($fp);
     }
+    // echo '<script>';
+    // echo 'window.onload = function(){';
+    // echo '  $("#modal").modal("show");';
+    // echo "}";
+    // echo '</script>';
 
-    var_dump($_POST);
-    
-    // Affiche le contenu des données du formulaire
+    fclose($fp);
+    // var_dump($_POST);
+
 }
-    // Lire le contenu du fichier target.txt et afficher les données
-    // if (file_exists($cheminTarget)) {
-        // Lire le contenu du fichier dans une variable
-        // $contenu = file_get_contents($cheminTarget);
 
-        // Diviser le contenu en lignes en utilisant le saut de ligne comme délimiteur
-        // $lignes = explode("\n", $contenu);
+// Lire le contenu du fichier target.txt et afficher les données
+// if (file_exists($cheminTarget)) {
+// Lire le contenu du fichier dans une variable
+// $contenu = file_get_contents($cheminTarget);
 
-        // Parcourir chaque ligne et afficher les données
-        // foreach ($lignes as $ligne) {
-            // Diviser la ligne en deux parties : le nom du champ et sa valeur
-            // $donnees = explode(":", $ligne);
+// Diviser le contenu en lignes en utilisant le saut de ligne comme délimiteur
+// $lignes = explode("\n", $contenu);
 
-            // Vérifier si le champ et sa valeur existent
-            // if (count($donnees) === 2) {
-            //     $champ = trim($donnees[0]);
-            //     $valeur = trim($donnees[1]);
+// Parcourir chaque ligne et afficher les données
+// foreach ($lignes as $ligne) {
+// Diviser la ligne en deux parties : le nom du champ et sa valeur
+// $donnees = explode(":", $ligne);
 
-                // Afficher le champ et sa valeur
-    //             echo "$champ : $valeur<br>";
-    //         }
-    //     }
-    // } else {
-    //     echo "Aucune donnée n'a été enregistrée pour le moment.";
-    // }
+// Vérifier si le champ et sa valeur existent
+// if (count($donnees) === 2) {
+//     $champ = trim($donnees[0]);
+//     $valeur = trim($donnees[1]);
+
+// Afficher le champ et sa valeur
+//             echo "$champ : $valeur<br>";
+//         }
+//     }
+// } else {
+//     echo "Aucune donnée n'a été enregistrée pour le moment.";
+// }
 ?>

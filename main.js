@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-// import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
 
@@ -360,7 +360,7 @@ function valider(e) {
         // alert("Le formulaire a été soumis avec succès !");
     form.classList.add("was-validated");
     return;
-
+    
     // if (form.checkValidity() && validName.test(form.nom.value) && validMail.test(form.email.value) && validTel.test(form.tel.value)) {
         // Le formulaire est valide et prêt à être soumis
 
@@ -393,7 +393,7 @@ function valider(e) {
 // $('#valid').on('click',valider);
 // $('.validation').on('click',valider);
 
-// const myModal = document.querySelector('#Modal')
+// const myModal = document.querySelector('.Modal')
 // const myInput = document.getElementById('myInput')
 
 // let forms = document.forms;
@@ -402,8 +402,22 @@ function valider(e) {
 //   if (form.method === 'post' || form.method === 'POST') {
 //     myModal.addEventListener('shown.bs.modal', () => {
 //         myInput.focus()
-//     })
+//     });
+// const closeButton = document.querySelector('.modal .close');
+// closeButton.addEventListener('click', () => {
+//   window.location.href = 'category.php';
+// });
+
 //       }
 // };
 
 //il faut faire en sorte que l'event se declanche au click button et pas sur le onclick de la zone "votre message"
+
+
+// fermeture de la modal et redirection
+  // Lorsque l'utilisateur ferme la modal, redirigez-le vers une page spécifique
+//   const closeButton = document.querySelector('.modal .close');
+//   closeButton.addEventListener('click', () => {
+//     window.location.href = 'category.php';
+//   });
+

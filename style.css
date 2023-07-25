@@ -64,7 +64,8 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   color: var(--bordeau) !important;
 }
 
-.nav-link:active {
+.nav #link-active{
+/* .nav-link:active { */
   color: var(--bordeau) !important;
   /* text-decoration: none; */
 }

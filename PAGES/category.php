@@ -79,7 +79,8 @@ include('../partials/header.php');
       </button>
     </div>
   </div>
-  <button type="button" class="btn btn-order bg-danger col-3 col-md-4 col-lg-3" href="/PAGES/commande.php">
+  <a class="btn btn-order rounded-0" href="/PAGES/commande.php">
+  <button type="button" class="btn btn-order bg-danger col-3 col-md-4 col-lg-3">
     Ma commande <i class="bi bi-basket btn-icon"></i>
   </button>
   <!-- <a class="btn btn-order rounded-0" href="/PAGES/commande.php"> -->

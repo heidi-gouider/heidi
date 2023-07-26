@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     fclose($fp);
     // var_dump($_POST);
-
+  // Redirige l'utilisateur vers une page de confirmation après la soumission réussie
+  header("Location: confirmation.php");
+  exit(); //  terminer le script ici pour éviter toute exécution supplémentaire
 }
 
 // Lire le contenu du fichier target.txt et afficher les données

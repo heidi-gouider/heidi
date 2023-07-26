@@ -378,6 +378,18 @@ function valider(e) {
 // FORMULAIRE
 
 //********* PAGE contact ***********//
+  // Fonction pour afficher la modal
+  function afficherModal() {
+    // Afficher la modal (vous pouvez utiliser ici votre propre code pour afficher la modal)
+    alert("C'est OK ! Vos données ont été enregistrées avec succès.");
+}
+
+// Vérifier si le formulaire a été soumis avec succès
+let urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === '1') {
+    // Appeler la fonction pour afficher la modal
+    afficherModal();
+}
 // AFFICHAGE MODAL //
 // $('#valid').on('submit', valider);
 // $('.validation').on('submit', valider);

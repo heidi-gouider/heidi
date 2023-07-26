@@ -47,10 +47,10 @@ include('../partials/header.php');
 
       <div class="col-md-6 mb-4">
         <label for="tel" class="form-label">Téléphone
-          <!-- <span class="required text-danger">*</span> -->
+          <span class="required text-danger">*</span>
         </label>
-        <input type="tel" class="form-control form-control-hover champ" placeholder="Téléphone" id="tel" name="tel" autocomplete="off">
-        <!-- <span class="invalid-feedback">Veuillez renseigner un numéro de téléphone</span> -->
+        <input type="tel" class="form-control form-control-hover champ" placeholder="Téléphone" id="tel" name="tel" autocomplete="off"required>
+        <span class="invalid-feedback">Veuillez renseigner un numéro de téléphone</span>
         <div class="erreurTel text-danger" id="erreurTel"></div>
       </div>
 

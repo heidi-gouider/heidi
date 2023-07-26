@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 
 import './style.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+// @import 'url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css")';
 
 
 // menu responsive //
@@ -373,9 +374,28 @@ function valider(e) {
 
 };
 
+//********* MODAL ***********//
+// FORMULAIRE
+
+//********* PAGE contact ***********//
+// AFFICHAGE MODAL //
+// $('#valid').on('submit', valider);
+// $('.validation').on('submit', valider);
+
+// const myModal = document.querySelector('#Modal');
+// const myInput = document.getElementById('myInput');
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//     myInput.focus();
+// });
+
+// myModal.addEventListener('hidden.bs.modal', () => {
+//     // Remplacez "votre_page_redirection.php" par le nom du fichier PHP vers lequel vous souhaitez rediriger l'utilisateur.
+//     window.location.href = 'votre_page_redirection.php';
+// });
 
 
-//********* PAGE commande ***********//
+// ********* PAGE commande ***********//
 
 // let validFormAnim= document.querySelector(".btn-joke");
 

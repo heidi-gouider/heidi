@@ -11,6 +11,7 @@
     <title><?= $title ?></title>
     <meta name="description" content="">
     <link rel="stylesheet" href="../dist/assets/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
                 <!-- <ul class="nav-fill justify-content-end"> -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center text-sm">
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link active nav-link-custom" id="link-active" aria-current="page" href="/index.php">Accueil</a>
+                        <a class="nav-link nav-link-custom" id="link-active" aria-current="page" href="/index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="/PAGES/category.php">Catégories</a>

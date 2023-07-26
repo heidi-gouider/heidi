@@ -13,7 +13,7 @@ include('../partials/header.php');
   ?>
 
   <div class="container d-flex justify-content-center mx-auto" id="formulaire">
-    <form action="target.txt" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-6 mb-4">
         <label for="nom" class="form-label">Nom
           <span class="required text-danger">*</span>
@@ -81,7 +81,7 @@ include('../partials/footer.php');
 <!-- /// LA MODAL include la modal avec php /// -->
 
 <script type="module" src="/dist/assets/index.js"></script>
-<script src="JAVASCRIPT\contact.js"></script>
+<!-- <script src="JAVASCRIPT/contact.js"></script> -->
 
 </body>
 

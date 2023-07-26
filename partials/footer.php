@@ -13,7 +13,7 @@
 <body>
 
 <footer class="sticky-bottom footer">
-    <h3>Pour nous suivre !</h3>
+    <h3 class="text-center">Pour nous suivre !</h3>
     <div class="container">
         <ul class="list-inline text-center">
             <li class="list-inline-item">
@@ -27,7 +27,7 @@
             </li>
         </ul>
     </div>
-    <h4>Nous contacter</h4>
+    <!-- <h4>Nous contacter</h4> -->
 </footer>
 
 <!-- <footer>

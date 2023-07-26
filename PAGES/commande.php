@@ -30,7 +30,7 @@ include('../partials/header.php');
 
 
   <!-- /// LES PLATS COMMANDÉS EN SCROLL HIDDEN/// -->
-  <div class="container overflow-hidden overflow-y-auto" style="height: 23vh;cursor: pointer;">
+  <div class="container overflow-y-auto" style="height: 23vh;cursor: pointer;">
     <!-- <div class="row"> -->
     <!-- <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
     class="scrollspy-example" tabindex="0"> -->

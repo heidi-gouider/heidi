@@ -1,10 +1,10 @@
 <?php
-$title="Commande";
+$title="category";
 include ('../partials/header.php');
 ?>
 
   <div class="contenu">
-    <h1 class="row col-12">Notre carte</h1>
+    <h1 class="fst-italic">Notre carte</h1>
     <section class="category">
         <div class="main d-flex align-items-center justify-content-center m-3">
             <!-- <div id="carousel" class="carousel slide" data-ride="carousel"> -->
@@ -14,14 +14,14 @@ include ('../partials/header.php');
                         <!-- <div class="carousel-item active zoomed-item"> -->
                         <!-- <div class="row gap-3 justify-content-center"> -->
                         <!-- <div class="col-md-2"> -->
-                        <img src="/ASSETS/IMG/category/burger_cat.jpg" class="rounded w-25" alt="photo burger" />
+                        <img src="/public/IMG/category/burger_cat.jpg" class="rounded w-25" alt="photo burger" />
                         <!-- </div> -->
                         <!-- <div class="col-md-2"> -->
-                        <img src="/ASSETS/IMG/category/asian_food_cat.jpg" class="rounded w-25" id="image2"
+                        <img src="/public/IMG/category/asian_food_cat.jpg" class="rounded w-25" id="image2"
                             alt="photo asian food" />
                         <!-- </div> -->
                         <!-- <div class="col-md-2"> -->
-                        <img src="/ASSETS/IMG/category/pizza_cat.jpg" class="rounded w-25" id="image3"
+                        <img src="/public/IMG/category/pizza_cat.jpg" class="rounded w-25" id="image3"
                             alt="photo pizza" />
                         <!-- </div> -->
                         <!-- </div> -->
@@ -30,13 +30,13 @@ include ('../partials/header.php');
                         <!-- <div class="carousel-item"> -->
                         <!-- <div class="row gap-3 justify-content-center"> -->
                         <!-- <div class="col-md-3"> -->
-                        <img src="/ASSETS/IMG/category/burger_cat.jpg" class="rounded w-25" alt="photo burger" />
+                        <img src="/public/IMG/category/burger_cat.jpg" class="rounded w-25" alt="photo burger" />
                         <!-- </div> -->
                         <!-- <div class="col-md-3"> -->
                         <img src="/ASSETS/IMG/category/pasta_cat.jpg" class="rounded w-25" alt="pates" />
                         <!-- </div> -->
                         <!-- <div class="col-md-3"> -->
-                        <img src="/ASSETS/IMG/category/salade_cat.jpg" class="rounded w-25" alt="photo salades" />
+                        <img src="/public/IMG/category/salade_cat.jpg" class="rounded w-25" alt="photo salades" />
                     </div>
                 </div>
             </div>

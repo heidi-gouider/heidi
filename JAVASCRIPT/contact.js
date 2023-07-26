@@ -16,20 +16,20 @@ import '/FRONT/STATIQUE/CSS/contact.css'
 
 //********* PAGE contact ***********//
 // AFFICHAGE MODAL //
-$('#valid').on('submit', valider);
-$('.validation').on('submit', valider);
+// $('#valid').on('submit', valider);
+// $('.validation').on('submit', valider);
 
-const myModal = document.querySelector('#Modal');
-const myInput = document.getElementById('myInput');
+// const myModal = document.querySelector('#Modal');
+// const myInput = document.getElementById('myInput');
 
-myModal.addEventListener('shown.bs.modal', () => {
-    myInput.focus();
-});
+// myModal.addEventListener('shown.bs.modal', () => {
+//     myInput.focus();
+// });
 
-myModal.addEventListener('hidden.bs.modal', () => {
-    // Remplacez "votre_page_redirection.php" par le nom du fichier PHP vers lequel vous souhaitez rediriger l'utilisateur.
-    window.location.href = 'votre_page_redirection.php';
-});
+// myModal.addEventListener('hidden.bs.modal', () => {
+//     // Remplacez "votre_page_redirection.php" par le nom du fichier PHP vers lequel vous souhaitez rediriger l'utilisateur.
+//     window.location.href = 'votre_page_redirection.php';
+// });
 
 
 // la fonction "valider (e)" est appelée quand la soumission du formulaire est déclenchée

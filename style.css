@@ -317,7 +317,7 @@ section {
 .carousel {
   width: 80%;
   min-height: 60vh;
-  background-color: rgba(36, 38, 41, 0.6);
+  background-color: rgba(36, 38, 41, 0.4);
   z-index: 2;
     /* cursor: pointer; */
   white-space: nowrap;

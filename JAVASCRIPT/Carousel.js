@@ -5,43 +5,56 @@
 //  3- l'img active centrale aura un effet zoom
 
 
-// class Carousel{
-//     constructor()
-// }
+class Carousel {
+    constructor(selector) {
+        this.carousel = document.querySelector(selector);
+        // bouttons = document.querySelectorAll("button i");
+        this.isSlideStart = false;
+        this.startX = 0;
+        this.scrollLeft = 0;
+        this.slideStart = this.slideStart.bind(this);
+    this.sliding = this.sliding.bind(this);
+    this.slideStop = this.slideStop.bind(this);
+        this.addEventListener();
+    }
+
+    // fonctions pour le défilement
+    slideStart = (e) => {
+        this.isSlideStart = true;
+        this.startX = e.pageX - this.carousel.offsetLeft;
+        this.scrollLeft = this.carousel.scrollLeft;
+    }
+
+    sliding = (e) => {
+        if (!this.isSlideStart) return;
+        e.preventDefault();
+        // carousel.scrollLeft = e.pageX;
+        const x = e.pageX - this.carousel.offsetLeft;
+        const walk = (x - this.startX) * 2; // Ajuster la sensibilité de défilement
+        this.carousel.scrollLeft = this.scrollLeft - walk;
+    }
+
+    slideStop = () => {
+        this.slideStart = false;
+
+    }
+    // lorsque l'utilisateur clique sur le carousel (mousedown), le déplacement de la souris (mousemove) est enregistré
+    //  la propriété scrollLeft du carousel est ajustée pour simuler un défilement horizontal. 
+    // Lorsque l'utilisateur relâche le clic (mouseup) ou sort du carousel (mouseleave), le défilement s'arrête.
+    addEventListener() {
+        this.carousel.addEventListener("mousedown", this.slideStart);
+        this.carousel.addEventListener("mousemove", this.sliding);
+        this.carousel.addEventListener("mouseup", this.slideStop);
+        this.carousel.addEventListener("mouseleave", this.slideStop);
+    }
+}
+
+const myCarousel = new bootstrap.Carousel(".carousel");
 
 
-let carousel = document.querySelector(".carousel");
-bouttons = document.querySelectorAll("button i");
+    // On récupère le conteneur de tous les éléments
+    // elements = document.querySelector(".elements")
 
-let isSlideStart = false;
-let startX = 0;
-let scrollLeft = 0;
-
-const slideStart = (e) => {
-    isSlideStart = true;
-    startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-};
-
-let sliding = (e) => {
-    if (!isSlideStart) return;
-    e.preventDefault();
-    // carousel.scrollLeft = e.pageX;
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2; // Ajuster la sensibilité de défilement
-    carousel.scrollLeft = scrollLeft - walk;
-};
-let slideStop = () => {
-    slideStart = false;
-
-};
-// lorsque l'utilisateur clique sur le carousel (mousedown), le déplacement de la souris (mousemove) est enregistré
-//  la propriété scrollLeft du carousel est ajustée pour simuler un défilement horizontal. 
-// Lorsque l'utilisateur relâche le clic (mouseup) ou sort du carousel (mouseleave), le défilement s'arrête.
-carousel.addEventListener("mousedown", slideStart);
-carousel.addEventListener("mousemove", sliding);
-carousel.addEventListener("mouseup", slideStop);
-carousel.addEventListener("mouseleave", slideStop);
 // pour ne pas attendre que les feuilles de style etle reste soi chargé
 // window.addEventListener('DOMContentLoaded', () => {
 // ------------------------------------------------------------------------------------------

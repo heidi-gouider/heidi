@@ -3,6 +3,7 @@
 //  1- Le carousel doit afficher 3img actives
 //  2- lors du slide, la 1ere img fait place à une 4eme qui prend la 3eme position
 //  3- l'img active centrale aura un effet zoom
+// import { Carousel } from 'bootstrap';
 
 
 class Carousel {
@@ -49,7 +50,7 @@ class Carousel {
     }
 }
 
-const myCarousel = new bootstrap.Carousel(".carousel");
+const myCarousel = new Carousel('.carousel');
 
 
     // On récupère le conteneur de tous les éléments

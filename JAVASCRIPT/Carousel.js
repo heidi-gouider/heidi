@@ -51,6 +51,9 @@ class Carousel {
 }
 
 const myCarousel = new Carousel('.carousel');
+    // const myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
+    //     interval: 5000 // Changez cette valeur pour définir la durée d'affichage de chaque image en millisecondes
+    // });
 
 
     // On récupère le conteneur de tous les éléments

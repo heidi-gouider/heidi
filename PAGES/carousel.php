@@ -80,7 +80,7 @@ include('../partials/header.php');
 <?php
 include('../partials/footer.php');
 ?>
-<script src="/JAVASCRIPT/Carousel.js"></script>
+<!-- <script src="/JAVASCRIPT/Carousel.js"></script> -->
 <script type="module" src="../../../main.js"></script>
 
 </body>

@@ -3,7 +3,21 @@
 ## Description du projet :
 
 1. objectif
+
+Un nouveau restaurant souhaite mettre en place un site internet pour permettre à ses clients de commander en ligne.
+
 1. fonctionnalités principales
+
+Le site doit permettre d'afficher l'ensemble des plats ou de naviguer dans les catégories.
+
+Le client doit pouvoir sélectionner un plat et passer une commande.
+
+Lors de la commande, il doit indiquer ses nom et prénom, son adresse, sa ville, son numéro de téléphone et son email.
+
+Le client reçoit un email de confirmation lorsque sa commande est validée.
+
+La page contact doit permettre d'envoyer un message au restaurant via un formulaire.
+
 1. ce qu'il apporte.
 
 ### Installation :
@@ -13,6 +27,7 @@
   les dépendances nécessaires, !vite est une alternatine aux bundler pour la fase de developpement!
   les commandes à exécuter,
   toutes les étapes importantes pour mettre en place l'environnement de développement.
+
 
 ### Utilisation :
 

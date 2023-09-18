@@ -1,0 +1,2 @@
+<!-- Le dossier "Models" peut contenir vos fichiers PHP qui représentent les modèles de données de votre application.
+Cela inclut généralement les interactions avec la base de données, les requêtes SQL, etc. -->

@@ -15,17 +15,19 @@ require_once('db_connect.php');
 // if (isset($_GET["added"]) && $_GET["added"] === "true") {
 // echo "Les données ajoutées devraient être affichées ici.";
 // }
-
-// $requete = $db->query("SELECT plat.*FROM plat ");
-$requete = $db->prepare("select plat.*, categorie.id FROM plat INNER JOIN categorie ON plat.categorie_id = categorie.id WHERE categorie_id=?");
+if (isset($_GET['id'])) {
+    $id_categorie = $_GET['id'];
+$requete = $db->query("SELECT * FROM plat WHERE id_categorie=?");
+// $requete = $db->prepare("select plat.*, categorie.id FROM plat INNER JOIN plat ON plat.id_categorie = categorie.id WHERE id_categorie=?");
 // récupération les données
-// $requete->execute(array($_GET["categorie_id"]));
-$tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+$requete->execute(array($_GET["$id_categorie"]));
+$tableau = $requete->fetch(PDO::FETCH_OBJ);
 
 //Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
 $requete->closeCursor();
 
 $count = 0;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,8 +63,10 @@ $count = 0;
                     echo '</div><div class="row">';
                 }
             endforeach; ?>
+            
         </div>
     </main>
+        
     <?php
 include('../partials/footer.php');
 ?>

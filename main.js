@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
-import './JAVASCRIPT/Carousel.js';
+import 'JAVASCRIPT/Carousel.js';
 import './style.css';
 // import 'bootstrap-icons/font/bootstrap-icons.css';
 

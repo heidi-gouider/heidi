@@ -1,6 +1,6 @@
 <?php
 $title = "Catégories";
-include('../partials/header.php');
+include('partials/header.php');
 ?>
 
 

@@ -35,23 +35,56 @@ include('../partials/header.php');
   </div>
 </div>
 
+<!-- //code plats_script.php -->
+<div class="col-md-6 mb-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $plat->libelle ?></h5>
+                                <p class="card-text"> <?= $plat->description ?></p>
+                                <p class="content bg-body"><?= $plat->prix ?></p>
+                                <!-- <div class="card-body">
+                                <a href="plats_script.php?id=<?= $plat->id ?>" class="btn btn-primary">plats</a>
+                            </div> -->
+                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
+                                    <i class="bi bi-basket"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-3 w-25">
+                        <div class="col-md-6 mb-4">
+                            <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
+                            <div class="card-title">
+                                <h5><?= $plat->libelle ?></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p><?= $plat->description ?></p>
+                                    <p class="content bg-body"> <?= $plat->prix ?></p>
+                                </div>
+                                <!-- <div class="container"> -->
+                                <!-- bouton -->
+                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
+                                    <i class="bi bi-basket"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
 <!-- /// LES PLATS /// -->
 <div class="container m-5 pt-3" id="cards">
-  <div class="row  m-3 justify-content-around" id="row1-burger">
+  <div class="row  m-3 justify-content-around">
     <div class="card p-3 w-25">
-      <!-- <div class="card-header ">
-        <button type="button" class="btn text-white">
-          <i class="bi bi-plus"></i>
-        </button> -->
-        <img src="/public/IMG/food/cheesburger.jpg" alt="image burger" id="image1">
-      <!-- </div> -->
+    <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
       <div class="card-title">
-        <h5>fromage</h5>
+        <h5><?= $plat->libelle ?></h5>
       </div>
       <div class="card-body">
         <div class="d-flex justify-content-between">
-          <p>description du produit</p>
-          <p class="content bg-body"> 6.90 $ </p>
+          <p><?= $plat->description ?></p>
+          <p class="content bg-body"> <?= $plat->prix ?></p>
         </div>
         <!-- <div class="container"> -->
         <!-- bouton -->

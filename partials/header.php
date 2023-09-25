@@ -53,7 +53,7 @@
                             <i class="bi bi-basket btn-icon"></i>
                         </a>
                     </li> -->
-                    <a class="btn btn-order rounded-0" href="/PAGES/commande.php">
+                    <a class="btn btn-order rounded-0" href="/templates/commande.php">
                    <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
                         Ma commande <i class="bi bi-basket btn-icon"></i>
                     </button></a>

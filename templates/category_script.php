@@ -15,12 +15,20 @@ require_once('db_connect.php');
 // if (isset($_GET["added"]) && $_GET["added"] === "true") {
 // echo "Les données ajoutées devraient être affichées ici.";
 // }
+
+
 // $requete = $db->query("SELECT categorie.*, COUNT (plat.id) FROM categorie INNER JOIN plat ON categorie.id = plat.id 
 //     GROUP BY categorie.id HAVING COUNT(plat.id)= plat.active");
 // $requete = $db->query("SELECT categorie.*, COUNT (plat.active) FROM categorie INNER JOIN plat ON categorie.id = plat.id_categorie
 //     GROUP BY categorie.id HAVING COUNT(plat.active)= yes");
 
 $requete = $db->query("SELECT categorie.*FROM categorie ");
+// Requête pour récupérer les catégories avec le nombre de plats actifs
+$requete = $db->query("SELECT categorie.*, 
+                            (SELECT COUNT(*) 
+                             FROM plat 
+                             WHERE plat.id_categorie = categorie.id AND plat.active = 'yes') AS count_active 
+                        FROM categorie");
 
 // récupération les données
 $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -28,6 +36,17 @@ $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 //Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
 $requete->closeCursor();
 
+//requete pour afficher le nombre de plats actifs par catégorie
+// $requete = $db->prepare("SELECT id_categorie, COUNT(*) AS count_active FROM plat WHERE active = 'yes' GROUP BY id_categorie HAVING count_active > 0;");
+// $requete->execute();
+
+// Récupérez les résultats sous forme de tableau associatif
+// $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+// Fermez le curseur de la requête
+// $requete->closeCursor();
+
+$count_active = 0;
 $count = 0;
 ?>
 <!DOCTYPE html>
@@ -53,7 +72,17 @@ $count = 0;
                         <img src="/public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->libelle ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?= $categorie->libelle ?></h5>
-                            <p class="card-text">Nombre de plats actifs : <?= $categorie->active ?></p>                                
+                            <?php
+                                // $count_active = 0;
+                                // Trouvez le nombre de plats actifs pour cette catégorie
+                                // foreach ($resultat as $resultat) {
+                                //     if ($resultat['id_categorie'] == $categorie->id) {
+                                //         $count_active = $resultat['count_active'];
+                                //         break;
+                                //     }
+                                // }
+                                ?>
+                            <p class="card-text">Nombre de plats actifs : <?= $categorie->count_active ?></p>                                
                             <div class="card-body">
                                 <a href="plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
                             </div>

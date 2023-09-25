@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import 'node_modules/bootstrap/dist/css';
 // import $ from 'jquery';
-import 'bootstrap/dist/js/bootstrap.js';
+import 'node_modules/bootstrap/dist/js';
 // import { Carousel } from 'bootstrap';
 import 'JAVASCRIPT/Carousel.js';
 import './style.css';

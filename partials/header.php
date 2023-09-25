@@ -33,13 +33,15 @@
                         <a class="nav-link nav-link-custom" id="link-active" aria-current="page" href="/index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="/PAGES/category.php">Catégories</a>
+                        <!-- <a class="nav-link nav-link-custom" href="/templates/category.php">Catégories</a> -->
+                        <a class="nav-link nav-link-custom" href="/templates/category_script.php">Catégories</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="/PAGES/plats.php">Plats</a>
+                        <!-- <a class="nav-link nav-link-custom" href="/templates/plats.php">Plats</a> -->
+                        <a class="nav-link nav-link-custom" href="/templates/plats_script.php">Plats</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="/PAGES/contact.php">Contact <i class="bi bi-envelope"></i></a>
+                        <a class="nav-link nav-link-custom" href="/templates/contact.php">Contact <i class="bi bi-envelope"></i></a>
                     </li>
                     <!-- <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="">Mon compte</a>

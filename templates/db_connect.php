@@ -8,9 +8,6 @@ $username = "heidi";
 $password = "ra#tro"; // serait il préférable de cacher le mot de passe ici ?
 try {
     // Établir une connexion à la base de données MySQL en utilisant une instance d'une classe PDO
-    // le premier argument le datasource name (dsn)
-    // le deusieme est le nom utilisateur
-    //le troisieme le mdp
     $db = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 
     // Configurer le mode de gestion des erreurs de PDO pour générer des exceptions en cas d'erreurs

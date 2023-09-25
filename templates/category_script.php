@@ -1,5 +1,5 @@
 <?php
-//je démare la session
+//je démare la session php = "identifiant donné au navigateur pour l'identifie du coté serveur et rendre sur chaque page les diff variables stocké"
 // session_start();
 
 // Active l'affichage des erreurs dans le navigateur
@@ -60,19 +60,19 @@ $count = 0;
 <body>
     <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
     <div class="contenu">
-  <h1 class="fst-italic">Notre carte</h1>
-  <!-- <div class="container d-flex justify-content-center" id="section"> -->
+        <h1 class="fst-italic">Notre carte</h1>
+        <!-- <div class="container d-flex justify-content-center" id="section"> -->
 
-    <main class="container">
-        <div class="row">
-            <?php
-            foreach ($tableau as $categorie) : ?>
-                <div class="col-md-6 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->libelle ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $categorie->libelle ?></h5>
-                            <?php
+        <main class="container">
+            <div class="row">
+                <?php
+                foreach ($tableau as $categorie) : ?>
+                    <div class="col-md-6 mb-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->libelle ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $categorie->libelle ?></h5>
+                                <?php
                                 // $count_active = 0;
                                 // Trouvez le nombre de plats actifs pour cette catégorie
                                 // foreach ($resultat as $resultat) {
@@ -82,29 +82,29 @@ $count = 0;
                                 //     }
                                 // }
                                 ?>
-                            <p class="card-text">Nombre de plats actifs : <?= $categorie->count_active ?></p>                                
-                            <div class="card-body">
-                                <a href="plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
+                                <p class="card-text">Nombre de plats actifs : <?= $categorie->count_active ?></p>
+                                <div class="card-body">
+                                    <a href="plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php
-                $count++; // Incrémentez le compteur
-                // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
-                if ($count % 2 == 0) {
-                    echo '</div><div class="row">';
-                }
+                <?php
+                    $count++; // Incrémentez le compteur
+                    // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
+                    if ($count % 2 == 0) {
+                        echo '</div><div class="row">';
+                    }
 
-            endforeach; ?>
-        </div>
-    </main>
-  <!-- </div> -->
-  <?php
-include('../partials/footer.php');
-?>
+                endforeach; ?>
+            </div>
+        </main>
+        <!-- </div> -->
+        <?php
+        include('../partials/footer.php');
+        ?>
 
-  <script type="module" src="../dist/assets/index.js"></script>
+        <script type="module" src="../dist/assets/index.js"></script>
 
 </body>
 

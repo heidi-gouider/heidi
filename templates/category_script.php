@@ -22,7 +22,7 @@ require_once('db_connect.php');
 // $requete = $db->query("SELECT categorie.*, COUNT (plat.active) FROM categorie INNER JOIN plat ON categorie.id = plat.id_categorie
 //     GROUP BY categorie.id HAVING COUNT(plat.active)= yes");
 
-$requete = $db->query("SELECT categorie.*FROM categorie ");
+// $requete = $db->query("SELECT categorie.*FROM categorie ");
 // Requête pour récupérer les catégories avec le nombre de plats actifs
 $requete = $db->query("SELECT categorie.*, 
                             (SELECT COUNT(*) 

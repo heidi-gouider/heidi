@@ -1,7 +1,0 @@
-/**
-     * objet catégories
-     */
-class category
-{
-
-}

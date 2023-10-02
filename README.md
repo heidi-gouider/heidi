@@ -24,7 +24,7 @@ La page contact doit permettre d'envoyer un message au restaurant via un formula
 
 -instructions sur l'installation du projet.
 -inclure :
-  les dépendances nécessaires, !vite est une alternatine aux bundler pour la fase de developpement!
+  les dépendances nécessaires, !vite est une alternatine aux bundler pour la fase de developpement côté front end!
   les commandes à exécuter,
   toutes les étapes importantes pour mettre en place l'environnement de développement.
 

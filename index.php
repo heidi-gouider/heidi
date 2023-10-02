@@ -1,6 +1,25 @@
 <?php
+// Active l'affichage des erreurs dans le navigateur
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $title = "Accueil";
-include('partials/header.php');
+include('./partials/header.php');
+//inclusion de la page de connexion à la base de donnée
+require_once('./templates/db_connect.php');
+//objet Dao et requete
+require_once('./templates/Dao.php');
+
+    // Je crée une instance de DAO en passant la connexion PDO
+    $dao = new Dao($db);
+
+
+    // J'utilise la fonction getCategoriesWithActivePlatsCount
+    $tableau = $dao->getTopSellingPlatsByCategorie();
+
+    $count = 0;
+
 ?>
 
 <div class="row video-container">
@@ -18,7 +37,35 @@ include('partials/header.php');
     </video>
 </div>
 
-<div class="container d-grid mt-lg-4" id="images">
+<main class="container mt-4">
+            <div class="row">
+                <?php
+                foreach ($tableau as $categorie) : ?>
+                    <div class="col-md-6 mb-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->nom_categorie ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $categorie->nom_categorie ?></h5>
+                                <?php
+                                ?>
+                                <!-- <div class="card-body">
+                                    <a href="category_plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    $count++; // Incrémentez le compteur
+                    // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
+                    if ($count % 2 == 0) {
+                        echo '</div><div class="row">';
+                    }
+
+                endforeach; ?>
+            </div>
+        </main>
+
+<!-- <div class="container d-grid mt-lg-4" id="images">
     <div class="row gap-5 justify-content-sm-center m-3">
         <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/asian_food_cat.jpg" alt="asian food">
         <img class="col-6 col-md-4 col-lg-3  p-2 img-thumbnail" src="public/IMG/category/burger_cat.jpg" alt="burger">
@@ -29,7 +76,7 @@ include('partials/header.php');
         <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/sandwich_cat.jpg" alt="sandwich">
         <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/veggie_cat.jpg" alt="végé">
     </div>
-</div>
+</div> -->
 
 <?php
 include('partials/footer.php');

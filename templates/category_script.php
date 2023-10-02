@@ -11,40 +11,15 @@ $title = "Catégories";
 include('../partials/header.php');
 //inclusion de la page de connexion à la base de donnée
 require_once('db_connect.php');
+//objet Dao et requete
+require_once('Dao.php');
 
-// if (isset($_GET["added"]) && $_GET["added"] === "true") {
-// echo "Les données ajoutées devraient être affichées ici.";
-// }
+    // Je crée une instance de DAO en passant la connexion PDO
+    $dao = new Dao($db);
 
 
-// $requete = $db->query("SELECT categorie.*, COUNT (plat.id) FROM categorie INNER JOIN plat ON categorie.id = plat.id 
-//     GROUP BY categorie.id HAVING COUNT(plat.id)= plat.active");
-// $requete = $db->query("SELECT categorie.*, COUNT (plat.active) FROM categorie INNER JOIN plat ON categorie.id = plat.id_categorie
-//     GROUP BY categorie.id HAVING COUNT(plat.active)= yes");
-
-// $requete = $db->query("SELECT categorie.*FROM categorie ");
-// Requête pour récupérer les catégories avec le nombre de plats actifs
-$requete = $db->query("SELECT categorie.*, 
-                            (SELECT COUNT(*) 
-                             FROM plat 
-                             WHERE plat.id_categorie = categorie.id AND plat.active = 'yes') AS count_active 
-                        FROM categorie");
-
-// récupération les données
-$tableau = $requete->fetchAll(PDO::FETCH_OBJ);
-
-//Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
-$requete->closeCursor();
-
-//requete pour afficher le nombre de plats actifs par catégorie
-// $requete = $db->prepare("SELECT id_categorie, COUNT(*) AS count_active FROM plat WHERE active = 'yes' GROUP BY id_categorie HAVING count_active > 0;");
-// $requete->execute();
-
-// Récupérez les résultats sous forme de tableau associatif
-// $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-
-// Fermez le curseur de la requête
-// $requete->closeCursor();
+    // J'utilise la fonction getCategoriesWithActivePlatsCount
+    $tableau = $dao->getCategoriesWithActivePlatsCount();
 
 $count_active = 0;
 $count = 0;
@@ -99,7 +74,7 @@ $count = 0;
                 endforeach; ?>
             </div>
         </main>
-        <!-- </div> -->
+        </div>
         <?php
         include('../partials/footer.php');
         ?>

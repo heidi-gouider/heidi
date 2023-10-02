@@ -11,7 +11,10 @@ $title = "Plats";
 include('../partials/header.php');
 //inclusion de la page de connexion à la base de donnée
 require_once('db_connect.php');
+require_once('Dao.php');
 
+//création de l'instance
+$Dao = new Dao($db);
 // if (isset($_GET["added"]) && $_GET["added"] === "true") {
 // echo "Les données ajoutées devraient être affichées ici.";
 // }

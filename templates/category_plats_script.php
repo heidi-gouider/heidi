@@ -23,6 +23,8 @@ if (isset($_GET['id'])) {
     // J'utilise la fonction getPlatsByCategorie
     $plats = $dao->getPlatsByCategorie($id_categorie);
     $nom_categorie = !empty($plats) ? $plats[0]->nom_categorie : '';
+    // $libelle = !empty($plats) ? $plats[0]->libelle : '';
+
 
     $count = 0;
 
@@ -37,11 +39,6 @@ if (isset($_GET['id'])) {
     <body>
         <div class="contenu">
             <h1 class="row col-12 fst-italic">Nos <?= $nom_categorie ?></h1>
-            <!-- <h1 class="row col-12 fst-italic">Nos <?= $plats ?></h1> -->
-
-
-            <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
-
             <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
             <main class="container">
                 <div class="row">
@@ -55,31 +52,55 @@ if (isset($_GET['id'])) {
                                     <p class="card-text"> <?= $plat->description ?></p>
                                     <p class="content bg-body"><?= $plat->prix ?></p>
                                 </div>
-                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
+                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal<?= $plat->id?>">Ajouter au panier
                                     <i class="bi bi-basket"></i>
                                 </button>
 
                             </div>
                         </div>
+
+                        <!-- /// LA MODAL D'AJOUT AU PANIER/// -->
+                        <div class="modal fade" id="modal<?= $plat->id?>" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title rounded p-3">Ma commande</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body bg-secondary" aria-describedby="quantité">
+                                        <form action="ajouter_au_panier.php" method="post" id="valid" novalidate>
+                                            <div class="dropdown">
+                                                <label for="quantité" class="lead text-white">Combien de <?= $plat->libelle ?> désirez-vous</label>
+                                                <input type="number" id="quantité" name="quantite" value="1" min="1" max="10">
+                                                <input type="hidden" name="platId" value="<?= $plat->id ?>">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                 <?php
                         $count++; // Incrémentez le compteur
                         // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
                         if ($count % 2 == 0) {
                             echo '</div><div class="row">';
                         }
+
                     endforeach;
                 }
                 ?>
-
                 </div>
             </main>
         </div>
-            <?php
-            include('../partials/footer.php');
-            ?>
+        <?php
+        include('../partials/footer.php');
+        ?>
 
-            <script type="module" src="../dist/assets/index.js"></script>
-
+        <script type="module" src="../dist/assets/index.js"></script>
     </body>
 
     </html>

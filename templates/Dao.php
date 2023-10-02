@@ -77,4 +77,14 @@ class Dao
         $requete->closeCursor();
         return $tableaux;
     }
+
+    //fonction page commande et panier pour récupérer un plat par son id
+    public function getPlatById($id)
+{
+    $requete = $this->db->prepare("SELECT * FROM plat WHERE id = ?");
+    $requete->execute([$id]);
+    $plat = $requete->fetch(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+    return $plat;
+}
 }

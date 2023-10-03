@@ -88,12 +88,14 @@ $dao = new Dao($db);
             } else {
                 // Le panier est vide
                 // J'affiche un message
-                // if (isset($_SESSION['error_message'])) {
-                echo '<pre>';
-                echo 'alert("' . $_SESSION['panier_vide_message'] . '");';
-                echo '</pre>';
-                // echo "Votre panier est vide.";
-                exit();
+                if (isset($_SESSION['panier_vide_message'])) {
+                    $message = $_SESSION['panier_vide_message'];
+                    echo '<pre>';
+                    echo 'alert("' . $_SESSION['panier_vide_message'] . '");';
+                    echo '</pre>';
+                    // echo "Votre panier est vide.";
+                    exit();
+                }
             }
 
 ?>

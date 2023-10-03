@@ -79,9 +79,9 @@ $dao = new Dao($db);
       // Vérifier si le panier existe dans la session
       if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
         // Afficher les éléments du panier
-        foreach ($_SESSION['panier'] as $id_plat => $quantite) {
+        foreach ($_SESSION['panier'] as $platId => $quantite) {
           // Récupérez les informations du plat à partir de la base de données en utilisant $platId
-          $plat = $dao->getPlatById($id_plat);
+          $plat = $dao->getPlatById($platId);
 
           // Vérifiez si le plat existe (il peut avoir été supprimé de la base de données)
           if ($plat) {    ?>

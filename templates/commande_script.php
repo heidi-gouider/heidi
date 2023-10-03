@@ -47,26 +47,32 @@
         // $adresse = strip_tags($adresse);
         // if (!empty($_POST)) {
 
-        // Je vérifie que le format email est valide
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Je stocke le message d'erreur dans une variable de session
-            $_SESSION['error_message'] = "Le format de l'email est incorrect";
+        //vérifier si les champs sont bien rempli
+        if (
+            isset($nom, $email, $tel, $adresse)
+            && !empty($nom) && !empty($email) && !empty($tel) && !empty($adresse)
+        ) {
 
-            // Je redirige vers le formulaire de commande
-            header("Location: commande_form.php");
-            exit();
-        }
+            // Je vérifie que le format email est valide
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // Je stocke le message d'erreur dans une variable de session
+                $_SESSION['error_message'] = "Le format de l'email est incorrect";
 
-        // récupération des plats enregistrés
-        // Je vérif si le panier existe déjà dans la session
-        if (!isset($_SESSION['panier'])) {
-            // $_SESSION['panier'] = [];
+                // Je redirige vers le formulaire de commande
+                header("Location: commande_form.php");
+                exit();
+            }
 
-            // if (isset($_POST['id_plat']) && isset($_POST['quantite'])) {
-            //     $platId = $_POST['id_plat'];
-            //     $quantite = $_POST['quantite'];
-            // }
+            // récupération des plats enregistrés
+            // Je vérif si le panier existe déjà dans la session
+            if (!isset($_SESSION['panier'])) {
+                $_SESSION['panier'] = [];
 
+                // if (isset($_POST['id_plat']) && isset($_POST['quantite'])) {
+                //     $platId = $_POST['id_plat'];
+                //     $quantite = $_POST['quantite'];
+                // }
+            }
             // J'ajoute la quantité au panier
             if (isset($_SESSION['panier'][$platId])) {
                 $_SESSION['panier'][$platId] += $quantite;
@@ -77,10 +83,10 @@
             // Redirestion vers la page précédente après avoir ajouté un plat au panier avec succès
             // header("Location: " . $_SERVER['HTTP_REFERER']);
             // exit();
-        } else {
+            // } else {
             // Si le panier n'existe pas dans la session, créez-le
-                        $_SESSION['panier'] = [];
-                        $_SESSION['panier'][$platId] = $quantite;
+            // $_SESSION['panier'] = [];
+            // $_SESSION['panier'][$platId] = $quantite;
             // Je stocke le message d'erreur dans une variable de session
             // $_SESSION['panier_vide_message'] = "Votre panier est vide";
 
@@ -88,65 +94,74 @@
             // echo 'Erreur : Données manquantes.';
             // header("Location: " . $_SERVER['HTTP_REFERER']);
             // exit();
-        }
+            // }
 
 
-        // je stocke les informations de l'utilisateur dans la session
-        // $_SESSION["commande"] = [
-        //     "id" => $id["id"],
-        //     "id_plat" => $id_plat["id_plat"],
-        //     "nom_client" => $nom["nom_client"],
-        //     "email_client" => $email["email_client"],
-        //     "tel_client" => $tel["tel_client"],
-        //     "adresse_client" => $adresse["adresse_client"],
-        // ];
-        $_SESSION["commande"] = [
-            "id_plat" => $platId,
-            "nom_client" => $nom,
-            "email_client" => $email,
-            "tel_client" => $tel,
-            "adresse_client" => $adresse,
-            "total" => $total,
-        ];
+            // je stocke les informations de l'utilisateur dans la session
+            $_SESSION["commande"] = [
+                "id" => $id["id"],
+                "plaId" => $platId["id_plat"],
+                "nom_client" => $nom["nom_client"],
+                "email_client" => $email["email_client"],
+                "tel_client" => $tel["tel_client"],
+                "adresse_client" => $adresse["adresse_client"],
+            ];
+            // $_SESSION["commande"] = [
+            //     "id_plat" => $platId,
+            //     "nom_client" => $nom,
+            //     "email_client" => $email,
+            //     "tel_client" => $tel,
+            //     "adresse_client" => $adresse,
+            //     "total" => $total,
+            // ];
 
-        // J'insère les données de commande dans la base de données
-        $stm = $dao->insertDataCommande($platId, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
+            // J'insère les données de commande dans la base de données
+            $stm = $dao->insertDataCommande($platId, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
-        if ($stm) {
-            // affichage d'une popup dans la page commande_form
-            $_SESSION['success_message'] = "L'insertion des données a réussi.";
-            unset ($_SESSION["commande"]);
-            // session_destroy();
+            if ($stm) {
+                // affichage d'une popup dans la page commande_form
+                $_SESSION['success_message'] = "L'insertion des données a réussi.";
+                unset($_SESSION["commande"]);
+                if (ini_get("session.use_cookies")) {
+                    setcookie(session_name(), '', time() - 42000);
+                }
 
-            //je redirige vers une autre page 
-            header("Location:accueil.php");
-            exit();
+                session_destroy();
+                //je redirige vers une autre page 
+                header("Location:accueil.php");
+                exit();
+            } else {
+                // Formulaire incomplet
+                $_SESSION['error_message'] = "erreur de saisie !";
+                header("Location: commande_form.php");
+                exit();
+            }
         } else {
             // Formulaire incomplet
-            $_SESSION['error_message'] = "formulaire imcomplet !";
+            $_SESSION['error_message'] = "Formulaire incomplet !";
             header("Location: commande_form.php");
             exit();
         }
     }
-        // Envoi de l'e-mail de confirmation
-        // $to = $emailClient;
-        // $subject = 'Confirmation de commande';
-        // $message = 'Merci pour votre commande. Voici les détails de votre commande :' . "\r\n";
-        // Ajoutez les détails de la commande ici (articles, quantités, etc.)
-        // ...
+    // Envoi de l'e-mail de confirmation
+    // $to = $emailClient;
+    // $subject = 'Confirmation de commande';
+    // $message = 'Merci pour votre commande. Voici les détails de votre commande :' . "\r\n";
+    // Ajoutez les détails de la commande ici (articles, quantités, etc.)
+    // ...
 
-        // En-têtes de l'e-mail
-        // $headers = 'From: votre@email.com' . "\r\n" .
-        //     'Reply-To: votre@email.com' . "\r\n" .
-        //     'X-Mailer: PHP/' . phpversion();
+    // En-têtes de l'e-mail
+    // $headers = 'From: votre@email.com' . "\r\n" .
+    //     'Reply-To: votre@email.com' . "\r\n" .
+    //     'X-Mailer: PHP/' . phpversion();
 
-        // Envoi de l'e-mail
-        // mail($to, $subject, $message, $headers);
+    // Envoi de l'e-mail
+    // mail($to, $subject, $message, $headers);
 
-        // Redirigez l'utilisateur vers une page de confirmation
-        // header('Location: confirmation.php');
-        // exit();
-    
+    // Redirigez l'utilisateur vers une page de confirmation
+    // header('Location: confirmation.php');
+    // exit();
+
 
     ///la suppression de la session se fera soir avec le bouton déconnexion soit quand le user quitera le site
     // Si les cookies de session sont utilisés, les invalider

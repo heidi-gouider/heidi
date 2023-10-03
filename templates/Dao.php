@@ -94,28 +94,28 @@ class Dao
     public function insertDataCommande($platId, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client)
     {
         $stmt = $this->db->prepare("INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) 
-VALUES (id_plat, quantite, :total, NOW(), 'En attente', :nom_client, :telephone_client, :email_client, :adresse_client)");
+VALUES (:platId, :quantite, :total, NOW(), 'En attente', :nom_client, :telephone_client, :email_client, :adresse_client)");
         // Associez les valeurs récupérées aux paramètres de la requête
-        $stmt->bindParam(':id_plat', $platId, PDO::PARAM_INT); // Si id_plat est un entier, utilisez PDO::PARAM_INT
+        $stmt->bindParam(':platId', $platId, PDO::PARAM_INT); // Si id_plat est un entier, utilisez PDO::PARAM_INT
         $stmt->bindParam(':quantite', $quantite, PDO::PARAM_INT); // Si quantite est un entier, utilisez PDO::PARAM_INT
         $stmt->bindParam(':total', $total, PDO::PARAM_STR); // Si total est une chaîne, utilisez PDO::PARAM_STR
         $stmt->bindParam(':nom_client', $nom_client, PDO::PARAM_STR);
         $stmt->bindParam(':telephone_client', $telephone_client, PDO::PARAM_STR);
         $stmt->bindParam(':email_client', $email_client, PDO::PARAM_STR);
         $stmt->bindParam(':adresse_client', $adresse_client, PDO::PARAM_STR);
-                return $stmt->execute();
+        return $stmt->execute();
     }
 
-//     public function insertCommandeDataUser($id, $nom, $prenom, $email, $mot)
-//     {
-//         $requete = $this->db->prepare("INSERT INTO user (id, nom, prenom, email, adresse)
-// VALUES (:id, :nom, :prenom, :email, :mot_de_passe)");
-//         $requete->bindParam(':id', $id, PDO::PARAM_STR);
-//         $requete->bindParam(':nom_client', $nom, PDO::PARAM_STR);
-//         $requete->bindParam(':telephone_client', $prenom, PDO::PARAM_STR);
-//         $requete->bindParam(':email_client', $email, PDO::PARAM_STR);
-//         $requete->bindParam(':adresse_client', $adresse, PDO::PARAM_STR);
+    //     public function insertCommandeDataUser($id, $nom, $prenom, $email, $mot)
+    //     {
+    //         $requete = $this->db->prepare("INSERT INTO user (id, nom, prenom, email, adresse)
+    // VALUES (:id, :nom, :prenom, :email, :mot_de_passe)");
+    //         $requete->bindParam(':id', $id, PDO::PARAM_STR);
+    //         $requete->bindParam(':nom_client', $nom, PDO::PARAM_STR);
+    //         $requete->bindParam(':telephone_client', $prenom, PDO::PARAM_STR);
+    //         $requete->bindParam(':email_client', $email, PDO::PARAM_STR);
+    //         $requete->bindParam(':adresse_client', $adresse, PDO::PARAM_STR);
 
-//         return $requete->execute();
-//     }
+    //         return $requete->execute();
+    //     }
 }

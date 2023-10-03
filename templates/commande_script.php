@@ -98,6 +98,7 @@
 
 
             // je stocke les informations de l'utilisateur dans la session
+            $_SESSION["panier"] = "true";
             $_SESSION["commande"] = [
                 "id" => $id["id"],
                 "plaId" => $platId["id_plat"],

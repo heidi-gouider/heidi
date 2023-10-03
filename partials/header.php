@@ -53,10 +53,18 @@
                             <i class="bi bi-basket btn-icon"></i>
                         </a>
                     </li> -->
+                    <li>
+                        <!-- <a class="btn btn-order" href="/templates/commande_form.php"> -->
+                        <a href="/templates/panier.php"><i class="bi bi-basket btn-icon"></i></a>
+                        <!-- <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3" id="commande">
+                        <i class="bi bi-basket btn-icon"></i>
+                    </button></a> -->
+                    </li>
+
                     <a class="btn btn-order rounded-0" href="/templates/commande_form.php">
-                   <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
-                        Ma commande <i class="bi bi-basket btn-icon"></i>
-                    </button></a>
+                        <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
+                            Ma commande <i class="bi bi-basket btn-icon"></i>
+                        </button></a>
                 </ul>
             </div>
         </div>

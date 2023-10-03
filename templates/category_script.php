@@ -57,7 +57,7 @@ $count = 0;
                                 //     }
                                 // }
                                 ?>
-                                <p class="card-text">Nombre de plats actifs : <?= $categorie->count_active ?></p>
+                                <!-- <p class="card-text">Nombre de plats actifs : <?= $categorie->count_active ?></p> -->
                                 <div class="card-body">
                                     <a href="category_plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
                                 </div>

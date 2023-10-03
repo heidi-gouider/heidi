@@ -31,7 +31,18 @@ $dao = new Dao($db);
 </head>
 
 <body>
+  <!-- affichage d'une popup si commande récupérer dans la bdd -->
+<?php
+    // Vérifiez si la variable de session success_message est définie
+    if (isset($_SESSION['success_message'])) {
+        echo '<script>';
+        echo 'alert("' . $_SESSION['success_message'] . '");'; // Affichez un message d'alerte
+        echo '</script>';
 
+        // Supprimez la variable de session après l'affichage de la pop-up
+        unset($_SESSION['success_message']);
+    }
+    ?>
   <!-- PENSER A AJOUTER UNE CONNEXION... -->
 
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
@@ -113,7 +124,7 @@ $dao = new Dao($db);
       <!-- <div class="row  m-3 justify-content-around">
         <div class="card p-3 w-50 h-50 flex-row justify-content-between">
           <img class="col-4" src="/public/IMG/food/cheesburger.jpg" alt="image burger" id="img1">
-          <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
+          <img src="/public/IMG/food/
           <div class="col-7">
             <div class="card-title row justify-content-around">
               <h5 class="col-6"> burger-du-chef</h5>
@@ -153,7 +164,7 @@ $dao = new Dao($db);
 
     <!-- ajout de plusieurs plats à la suite => voir avec une méthode ou propriété bs pour cacher et scrowlé -->
 
-
+<!-- /////:FORMULAIRE DE COMMANDE //////////// -->
 
     <div class="container d-flex justify-content-center" id="formulaire">
       <form action="data-commande_script.php" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
@@ -162,7 +173,7 @@ $dao = new Dao($db);
             Nom et Prénom
             <span class="required text-danger">*</span>
           </label>
-          <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom" autocomplete="off" required>
+          <input type="text" class="form-control form-control-hover" placeholder="" id="nom" name="nom_client" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner votre Nom et votre prénom</span>
           <div class="erreur text-danger" id="erreurNom"></div>
         </div>
@@ -174,7 +185,7 @@ $dao = new Dao($db);
           </label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend3">@</span>
-            <input type="text" class="form-control" id="email" name="email" autocomplete="off" required>
+            <input type="text" class="form-control" id="email" name="email_client" autocomplete="off" required>
             <span class="invalid-feedback">Veuillez renseigner votre Email</span>
             <div class="erreur text-danger" id="erreurMail"></div>
           </div>
@@ -185,7 +196,7 @@ $dao = new Dao($db);
             Téléphone
             <span class="required text-danger">*</span>
           </label>
-          <input type="number" class="form-control" id="tel" name="tel" autocomplete="off" required>
+          <input type="number" class="form-control" id="tel" name="tel_client" autocomplete="off" required>
           <span class="invalid-feedback">Veuillez renseigner un téléphone</span>
           <div class="erreurTel text-danger" id="erreurTel"></div>
         </div>
@@ -195,7 +206,7 @@ $dao = new Dao($db);
             Votre adresse
             <span class="required text-danger">*</span>
           </label>
-          <textarea class="form-control" id="adresse" name="adresse" rows="3" autocomplete="off" required></textarea>
+          <textarea class="form-control" id="adresse" name="adresse_client" rows="3" autocomplete="off" required></textarea>
           <span class="invalid-feedback">Veuillez renseigner votre adresse</span>
         </div>
 

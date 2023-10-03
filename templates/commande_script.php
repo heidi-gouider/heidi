@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>enregistrement modal commande</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -13,34 +12,32 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+
     //connexion à la base de donnée
-    // require_once('db_connect.php');
+    require_once('db_connect.php');
+
+    //objet Dao et requete
+    require_once('Dao.php');
 
     ////LA SESSION DÉMARRE QUAND ON VEUT STOCKÉ DES INFORMATIONS ICI APRÈS IDENTIFICATION DE L'UTILISATEUR
     /*j'initialise une session*/
-    // session_start();
+    session_start();
 
-
-    // je vérifie si le form a été soumis
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    //vérifier si le form a été envoyé
-    if (!empty($_POST)) {
-        // var_dump($_POST);
 
         //vérifier si les champs sont bien rempli
-        if (
-            isset($nom, $email, $tel, $adresse)
-            && !empty($nom) && !empty($email) && !empty($tel) && !empty($adresse)
-        ) {
+        // if (
+        //     isset($nom, $email, $tel, $adresse)
+        //     && !empty($nom) && !empty($email) && !empty($tel) && !empty($adresse)
+        // ) {
+        if (!empty($_POST)) {
             //Je nettoie les données entrées par l'utilisateur, je supprime toutes les balises html
-            $nom = strip_tags($nom);
-            $adresse = strip_tags($adresse);
+            // $nom = strip_tags($nom);
+            // $adresse = strip_tags($adresse);
             //je récupère les données saisies
-            $nom = $_POST["nom"];
-            $email = $_POST["email"];
-            $tel = $_POST["tel"];
-            $adresse = $_POST["adresse"];
+            $nom = $_POST["nom_client"];
+            $email = $_POST["email_client"];
+            $tel = $_POST["tel_client"];
+            $adresse = $_POST["adresse_client"];
 
             // Je vérifie que le format email est valide
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -48,93 +45,42 @@
                 $_SESSION['error_message'] = "Le format de l'email est incorrect";
 
                 // Je redirige vers le formulaire de commande
-                header("Location: commande.php");
+                header("Location: commande_form.php");
                 exit();
             }
-            //connexion à la base de donnée
-            require_once('db_connect.php');
+               // je stocke les informations de l'utilisateur dans la session
+
+               $_SESSION["panier"] = "true";
+               $_SESSION["commande"] = [
+                   "id" => $commande["id"],
+                   "id_plat" => $commande["id_plat"],
+                   "nom_client" => $commande["nom_client"],
+                   "email_client" => $commande["email_client"],
+                   "tel_client" => $commande["tel_client"],
+                   "tel_client" => $commande["tel_client"],
+   
+               ];
+            // Je crée une instance de DAO en passant la connexion PDO
+            $dao = new Dao($db);
 
             //!!!!!!!!!!ATTENTION À RECUPERER LES INFOS CLIENT ET LES INFOS PLATS COMMANDÉS!!!!!!!!!!!
 
-            $sql = "INSERT INTO user (id, nom, prenom, email, mot_de_passe)
-            VALUES (:id, :nom, :prenom, :email, :mot_de_passe)";
+            $requete = $dao->insertDataCommande($id_plat, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
-            // Préparation de la requête SQL
-            $stmt = $db->prepare($sql);
-
-            // Liaison des valeurs
-            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-            $stmt->bindParam(':nom_client', $nom, PDO::PARAM_STR);
-            $stmt->bindParam(':telephone_client', $prenom, PDO::PARAM_STR);
-            $stmt->bindParam(':email_client', $email, PDO::PARAM_STR);
-            $stmt->bindParam(':adresse_client', $password_hash, PDO::PARAM_STR);
-
-            // liaison des valeurs
-            $query->bindValue(':email_client', $email, PDO::PARAM_STR);
-
-            // Exécution de la requête SQL
-            $query->execute();
-            // $id = $db->lastInsertId();
-            // Récupération du résultat de la requête
-            $user = $query->fetch();
-
-
-            // Vérification si l'email existe dans la base de données
-            if (!$user) {
-                // die("Aucun utilisateur ");
-                $_SESSION['error_message'] = "Aucun utilisateur trouvé";
-                header("Location: login_form.php");
-                exit();
-            }
-            //utilisateur reconnu par l'email
-            // Je vérifie le password
-            // Récupération du mot de passe haché de la base de données
-            $password_hash = $user["mot_de_passe"];
-
-            // Vérification si le mot de passe saisi correspond au mot de passe haché de la base de données
-            if (password_verify($password, $password_hash)) {
-                // die("Aucun utilisateur: erreur mot de passe ");
-                // Mot de passe incorrect
-                // }
-                // Authentification réussie
-                //connexion
-
-                /*j'initialise une session*/
-                session_start();
-
-                // je stocke les informations de l'utilisateur dans la session
-
-                $_SESSION["auth"] = "ok";
-                $_SESSION["user"] = [
-                    "id" => $user["id"],
-                    "nom" => $user["nom"],
-                    "prenom" => $user["prenom"],
-                    "email" => $email,
-
-                ];
-
-                // $_SESSION["password"] = $password_hash;
-
+            if ($requete) {
+                // affichage d'une popup dans la page commande_form
+                $_SESSION['success_message'] = "L'insertion des données a réussi.";
                 //je redirige vers une autre page 
-                header("Location:connexion.php");
+                header("Location:accueil.php");
                 exit();
-                // die("Aucun utilisateur: erreur mot de passe ");
-                // Mot de passe incorrect
-
             } else {
                 // Formulaire incomplet
                 $_SESSION['error_message'] = "Mot de passe incorrect !";
-                header("Location: login_form.php");
+                header("Location: commande_form.php");
                 exit();
             }
-        } else {
-            // Formulaire incomplet
-            $_SESSION['error_message'] = "Formulaire incomplet";
-            header("Location: login_form.php");
-            exit();
         }
-    }
-
+    
     // Avec ces modifications, le code devrait fonctionner correctement et gérer les erreurs de manière appropriée. N'oubliez pas de vous assurer que la structure de la base de données correspond à ce que vous attendez, notamment en ce qui concerne les noms de colonnes et les mots de passe hachés.
     // si les données fournies ne sont pas correctes, je détruit les variables de session
     // unset($_SESSION["email"]);

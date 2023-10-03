@@ -33,8 +33,13 @@ $dao = new Dao($db);
 <body>
   <!-- affichage d'une popup si commande récupérer dans la bdd -->
 <?php
+            if (isset($_SESSION['error_message'])) {
+              echo '<pre>';
+              echo 'alert("' . $_SESSION['error_message'] . '");'; // Affichez un message d'alerte
+              echo '</pre>';
+      
     // Vérifiez si la variable de session success_message est définie
-    if (isset($_SESSION['success_message'])) {
+    }elseif (isset($_SESSION['success_message'])) {
         echo '<script>';
         echo 'alert("' . $_SESSION['success_message'] . '");'; // Affichez un message d'alerte
         echo '</script>';
@@ -42,6 +47,7 @@ $dao = new Dao($db);
         // Supprimez la variable de session après l'affichage de la pop-up
         unset($_SESSION['success_message']);
     }
+
     ?>
   <!-- PENSER A AJOUTER UNE CONNEXION... -->
 

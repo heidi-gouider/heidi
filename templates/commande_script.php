@@ -19,10 +19,14 @@
     //objet Dao et requete
     require_once('Dao.php');
 
-    ////LA SESSION DÉMARRE QUAND ON VEUT STOCKÉ DES INFORMATIONS ICI APRÈS IDENTIFICATION DE L'UTILISATEUR
     /*j'initialise une session*/
     session_start();
 
+    //je récupère les données saisies
+    $nom = $_POST["nom_client"];
+    $email = $_POST["email_client"];
+    $tel = $_POST["tel_client"];
+    $adresse = $_POST["adresse_client"];
 
         //vérifier si les champs sont bien rempli
         // if (
@@ -33,11 +37,6 @@
             //Je nettoie les données entrées par l'utilisateur, je supprime toutes les balises html
             // $nom = strip_tags($nom);
             // $adresse = strip_tags($adresse);
-            //je récupère les données saisies
-            $nom = $_POST["nom_client"];
-            $email = $_POST["email_client"];
-            $tel = $_POST["tel_client"];
-            $adresse = $_POST["adresse_client"];
 
             // Je vérifie que le format email est valide
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -68,11 +67,12 @@
             $requete = $dao->insertDataCommande($id_plat, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
             if ($requete) {
+                var_dump($requete);
                 // affichage d'une popup dans la page commande_form
-                $_SESSION['success_message'] = "L'insertion des données a réussi.";
+                // $_SESSION['success_message'] = "L'insertion des données a réussi.";
                 //je redirige vers une autre page 
-                header("Location:accueil.php");
-                exit();
+                // header("Location:accueil.php");
+                // exit();
             } else {
                 // Formulaire incomplet
                 $_SESSION['error_message'] = "Mot de passe incorrect !";

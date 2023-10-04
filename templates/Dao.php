@@ -91,19 +91,20 @@ class Dao
         return $plat;
     }
     //fonction pour inserer les données du panier et du formulaire de commande dans la table commande
-    public function insertDataCommande($platId, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client)
+    public function insertDataCommande($id_plat, $quantite, $total, $nom_client, $tel_client, $email_client, $adresse_client)
     {
-        $stmt = $this->db->prepare("INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) 
-VALUES (:platId, :quantite, :total, NOW(), 'En attente', :nom_client, :telephone_client, :email_client, :adresse_client)");
+        $stmt = $this->db->prepare("INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, tel_client, email_client, adresse_client) 
+VALUES (:id_plat, :quantite, 10, NOW(), 'En attente', :nom_client, :tel_client, :email_client, :adresse_client)");
         // Associez les valeurs récupérées aux paramètres de la requête
-        $stmt->bindParam(':platId', $platId, PDO::PARAM_INT); // Si id_plat est un entier, utilisez PDO::PARAM_INT
+        $stmt->bindParam(':id_plat', $id_plat, PDO::PARAM_INT); // Si id_plat est un entier, utilisez PDO::PARAM_INT
         $stmt->bindParam(':quantite', $quantite, PDO::PARAM_INT); // Si quantite est un entier, utilisez PDO::PARAM_INT
-        $stmt->bindParam(':total', $total, PDO::PARAM_STR); // Si total est une chaîne, utilisez PDO::PARAM_STR
+        // $stmt->bindParam(':total', $total, PDO::PARAM_STR); 
         $stmt->bindParam(':nom_client', $nom_client, PDO::PARAM_STR);
-        $stmt->bindParam(':telephone_client', $telephone_client, PDO::PARAM_STR);
+        $stmt->bindParam(':tel_client', $tel_client, PDO::PARAM_STR);
         $stmt->bindParam(':email_client', $email_client, PDO::PARAM_STR);
         $stmt->bindParam(':adresse_client', $adresse_client, PDO::PARAM_STR);
         return $stmt->execute();
+
     }
 
     //     public function insertCommandeDataUser($id, $nom, $prenom, $email, $mot)

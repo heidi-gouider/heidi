@@ -18,7 +18,10 @@ require_once('Dao.php');
 
 // Je crée une instance de DAO en passant la connexion PDO
 $dao = new Dao($db);
-
+// J'utilise la fonction getPlatsByCategorie
+// $plats = $dao->getPlats();
+// $nom_categorie = !empty($plats) ? $plats[0]->nom_categorie : '';
+// $libelle = !empty($plats) ? $plats[0]->libelle : '';
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,20 +33,20 @@ $dao = new Dao($db);
 <body>
   <!-- affichage d'une popup si commande récupérer dans la bdd -->
   <?php
-  if (isset($_SESSION['error_message'])) {
-    echo '<pre>';
-    echo 'alert("' . $_SESSION['error_message'] . '");'; // Affichez un message d'alerte
-    echo '</pre>';
+  // if (isset($_SESSION['error_message'])) {
+  //   echo '<pre>';
+  //   echo 'alert("' . $_SESSION['error_message'] . '");'; // Affichez un message d'alerte
+  //   echo '</pre>';
 
     // Vérifiez si la variable de session success_message est définie
-  } elseif (isset($_SESSION['success_message'])) {
-    echo '<script>';
-    echo 'alert("' . $_SESSION['success_message'] . '");'; // Affichez un message d'alerte
-    echo '</script>';
+  // } elseif (isset($_SESSION['success_message'])) {
+  //   echo '<script>';
+  //   echo 'alert("' . $_SESSION['success_message'] . '");'; // Affichez un message d'alerte
+  //   echo '</script>';
 
     // Supprimez la variable de session après l'affichage de la pop-up
-    unset($_SESSION['success_message']);
-  }
+  //   unset($_SESSION['success_message']);
+  // }
 
   ?>
   <!-- PENSER A AJOUTER UNE CONNEXION... -->
@@ -79,9 +82,9 @@ $dao = new Dao($db);
       // Vérifier si le panier existe dans la session
       if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
         // Afficher les éléments du panier
-        foreach ($_SESSION['panier'] as $platId => $quantite) {
+        foreach ($_SESSION['panier'] as $id_plat => $quantite) {
           // Récupérez les informations du plat à partir de la base de données en utilisant $platId
-          $plat = $dao->getPlatById($platId);
+          $plat = $dao->getPlatById($id_plat);
 
           // Vérifiez si le plat existe (il peut avoir été supprimé de la base de données)
           if ($plat) {    ?>
@@ -109,15 +112,15 @@ $dao = new Dao($db);
           }
         }
         // echo "Plat ID: $platId, Quantité: $quantite<br>";
-      } else {
+      // } else {
         // Le panier est vide
         // J'affiche un message
         // if (isset($_SESSION['error_message'])) {
-        echo '<pre>';
-        echo 'alert("' . $_SESSION['panier_vide_message'] . '");';
-        echo '</pre>';
+        // echo '<pre>';
+        // echo 'alert("' . $_SESSION['panier_vide_message'] . '");';
+        // echo '</pre>';
         // echo "Votre panier est vide.";
-        exit();
+        // exit();
       }
 
 ?>
@@ -174,7 +177,7 @@ $dao = new Dao($db);
   <!-- /////:FORMULAIRE DE COMMANDE //////////// -->
 
   <div class="container d-flex justify-content-center" id="formulaire">
-    <form action="commande_script.php" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
+    <form action="commande_script_ini.php" method="post" onsubmit="return valider(event)" id="valid" class="validation row col-8 m-5 " novalidate>
       <div class="col-md-12 mb-5">
         <label for="nom" class="form-label">
           Nom et Prénom

@@ -72,7 +72,7 @@ if (isset($_GET['id'])) {
                                             <div class="dropdown">
                                                 <label for="quantité" class="lead text-white">Combien de <?= $plat->libelle ?> désirez-vous</label>
                                                 <input type="number" id="quantité" name="quantite" value="1" min="1" max="10">
-                                                <input type="hidden" name="platId" value="<?= $plat->id ?>">
+                                                <input type="hidden" name="id_plat" value="<?= $plat->id ?>">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" class="btn btn-primary">Ajouter</button>

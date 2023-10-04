@@ -18,7 +18,7 @@
 
     //inclusion de la classe  Dao et création de l'object
     require_once('Dao.php');
-    $dao = new Dao($db);
+    // $dao = new Dao($db);
 
     /*j'initialise une session*/
     session_start();
@@ -101,7 +101,7 @@
             $_SESSION["panier"] = "true";
             $_SESSION["commande"] = [
                 "id" => $id["id"],
-                "plaId" => $platId["id_plat"],
+                "id_plat" => $id_plat["id_plat"],
                 "nom_client" => $nom["nom_client"],
                 "email_client" => $email["email_client"],
                 "tel_client" => $tel["tel_client"],
@@ -117,7 +117,7 @@
             // ];
 
             // J'insère les données de commande dans la base de données
-            $stm = $dao->insertDataCommande($platId, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
+            $stm = $dao->insertDataCommande($id_plat, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
             if ($stm) {
                 // affichage d'une popup dans la page commande_form

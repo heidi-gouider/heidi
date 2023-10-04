@@ -8,11 +8,18 @@ require_once('db_connect.php');
 // objet Dao et requete
 require_once('Dao.php');
 
+// $dao = new Dao($db);
+
+// $plat = $dao->getPlatById($id);
+
 session_start();
     // récupération des plats enregistrés
     if (isset($_POST['id_plat']) && isset($_POST['quantite'])) {
-        $platId = $_POST['id_plat'];
+        $id_plat = $_POST['id_plat'];
         $quantite = $_POST['quantite'];
+
+           // Stocker la quantité dans une session PHP
+    // $_SESSION["quantite_plat_$id_plat"] = $quantite;
 
         // Je vérif si le panier existe déjà dans la session
         if (!isset($_SESSION['panier'])) {
@@ -20,10 +27,10 @@ session_start();
         }
 
         // J'ajoute la quantité au panier
-        if (isset($_SESSION['panier'][$platId])) {
-            $_SESSION['panier'][$platId] += $quantite;
+        if (isset($_SESSION['panier'][$id_plat])) {
+            $_SESSION['panier'][$id_plat] += $quantite;
         } else {
-            $_SESSION['panier'][$platId] = $quantite;
+            $_SESSION['panier'][$id_plat] = $quantite;
         }
 
         // Redirestion vers la page précédente après avoir ajouté un plat au panier avec succès

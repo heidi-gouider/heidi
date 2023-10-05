@@ -11,14 +11,15 @@ require_once('./templates/db_connect.php');
 //objet Dao et requete
 require_once('./templates/Dao.php');
 
-    // Je crée une instance de DAO en passant la connexion PDO
-    $dao = new Dao($db);
+// Je crée une instance de DAO en passant la connexion PDO
+$dao = new Dao($db);
 
 
-    // J'utilise la fonction getCategoriesWithActivePlatsCount
-    $tableau = $dao->getTopSellingPlatsByCategorie();
+// J'utilise la fonction getCategoriesWithActivePlatsCount
+$tableau = $dao->getTopSellingPlatsByCategorie();
+$plats = $dao->getallPlats();
 
-    $count = 0;
+$count = 0;
 
 ?>
 
@@ -26,11 +27,26 @@ require_once('./templates/Dao.php');
     <div class="fst-italic" id="titre-accueil">
         <h1>The District</h1>
     </div>
-
+    <!-- barre de recherche -->
     <form class="search-form d-flex justify-content-center" id="search-bar">
-        <input type="text" placeholder="Rechercher...">
+
+        <input type="text" id="search-input" placeholder="Rechercher...">
         <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
+
+        <label for="Plats" class="form-label"><button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button></label>
+        <!-- <input type="text" name="id" class="form-select" placeholder="Rechercher..."> -->
+
+        <select id="plats-dropdown" name="id" class="form-select" style="display: none;">
+            <?php
+            // Parcourez le tableau des plats pour générer les options
+
+            foreach ($plats as $plat) {
+                echo '<option value="' . $plat->id . '">' . $plat->libelle . '</option>';
+            }
+            "endforeach";
+            ?>
     </form>
+
     <video controls="controls" class="" loop="loop" autoplay="autoplay" muted>
         <!-- <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay" muted> -->
         <source src="public/VIDEO/video2.mp4">
@@ -38,45 +54,30 @@ require_once('./templates/Dao.php');
 </div>
 
 <main class="container mt-4">
-            <div class="row">
-                <?php
-                foreach ($tableau as $categorie) : ?>
-                    <div class="col-md-6 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->nom_categorie ?>">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $categorie->nom_categorie ?></h5>
-                                <?php
-                                ?>
-                                <!-- <div class="card-body">
-                                    <a href="category_plats_script.php?id=<?= $categorie->id ?>" class="btn btn-primary">plats</a>
-                                </div> -->
-                            </div>
-                        </div>
+    <div class="row">
+        <?php
+        foreach ($tableau as $categorie) : ?>
+            <div class="col-md-6 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->nom_categorie ?>">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $categorie->nom_categorie ?></h5>
+                        <?php
+                        ?>
                     </div>
-                <?php
-                    $count++; // Incrémentez le compteur
-                    // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
-                    if ($count % 2 == 0) {
-                        echo '</div><div class="row">';
-                    }
-
-                endforeach; ?>
+                </div>
             </div>
-        </main>
+        <?php
+            $count++; // Incrémentez le compteur
+            // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
+            if ($count % 2 == 0) {
+                echo '</div><div class="row">';
+            }
 
-<!-- <div class="container d-grid mt-lg-4" id="images">
-    <div class="row gap-5 justify-content-sm-center m-3">
-        <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/asian_food_cat.jpg" alt="asian food">
-        <img class="col-6 col-md-4 col-lg-3  p-2 img-thumbnail" src="public/IMG/category/burger_cat.jpg" alt="burger">
-        <img class="col-6 col-md-4 col-lg-3  p-2 img-thumbnail" src="public/IMG/category/salade_cat.jpg" alt="salad">
+        endforeach; ?>
     </div>
-    <div class="row gap-5 justify-content-sm-center d-md-flex m-3">
-        <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/pasta_cat.jpg" alt="pates">
-        <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/sandwich_cat.jpg" alt="sandwich">
-        <img class="col-6 col-md-4 col-lg-3 p-2 img-thumbnail" src="public/IMG/category/veggie_cat.jpg" alt="végé">
-    </div>
-</div> -->
+</main>
+
 
 <?php
 include('partials/footer.php');

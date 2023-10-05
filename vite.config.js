@@ -10,8 +10,12 @@ export default defineConfig({
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
         assetFileNames: `assets/[name].[ext]`
+        // entryFileNames: `templates/[name].js`,
+        // chunkFileNames: `templates/[name].js`,
+        // assetFileNames: `templates/[name].[ext]`
+
       },
-      // external: ['/dist/assets/bootstrap-icons.woff'],
+      // external: ['node_modules/bootstrap/dist/css'],
 // input: 'main.js'
     }
   }

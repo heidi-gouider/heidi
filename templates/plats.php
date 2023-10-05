@@ -1,42 +1,60 @@
 <?php
-$title = "Nos Plats";
+//je démare la session
+// session_start();
+
+// Active l'affichage des erreurs dans le navigateur
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$title = "Plats";
 include('../partials/header.php');
+//inclusion de la page de connexion à la base de donnée
+require_once('db_connect.php');
+require_once('Dao.php');
+
+//création de l'instance
+$Dao = new Dao($db);
+// if (isset($_GET["added"]) && $_GET["added"] === "true") {
+// echo "Les données ajoutées devraient être affichées ici.";
+// }
+// $requete = $db->query("SELECT categorie.*, COUNT (plat.id) FROM categorie INNER JOIN plat ON categorie.id = plat.id 
+//     GROUP BY categorie.id HAVING COUNT(plat.id)= plat.active");
+// $requete = $db->query("SELECT categorie.*, COUNT (plat.active) FROM categorie INNER JOIN plat ON categorie.id = plat.id_categorie
+//     GROUP BY categorie.id HAVING COUNT(plat.active)= yes");
+
+$requete = $db->query("SELECT plat.*FROM plat");
+
+// récupération les données
+$tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+
+//Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
+$requete->closeCursor();
+
+$count = 0;
 ?>
+<!DOCTYPE html>
+<html>
 
-<div class="contenu">
-<h1 class="row col-12 fst-italic">Nos burgers</h1>
-<!-- /// LA MODAL /// -->
-<div class="modal fade" id="modal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title rounded p-3">Ma commande</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body bg-secondary" aria-describedby="quantité">
-        <div class="dropdown">
-          <!-- <button class="btn btn-secondary dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"> -->
-          <label for="quantité" class="lead text-white">Combien de burgers désirez-vous</label>
-          <input type="number" id="quantité" name="amount" value="1" min="1" max="10">
-          <!-- </button> -->
-          <!-- <select class="dropdown-menu">
-              <option> -->
-          <!-- <input type="number" id="number" name="amount" value="1" min="1" max="10"> -->
-          <!-- </option>
-            </select> -->
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        <!-- mettre en place un "submit"  pour envoyer les données ... ? -->
-        <button type="button" class="btn btn-primary">Enregistrer</button>
-      </div>
-    </div>
-  </div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <!-- <title>Plats</title> -->
+</head>
 
-<!-- //code plats_script.php -->
-<div class="col-md-6 mb-4">
+<body>
+    <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
+    <div class="contenu">
+        <h1 class="fst-italic">Nos plats</h1>
+
+        <!-- <div class="container d-flex justify-content-center" id="section"> -->
+        <main class="container" id="cards">
+            <!-- <div class="row">  -->
+            <!-- <div class="container m-5 pt-3" id="cards"> -->
+            <div class="row  m-3 justify-content-around">
+
+                <?php
+                foreach ($tableau as $plat) : ?>
+                    <div class="col-md-6 mb-4 mt-4">
                         <div class="card" style="width: 18rem;">
                             <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
                             <div class="card-body">
@@ -53,111 +71,24 @@ include('../partials/header.php');
                             </div>
                         </div>
                     </div>
-                    <div class="card p-3 w-25">
-                        <div class="col-md-6 mb-4">
-                            <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
-                            <div class="card-title">
-                                <h5><?= $plat->libelle ?></h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <p><?= $plat->description ?></p>
-                                    <p class="content bg-body"> <?= $plat->prix ?></p>
-                                </div>
-                                <!-- <div class="container"> -->
-                                <!-- bouton -->
-                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
-                                    <i class="bi bi-basket"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
 
-<!-- /// LES PLATS /// -->
-<div class="container m-5 pt-3" id="cards">
-  <div class="row  m-3 justify-content-around">
-    <div class="card p-3 w-25">
-    <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
-      <div class="card-title">
-        <h5><?= $plat->libelle ?></h5>
-      </div>
-      <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <p><?= $plat->description ?></p>
-          <p class="content bg-body"> <?= $plat->prix ?></p>
-        </div>
-        <!-- <div class="container"> -->
-        <!-- bouton -->
-        <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
-          <i class="bi bi-basket"></i>
-        </button>
+                <?php
+                    $count++; // Incrémentez le compteur
+                    // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
+                    if ($count % 2 == 0) {
+                        echo '</div><div class="row">';
+                    }
 
-      </div>
+                endforeach; ?>
+            </div>
+        </main>
     </div>
+    <?php
+    include('../partials/footer.php');
+    ?>
 
-    <div class="card p-3 w-25">
-      <!-- <div class="card-header ">
-        <button type="button" class="btn text-white">
-          <i class="bi bi-plus"></i>
-        </button> -->
-        <img src="/public/IMG/food/veggie-burger.jpg" alt="image veggie burger" id="image2">
-      <!-- </div> -->
-      <div class="card-title">
-        <h5>le végé</h5>
-      </div>
-      <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <p>description du produit</p>
-          <p class="content bg-body">6.90 $</p>
-        </div>
-        <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
-          <i class="bi bi-basket"></i>
-        </button>
-      </div>
-    </div>
-  </div>
+    <script type="module" src="../dist/assets/index.js"></script>
 
-  <div class="row  m-3 pt-5 justify-content-around">
-    <div class="card p-3 w-25">
-      <img src="/public/IMG/food/hamburger.jpg" alt="image hamburger" id="image3">
-      <div class="card-title">
-        <h5>classique</h5>
-      </div>
-      <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <p>description du produit</p>
-          <p class="content bg-body">5.90 $</p>
-        </div>
-        <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
-          <i class="bi bi-basket"></i>
-        </button>
-      </div>
-    </div>
-
-    <div class="card p-3 w-25">
-      <img src="/public/IMG/food/burger-du-chef.jpg" alt="image burger du chef" id="image4">
-      <div class="card-title">
-        <h5>burger du chef</h5>
-      </div>
-      <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <p>description du produit</p>
-          <p class="content bg-body">7.90 $</p>
-        </div>
-        <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
-          <i class="bi bi-basket"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<?php
-include('../partials/footer.php');
-?>
-
-<script type="module" src="../dist/assets/index.js"></script>
 </body>
 
 </html>

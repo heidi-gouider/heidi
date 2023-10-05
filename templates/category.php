@@ -1,100 +1,85 @@
 <?php
+//je démare la session php = "identifiant donné au navigateur pour l'identifie du coté serveur et rendre sur chaque page les diff variables stocké"
+// session_start();
+
+// Active l'affichage des erreurs dans le navigateur
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $title = "Catégories";
 include('../partials/header.php');
+//inclusion de la page de connexion à la base de donnée
+require_once('db_connect.php');
+//objet Dao et requete
+require_once('Dao.php');
+
+// Je crée une instance de DAO en passant la connexion PDO
+$dao = new Dao($db);
+
+
+// J'utilise la fonction getCategoriesWithActivePlatsCount
+$tableau = $dao->getCategoriesWithActivePlatsCount();
+
+$count_active = 0;
+$count = 0;
 ?>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="UTF-8">
+    <!-- <title>Categories</title> -->
+</head>
 
+<body>
+    <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
+    <div class="contenu">
+        <h1 class="fst-italic">Notre carte</h1>
+        <!-- <div class="container d-flex justify-content-center" id="section"> -->
 
-<!-- <h1 class="row col-12 fst-italic">Notre carte</h1> -->
-<div class="contenu">
-  <h1 class="fst-italic">Notre carte</h1>
-  <div class="container d-flex justify-content-center" id="section">
-    <div id="carousel" class="carousel slide row col-5 m-5" data-ride="carousel" data-interval="2000">
-      <!-- Indicateurs -->
-      <ul class="carousel-indicators mx-auto">
-        <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
-        <li data-bs-target="#carousel" data-bs-slide-to="3"></li>
-        <li data-bs-target="#carousel" data-bs-slide-to="4"></li>
-        <li data-bs-target="#carousel" data-bs-slide-to="5"></li>
-      </ul>
-      <!-- CAROUSEL -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/public/IMG/category/burger_cat.jpg" class="d-block w-100" alt="photo burger">
-          <div class="carousel-caption d-none d-md-block">
-            <!-- <a href="plats.html">Nos burgers</a> -->
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
+        <main class="container">
+            <div class="row">
+                <?php
+                foreach ($tableau as $categorie) : ?>
+                    <div class="col-md-6 mb-4 mt-4">
+                        <div class="card" style="width: 18rem; background: rgba(255, 255, 255, 0.8);">
 
-        <div class="carousel-item">
-          <img src="/public/IMG/category/pizza_cat.jpg" class="d-block w-100" alt="photo pizza">
-          <div class="carousel-caption d-none d-md-block">
-            <a href="plats.html">Nos pizzas</a>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
+                            <a href="category_plats_script.php?id=<?= $categorie->id ?>">
+                                <img class="card-img-top mx-auto" src="/public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->libelle ?>">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><?= $categorie->libelle ?></h5>
+                                <?php
+                                // $count_active = 0;
+                                // Trouvez le nombre de plats actifs pour cette catégorie
+                                // foreach ($resultat as $resultat) {
+                                //     if ($resultat['id_categorie'] == $categorie->id) {
+                                //         $count_active = $resultat['count_active'];
+                                //         break;
+                                //     }
+                                // }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    $count++; // Incrémentez le compteur
+                    // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
+                    if ($count % 2 == 0) {
+                        echo '</div><div class="row">';
+                    }
 
-        <div class="carousel-item">
-          <img src="/public/IMG/category/asian_food_cat.jpg" class="d-block w-100" alt="photo asian food">
-          <div class="carousel-caption d-none d-md-block">
-            <a href="plats.html">Nos menu d'asie</a>
-            <p>description et commentaire.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="/public/IMG/category/pasta_cat.jpg" class="d-block w-100" alt="photo pates">
-          <div class="carousel-caption d-none d-md-block">
-            <a href="plats.html">Nos pates</a>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="/public/IMG/category/salade_cat.jpg" class="d-block w-100" alt="photo salade">
-          <div class="carousel-caption d-none d-md-block">
-            <a href="plats.html">Nos salades</a>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="/public/IMG/category/sandwich_cat.jpg" class="d-block w-100" alt="photo sandwich">
-        </div>
-      </div>
-      <!-- CONTROL DU CAROUSEL -->
-
-      <button class="carousel-control-prev" href="#carousel" type="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon rounded" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-      </button>
-      <button class="carousel-control-next " href="#carousel" type="button" data-bs-slide="next">
-        <!-- <svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
-          <path d="M12 30 L24 16 12 2" />
-      </svg> -->
-        <span class="carousel-control-next-icon rounded" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-      </button>
+                endforeach; ?>
+            </div>
+        </main>
     </div>
-  </div>
-  <a class="btn btn-order rounded-0" href="/PAGES/commande.php">
-  <button type="button" class="btn btn-order bg-danger col-3 col-md-4 col-lg-3">
-    Ma commande <i class="bi bi-basket btn-icon"></i>
-  </button>
-  <!-- <a class="btn btn-order rounded-0" href="/PAGES/commande.php"> -->
+    <?php
+    include('../partials/footer.php');
+    ?>
 
-  <!-- <a class="nav-link commande btn mx-auto bg-danger col-2 " href="/PAGES/commande.php" role="button">
-      <span class="d-sm-none d-md-inline">commander</span>
-    <i class="bi bi-basket btn-icon"></i></a> -->
-</div>
+    <script type="module" src="../dist/assets/index.js"></script>
 
-<?php
-include('../partials/footer.php');
-?>
-
-<script type="module" src="../dist/assets/index.js"></script>
 </body>
 
 </html>

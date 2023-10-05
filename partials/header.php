@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg search-bar">
         <div class="container-fluid m-auto fixed-top mb-4" id="menu">
-            <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="index.html">
+            <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="index.php">
                 <img src="/public/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
             </a>
 
@@ -34,18 +34,18 @@
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <!-- <a class="nav-link nav-link-custom" href="/templates/category.php">Catégories</a> -->
-                        <a class="nav-link nav-link-custom" href="/templates/category_script.php">Catégories</a>
+                        <a class="nav-link nav-link-custom" href="/templates/category.php">Catégories</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <!-- <a class="nav-link nav-link-custom" href="/templates/plats.php">Plats</a> -->
-                        <a class="nav-link nav-link-custom" href="/templates/plats_script.php">Plats</a>
+                        <a class="nav-link nav-link-custom" href="/templates/plats.php">Plats</a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
                         <a class="nav-link nav-link-custom" href="/templates/contact.php">Contact <i class="bi bi-envelope"></i></a>
                     </li>
-                    <!-- <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="">Mon compte</a>
-                    </li> -->
+                    <li class="nav-item pe-4 pt-2">
+                        <a class="nav-link nav-link-custom" href="/templates/mon_compte.php">Mon compte</a>
+                    </li>
                     <!-- <li class="nav-item" id="commande"> -->
                     <!-- <li class="nav-link" data-bs-toggle="collapse">
                         <a data-bs-toggle="collapse" href="/PAGES/commande.php" role="button">

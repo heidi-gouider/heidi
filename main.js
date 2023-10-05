@@ -2,7 +2,7 @@ import 'node_modules/bootstrap/dist/css';
 // import $ from 'jquery';
 import 'node_modules/bootstrap/dist/js';
 // import { Carousel } from 'bootstrap';
-import 'JAVASCRIPT/Carousel.js';
+// import 'JAVASCRIPT/Carousel.js';
 import './style.css';
 // import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -22,6 +22,17 @@ import './style.css';
 // section recherche //
 // let section = document.querySelector("section");
 // let video = document.querySelector("video");
+   // JavaScript pour afficher la liste déroulante lorsque le champ de recherche est cliqué
+   const searchInput = document.getElementById('search-input');
+   const platsDropdown = document.getElementById('plats-dropdown');
+
+   searchInput.addEventListener('focus', function () {
+       platsDropdown.style.display = 'block';
+   });
+
+   searchInput.addEventListener('blur', function () {
+       platsDropdown.style.display = 'none';
+   });
 
 // footer //
 // let network = document.querySelector(".network");

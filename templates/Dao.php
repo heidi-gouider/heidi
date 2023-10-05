@@ -59,11 +59,20 @@ class Dao
     {
         $requete = $this->db->query("SELECT plat.*FROM plat LIMIT 6");
         // récupération les données
-        $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+        $plats = $requete->fetchAll(PDO::FETCH_OBJ);
         //Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
         $requete->closeCursor();
+        return $plats;
     }
 
+    //Fonction pour avoir tous les plats active
+    public function getallPlats()
+    {
+        $requete = $this->db->query("SELECT plat.*FROM plat Where active = 'Yes'");
+        $allPlats = $requete->fetchAll(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $allPlats;
+    }
 
     public function getTopSellingPlats()
     {
@@ -104,7 +113,6 @@ VALUES (:id_plat, :quantite, 10, NOW(), 'En attente', :nom_client, :tel_client, 
         $stmt->bindParam(':email_client', $email_client, PDO::PARAM_STR);
         $stmt->bindParam(':adresse_client', $adresse_client, PDO::PARAM_STR);
         return $stmt->execute();
-
     }
 
     //     public function insertCommandeDataUser($id, $nom, $prenom, $email, $mot)

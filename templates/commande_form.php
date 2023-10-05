@@ -54,6 +54,7 @@ $dao = new Dao($db);
   <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
   <div class="contenu">
     <h1 class="fst-italic">Ma commande</h1>
+    <a href=" <?php header("Location: " . $_SERVER['HTTP_REFERER']);?>"> continuer mes achats </a>
 
     <!-- /// LA MODAL include la modal avec php /// -->
     <!-- <div class="modal fade modal-sm" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

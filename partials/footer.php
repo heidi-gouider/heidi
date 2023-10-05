@@ -27,6 +27,12 @@
             </li>
         </ul>
     </div>
+    <p>&copy; 2023 The District. Tous droits réservés.</p>
+        <ul>
+            <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+            <li><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
+            <li><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
+        </ul>
     <!-- <h4>Nous contacter</h4> -->
 </footer>
 

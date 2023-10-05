@@ -12,39 +12,42 @@
 
 <body>
 
-<footer class="sticky-bottom footer">
-    <h3 class="text-center">Pour nous suivre !</h3>
-    <div class="container">
-        <ul class="list-inline text-center">
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-geo-alt"></i></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#"><i class="bi bi-instagram"></i></a>
-            </li>
-        </ul>
-    </div>
-    <p>&copy; 2023 The District. Tous droits réservés.</p>
-        <ul>
-            <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
-            <li><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
-            <li><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
-        </ul>
-    <!-- <h4>Nous contacter</h4> -->
-</footer>
+    <footer class="sticky-bottom footer">
+        <h3 class="text-center">Pour nous suivre !</h3>
+        <div class="container">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-geo-alt"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+            </ul>
+            <div class="text-end">
+                <ul>
+                    <li class="text-sm"><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+                    <li class="text-sm"><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
+                    <li class="text-sm"><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
+                </ul>
+                <p>&copy; 2023 The District. Tous droits réservés.</p>
+            </div>
 
-<!-- <footer>
+        </div>
+        <!-- <h4>Nous contacter</h4> -->
+    </footer>
+
+    <!-- <footer>
         <div class="network"> -->
-            <!-- création d'une checkbox pour le bouton qui affiche au click les liens
+    <!-- création d'une checkbox pour le bouton qui affiche au click les liens
             des résx -->
-            <!-- <i class="fa-sharp fa-solid fa-share-nodes" id="open-liens"></i>
+    <!-- <i class="fa-sharp fa-solid fa-share-nodes" id="open-liens"></i>
             <i class="fa-regular fa-xmark" id="close-liens"></i> -->
-            <!-- <i class="bi bi-share-fill" id="open-liens"></i>
+    <!-- <i class="bi bi-share-fill" id="open-liens"></i>
             <i class="bi bi-x" id="close-liens"></i> -->
-        <!-- </div>
+    <!-- </div>
 
         <div class="link-external">
             <i class="fa-brands fa-facebook"></i>

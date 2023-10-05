@@ -45,7 +45,7 @@ $count = 0;
                     <div class="col-md-6 mb-4 mt-4">
                         <div class="card" style="width: 18rem; background: rgba(255, 255, 255, 0.8);">
 
-                            <a href="category_plats_script.php?id=<?= $categorie->id ?>">
+                            <a href="category_plats.php?id=<?= $categorie->id ?>">
                                 <img class="card-img-top mx-auto" src="/public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->libelle ?>">
                             </a>
                             <div class="card-body">

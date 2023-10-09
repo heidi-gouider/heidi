@@ -97,6 +97,7 @@ $dao = new Dao($db);
 
       ?>
     </div>
+    
     <div class="text-center">
       <a class="btn btn-commande rounded-0 mt-3 align-items-center text-nowrap" href="/templates/commande_form.php">
         <span class="d-md-none">Ma commande</span>

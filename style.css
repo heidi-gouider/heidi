@@ -493,6 +493,10 @@ section {
 
 .btn-commande {
   height: 30px;
+
+  position: absolute;
+  bottom: 0;
+
   color: var(--bordeau) !important;
   background-color: var(--gris);
   border-color: var(--bordeau);

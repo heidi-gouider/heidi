@@ -68,7 +68,7 @@ if (isset($_GET['id'])) {
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body bg-secondary" aria-describedby="quantité">
-                                        <form action="ajouter_au_panier.php" method="post" id="valid" novalidate>
+                                        <form action="ajout_au_panier.php" method="post" id="valid" novalidate>
                                             <div class="dropdown">
                                                 <label for="quantité" class="lead text-white">Combien de <?= $plat->libelle ?> désirez-vous</label>
                                                 <input type="number" id="quantité" name="quantite" value="1" min="1" max="10">

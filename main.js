@@ -244,8 +244,26 @@ function valider(e) {
 
 };
 
-//********* MODAL ***********//
-// FORMULAIRE
+//********* MODAL Page Mon Compte ***********//
+
+// Fonction pour ouvrir le modal
+// function openModal() {
+//     var modal = document.getElementById("myModal");
+//     modal.style.display = "block";
+// }
+
+// Fonction pour fermer le modal
+// function closeModal() {
+//     var modal = document.getElementById("myModal");
+//     modal.style.display = "none";
+// }
+
+// Gérer le clic sur le bouton "Ouvrir le modal"
+// document.getElementById("openModalButton").addEventListener("click", openModal);
+
+// Gérer le clic sur le bouton de fermeture
+// document.getElementById("closeModalButton").addEventListener("click", closeModal);
+
 
 //********* PAGE contact ***********//
   // Fonction pour afficher la modal
@@ -277,6 +295,26 @@ if (urlParams.get('success') === '1') {
 // });
 
 
+// ********* PAGE Mon Compte ***********//
+
+//  lien "Mon compte" par son ID
+// let monCompteBtn = document.getElementById("monCompteBtn");
+
+//  texte initial
+// let initialText = "Mon compte";
+
+//  texte au survol
+// let hoverText = "Connexion/Inscription";
+
+//  gestionnaire d'événements pour le survol
+// monCompteBtn.addEventListener("mouseover", function() {
+//   monCompteBtn.textContent = hoverText;
+// });
+
+//  gestionnaire d'événements pour le départ du survol
+// monCompteBtn.addEventListener("mouseout", function() {
+//   monCompteBtn.textContent = initialText;
+// });
 // ********* PAGE commande ***********//
 
 // let validFormAnim= document.querySelector(".btn-joke");

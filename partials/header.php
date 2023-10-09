@@ -53,7 +53,7 @@
                         <a class="nav-link nav-link-custom" href="/templates/contact.php">Contact <i class="bi bi-envelope"></i></a>
                     </li>
                     <li class="nav-item pe-4 pt-2">
-                        <a class="nav-link nav-link-custom" href="/templates/mon_compte.php">Mon compte</a>
+                        <a class="nav-link nav-link-custom" href="/templates/mon_compte.php"id="monCompteBtn"title="Inscription/Connexion">Mon compte</a>
                     </li>
                     <!-- <li class="nav-item" id="commande"> -->
                     <!-- <li class="nav-link" data-bs-toggle="collapse">
@@ -78,7 +78,7 @@
  -->
                     <a class="btn btn-command rounded-0 mt-3 align-items-center text-nowrap" href="/templates/commande_form.php">
                         <span class="d-md-none">Ma commande</span>
-                        <span class="d-md-flex d-none"><i class="bi bi-basket btn-icon"></i> Ma commande</span>
+                        <span class="d-md-flex d-none"><!-- <i class="bi bi-basket btn-icon"></i>--> Ma commande</span> 
                     </a>
 
                 </ul>

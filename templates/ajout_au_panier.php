@@ -34,7 +34,8 @@ session_start();
         }
 
         // Redirestion vers la page précédente après avoir ajouté un plat au panier avec succès
-        header("Location: " . $_SERVER['HTTP_REFERER']);
+        // header("Location: " . $_SERVER['HTTP_REFERER']);
+        header("Location: commande.php");
         exit();
     } else {
         // Je stocke le message d'erreur dans une variable de session
@@ -43,6 +44,7 @@ session_start();
         // Gérer les erreurs si des données sont manquantes
         // echo 'Erreur : Données manquantes.';
         header("Location: " . $_SERVER['HTTP_REFERER']);
+        // header("Location: commande.php");
         exit();
     }
 

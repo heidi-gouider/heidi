@@ -10,20 +10,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="dist/assets/index.css">
+    <link rel="stylesheet" href="/dist/assets/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg search-bar">
         <div class="container-fluid m-auto fixed-top mb-4" id="menu">
-            <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="index.php">
+            <a class="navbar-brand logo d-flex col-3 mx-2 py-3 justify-content-center" href="/index.php">
                 <img src="/public/IMG/logo/logo.png" alt="logo" style="width: 50%; border-radius: 60%;">
             </a>
 
-            <!-- je regroupe et cache les éléments pour le responsive -->
+            <!-- Icône du panier avec lien -->
+            <a href="/templates/panier.php" class="d-md-none">
+                <i class="bi bi-basket btn-icon btn-icon-large"></i>
+            </a>
+
+            <!-- Lien "Mon compte" en tant que bouton en version mobile -->
+            <a href="/templates/mon_compte.php" class="btn btn-primary d-md-none">Mon compte</a>
+
+            <!-- Bouton de menu avec icône du menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="z-index:1"></span>
+                <i class="bi bi-list"></i> <!-- Icône du menu -->
+                <!-- <span class="navbar-toggler-icon" style="z-index:1"></span> -->
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,18 +62,25 @@
                             <i class="bi bi-basket btn-icon"></i>
                         </a>
                     </li> -->
-                    <li>
-                        <!-- <a class="btn btn-order" href="/templates/commande_form.php"> -->
-                        <a href="/templates/panier.php"><i class="bi bi-basket btn-icon"></i></a>
-                        <!-- <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3" id="commande">
+                    <!-- <li> -->
+                    <!-- <a class="btn btn-order" href="/templates/commande_form.php"> -->
+                    <!-- <a href="/templates/panier.php"><i class="bi bi-basket btn-icon"></i></a> -->
+                    <!-- <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3" id="commande">
                         <i class="bi bi-basket btn-icon"></i>
                     </button></a> -->
-                    </li>
+                    <!-- </li> -->
 
-                    <a class="btn btn-order rounded-0" href="/templates/commande_form.php">
+                    <!-- <a class="btn btn-order rounded-0" href="/templates/commande_form.php">
                         <button type="button" class="btn btn-command d-md-flex rounded-0 mt-3 align-items-center" id="commande">
                             Ma commande <i class="bi bi-basket btn-icon"></i>
-                        </button></a>
+                        </button>
+                    </a>
+ -->
+                    <a class="btn btn-command rounded-0 mt-3 align-items-center text-nowrap" href="/templates/commande_form.php">
+                        <span class="d-md-none">Ma commande</span>
+                        <span class="d-md-flex d-none"><i class="bi bi-basket btn-icon"></i> Ma commande</span>
+                    </a>
+
                 </ul>
             </div>
         </div>

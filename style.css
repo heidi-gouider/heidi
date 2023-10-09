@@ -104,6 +104,11 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   /* border-color: #28a745; */
 }
 
+/* CSS personnalisé pour agrandir l'icône du panier en version mobile */
+.btn-icon-large {
+  font-size: 24px; /* Taille de police personnalisée */
+}
+
 /* ------------------------------------------------------------------------------------------------------------ *
 
 /* SECTION RECHERCHE AVEC VIDEO EN FOND  */
@@ -135,7 +140,7 @@ vérifier s'il n'est pas plus judicieux de nommer des classes perso au cas où i
   /* z-index: 1; */
   cursor: pointer;
   /* background-color: var(--grisFonce); */
-}
+} 
 
 /********* Titre & Barre de recherche **********/
 #titre-accueil {
@@ -259,7 +264,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
 h1 {
   animation: move-titre 1s ease-in-out both;
   z-index: 1;
-  color: rgb(175, 35, 35);
+  color: white;
   padding-top: 5%;
 }
 
@@ -484,6 +489,25 @@ section {
 
 /* ------------------------------------------------------------------------------------------------------------ */
 
+/*  PAGE commande  */
+
+.btn-commande {
+  height: 30px;
+  color: var(--bordeau) !important;
+  background-color: var(--gris);
+  border-color: var(--bordeau);
+  box-shadow: 1px 5px 5px 3px #42031f;
+  transition: 0.2s;
+}
+
+.btn-commande:hover,
+.btn-commande:focus,
+.btn-commande:active {
+  color: white;
+  background-color: var(--gris);
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+
 /*  LE FOOTER  */
 
 .footer {
@@ -517,3 +541,11 @@ section {
 /* .link-external i:hover{
 afficher le nom en texte du lien
 } */
+
+/* ////////////////menu déroulant mobile/////////// */
+@media (max-width: 767px) {
+  .collapse.navbar-collapse {
+      background-color: rgba(226, 226, 226, 0.7); /* Ajoutez votre couleur de fond ici */
+      box-shadow: 0px 5px 10px #42031f; /* Conservez votre ombre si nécessaire */
+  }
+}

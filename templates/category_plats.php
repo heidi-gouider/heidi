@@ -85,7 +85,6 @@ if (isset($_GET['id'])) {
 
                 <?php
                         $count++; // Incrémentez le compteur
-                        // Si vous avez affiché 2 disques, fermez la rangée actuelle et commencez une nouvelle rangée
                         if ($count % 2 == 0) {
                             echo '</div><div class="row">';
                         }

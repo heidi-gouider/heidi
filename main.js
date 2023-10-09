@@ -1,6 +1,6 @@
-import 'node_modules/bootstrap/dist/css';
+import './node_modules/bootstrap/dist/css/bootstrap.css';
 // import $ from 'jquery';
-import 'node_modules/bootstrap/dist/js';
+import './node_modules/bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
 // import 'JAVASCRIPT/Carousel.js';
 import './style.css';
@@ -19,20 +19,79 @@ import './style.css';
 // let body = document.querySelector("body");
 // let icone = document.querySelector(".icone");
 
-// section recherche //
+/////// section recherche //////////////
+
 // let section = document.querySelector("section");
 // let video = document.querySelector("video");
    // JavaScript pour afficher la liste déroulante lorsque le champ de recherche est cliqué
    const searchInput = document.getElementById('search-input');
    const platsDropdown = document.getElementById('plats-dropdown');
 
-   searchInput.addEventListener('focus', function () {
-       platsDropdown.style.display = 'block';
-   });
+//    searchInput.addEventListener('focus', function () {
+//        platsDropdown.style.display = 'block';
+//    });
 
-   searchInput.addEventListener('blur', function () {
-       platsDropdown.style.display = 'none';
-   });
+//    searchInput.addEventListener('blur', function () {
+//        platsDropdown.style.display = 'none';
+//    });
+
+///essaie barre de recherche avec pdo et dao//////
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const searchInput = document.getElementById("search-input");
+//     const suggestions = document.getElementById("suggestions");
+
+//     // Événement d'entrée pour la saisie de texte
+//     searchInput.addEventListener("input", function() {
+//         const inputValue = searchInput.value.trim();
+//         suggestions.innerHTML = ""; // Efface les suggestions précédentes
+
+//         if (inputValue !== "") {
+//             // Effectue une requête AJAX pour obtenir les suggestions
+//             fetch(`/votre_script_php.php?q=${inputValue}`)
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     data.forEach(plat => {
+//                         const option = document.createElement("option");
+//                         option.value = plat.id;
+//                         option.text = plat.libelle;
+//                         suggestions.appendChild(option);
+//                     });
+//                 });
+//         }
+//     });
+// });
+
+//    document.addEventListener("DOMContentLoaded", function() {
+//     const searchInput = document.getElementById("search-input");
+//     const suggestions = document.getElementById("suggestions");
+
+//     // Écouteur d'événement pour la saisie de texte
+//     searchInput.addEventListener("input", function() {
+//         const inputValue = searchInput.value.toLowerCase();
+
+//         // Efface les suggestions précédentes
+//         suggestions.innerHTML = "";
+
+//         // Vérifie si l'entrée de l'utilisateur correspond à un plat
+//         plats.forEach(function(plat) {
+//             const platLibelle = plat.libelle.toLowerCase();
+//             if (platLibelle.includes(inputValue)) {
+//                 const suggestionItem = document.createElement("div");
+//                 suggestionItem.textContent = plat.libelle;
+
+//                 // Ajoute un gestionnaire de clic pour sélectionner la suggestion
+//                 suggestionItem.addEventListener("click", function() {
+//                     searchInput.value = plat.libelle;
+//                     suggestions.innerHTML = "";
+//                 });
+
+//                 suggestions.appendChild(suggestionItem);
+//             }
+//         });
+//     });
+// });
+
 
 // footer //
 // let network = document.querySelector(".network");

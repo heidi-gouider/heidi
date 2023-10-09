@@ -21,6 +21,26 @@ $plats = $dao->getallPlats();
 
 $count = 0;
 
+//essaie barre de recherche avec js//
+// $q = $_GET["q"];
+// $suggestions = [];
+
+// if (!empty($q)) {
+//     $q = "%" . $q . "%";
+//     $query = "SELECT id, libelle FROM plats WHERE libelle LIKE :q";
+
+//     $stmt = $pdo->prepare($query);
+//     $stmt->bindParam(":q", $q, PDO::PARAM_STR);
+//     $stmt->execute();
+    
+//     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//         $suggestions[] = $row;
+//     }
+// }
+
+// Renvoyer les suggestions au format JSON
+// header("Content-Type: application/json");
+// echo json_encode($suggestions);
 ?>
 
 <div class="row video-container">
@@ -28,24 +48,32 @@ $count = 0;
         <h1>The District</h1>
     </div>
     <!-- barre de recherche -->
-    <form class="search-form d-flex justify-content-center" id="search-bar">
+    <!-- <form class="search-form d-flex justify-content-center" id="search-bar">
 
         <input type="text" id="search-input" placeholder="Rechercher...">
         <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
 
         <label for="Plats" class="form-label"><button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button></label>
-        <!-- <input type="text" name="id" class="form-select" placeholder="Rechercher..."> -->
 
-        <select id="plats-dropdown" name="id" class="form-select" style="display: none;">
+        <select id="plats-dropdown" name="id" class="form-select" style="display: none;"> -->
             <?php
             // Parcourez le tableau des plats pour générer les options
 
-            foreach ($plats as $plat) {
-                echo '<option value="' . $plat->id . '">' . $plat->libelle . '</option>';
-            }
-            "endforeach";
+            // foreach ($plats as $plat) {
+            //     echo '<option value="' . $plat->id . '">' . $plat->libelle . '</option>';
+            // }
+            // "endforeach";
             ?>
+        </select>
+    
     </form>
+
+    <form class="search-form d-flex justify-content-center" id="search-bar">
+    <input type="text" id="search-input" placeholder="Rechercher...">
+    <button class="btn text-light bg-dark" type="submit"><i class="bi bi-search"></i></button>
+    <!-- <div id="suggestions"></div> -->
+</form>
+
 
     <video controls="controls" class="" loop="loop" autoplay="autoplay" muted>
         <!-- <video controls="controls" class="controls video-fluid" loop="loop" autoplay="autoplay" muted> -->

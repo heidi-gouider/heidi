@@ -7,8 +7,7 @@ error_reporting(E_ALL);
 // je démare la session
 session_start();
 
-$title = "Ma commande";
-include('../partials/header.php');
+$title = "panier";
 //inclusion de la page de connexion à la base de donnée
 require_once('db_connect.php');
 //objet Dao et requete
@@ -18,8 +17,13 @@ require_once('Dao.php');
 
 // Je crée une instance de DAO en passant la connexion PDO
 $dao = new Dao($db);
-
+// J'utilise la fonction getPlatsByCategorie
+// $plats = $dao->getPlats();
+// $nom_categorie = !empty($plats) ? $plats[0]->nom_categorie : '';
+// $libelle = !empty($plats) ? $plats[0]->libelle : '';
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -47,11 +51,19 @@ $dao = new Dao($db);
 
     ?>
     <!-- PENSER A AJOUTER UNE CONNEXION... -->
-
-    <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
     <div class="contenu">
         <h1 class="fst-italic">Ma commande</h1>
-        <div class="container overflow-y-auto" style="height: 23vh;cursor: pointer;">
+        <div class="text-center mt-4">
+            <!-- <a href=" <?php //header("Location: " . $_SERVER['HTTP_REFERER']); 
+                            ?>"> continuer mes achats </a> -->
+            <a href="category.php" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Continuer mes achats</a>
+        </div>
+
+        <!-- Pour désactiver les info-bulles ajouter l'attribut novalidate à la class du form -->
+
+        <!-- /// LES PLATS COMMANDÉS EN SCROLL HIDDEN/// -->
+        <!-- récupération des plats enregistrer dans la modal d'ajout de plat -->
+        <div class="container overflow-y-auto" style="height: 50vh;cursor: pointer;">
             <?php
             // Vérifier si le panier existe dans la session
             if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
@@ -59,7 +71,8 @@ $dao = new Dao($db);
                 foreach ($_SESSION['panier'] as $id_plat => $quantite) {
                     // Récupérez les informations du plat à partir de la base de données en utilisant $platId
                     $plat = $dao->getPlatById($id_plat);
-
+                    $prix = $plat->prix;
+                    $total = $prix * $quantite;
                     // Vérifiez si le plat existe (il peut avoir été supprimé de la base de données)
                     if ($plat) {    ?>
                         <!-- j'affiche les plats du panier -->
@@ -73,18 +86,24 @@ $dao = new Dao($db);
                                             <i class="bi bi-basket col-1"></i>
                                         </div>
                                         <div class="card-body row justify-content-around">
-                                            <span class="col-4">quantité</span>
-                                            <span class="content col-2 border"><?= $quantite ?></span>
+                                            <div>
+                                                <span class="col-4">quantité</span>
+                                                <span class="content col-2 border"><?= $quantite ?></span>
+                                            </div>
+                                            <div>
+                                                <span class="col-4">Total</span>
+                                                <span class="content col-2 border"><?= $total ?></span>
+                                                <!-- <p class="content bg-body"><?= $total ?></p> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-        </div>
-<?php
+                        <!-- </div> -->
+            <?php
                     }
                 }
-                // echo "Plat ID: $platId, Quantité: $quantite<br>";
             } else {
                 // Le panier est vide
                 // J'affiche un message
@@ -97,19 +116,9 @@ $dao = new Dao($db);
                     exit();
                 }
             }
-
-?>
+            ?>
+        </div>
     </div>
-    <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-primary btn-joke" id="envoyer" type="submit">Envoyer</button>
-    </div>
-    </div>
-
-    <?php
-    include('../partials/footer.php');
-    ?>
-    </div>
-
     <script type="module" src="../dist/assets/index.js"></script>
 </body>
 

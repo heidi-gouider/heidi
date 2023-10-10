@@ -107,12 +107,7 @@ $dao = new Dao($db);
 
       ?>
       <div class="text-center">
-        <!-- <a class="btn btn-commande rounded-0 mt-3 align-items-center text-nowrap" id="openModalButton" href="/templates/mon_compte.php">
-        <span class="d-md-none">Ma commande</span>
-        <span class="d-md-flex d-none"><i class="bi bi-basket btn-icon"></i> Valider ma commande</span> -->
-        </a>
-
-        <!-- Ajoutez un bouton pour ouvrir le modal -->
+        <!--bouton pour ouvrir le modal -->
         <button id="openModalButton" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
 
       </div>

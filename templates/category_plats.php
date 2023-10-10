@@ -52,15 +52,14 @@ if (isset($_GET['id'])) {
                                     <p class="card-text"> <?= $plat->description ?></p>
                                     <p class="content bg-body"><?= $plat->prix ?></p>
                                 </div>
-                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal<?= $plat->id?>">Ajouter au panier
+                                <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal<?= $plat->id ?>">Ajouter au panier
                                     <i class="bi bi-basket"></i>
                                 </button>
-
                             </div>
                         </div>
 
                         <!-- /// LA MODAL D'AJOUT AU PANIER/// -->
-                        <div class="modal fade" id="modal<?= $plat->id?>" tabindex="-1">
+                        <div class="modal fade" id="modal<?= $plat->id ?>" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-sm">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -90,6 +89,9 @@ if (isset($_GET['id'])) {
                         }
 
                     endforeach;
+                    // Redirection vers une autre page
+                    // header("Location: chemin_vers_votre_page.php");
+                    // exit;
                 }
                 ?>
                 </div>

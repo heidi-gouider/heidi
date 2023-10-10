@@ -23,6 +23,11 @@ $Dao = new Dao($db);
 // $requete = $db->query("SELECT categorie.*, COUNT (plat.active) FROM categorie INNER JOIN plat ON categorie.id = plat.id_categorie
 //     GROUP BY categorie.id HAVING COUNT(plat.active)= yes");
 
+// Je crée une instance de DAO en passant la connexion PDO
+$dao = new Dao($db);
+
+// J'utilise la fonction getPlatsByCategorie
+
 $requete = $db->query("SELECT plat.*FROM plat");
 
 // récupération les données
@@ -30,6 +35,8 @@ $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 
 //Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
 $requete->closeCursor();
+
+    // $libelle = !empty($plats) ? $plats[0]->libelle : '';
 
 $count = 0;
 ?>
@@ -55,7 +62,7 @@ $count = 0;
                 <?php
                 foreach ($tableau as $plat) : ?>
                     <div class="col-md-6 mb-4 mt-4">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 25rem;">
                             <img src="/public/IMG/food/<?= $plat->image ?>" alt="<?= $plat->libelle ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $plat->libelle ?></h5>
@@ -67,7 +74,29 @@ $count = 0;
                                 <button type="button" class=" d-block mt-5 btn btn-secondary mx-auto" data-bs-toggle="modal" data-bs-target="#modal">Ajouter au panier
                                     <i class="bi bi-basket"></i>
                                 </button>
-
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /// LA MODAL D'AJOUT AU PANIER/// -->
+                    <div class="modal fade" id="modal<?= $plat->id ?>" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title rounded p-3">Ma commande</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-secondary" aria-describedby="quantité">
+                                    <form action="ajout_au_panier.php" method="post" id="valid" novalidate>
+                                        <div class="dropdown">
+                                            <label for="quantité" class="lead text-white">Combien de <?= $plat->libelle ?> désirez-vous</label>
+                                            <input type="number" id="quantité" name="quantite" value="1" min="1" max="10">
+                                            <input type="hidden" name="id_plat" value="<?= $plat->id ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

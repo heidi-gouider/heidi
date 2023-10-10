@@ -35,7 +35,8 @@ session_start();
 
         // Redirestion vers la page précédente après avoir ajouté un plat au panier avec succès
         // header("Location: " . $_SERVER['HTTP_REFERER']);
-        header("Location: commande.php");
+        // header("Location: commande.php");
+                header("Location: category.php");
         exit();
     } else {
         // Je stocke le message d'erreur dans une variable de session
@@ -47,5 +48,3 @@ session_start();
         // header("Location: commande.php");
         exit();
     }
-
-?>

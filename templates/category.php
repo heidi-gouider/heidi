@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 
 $title = "Catégories";
 include('../partials/header.php');
+include('modalAuth.php');
 //inclusion de la page de connexion à la base de donnée
 require_once('db_connect.php');
 //objet Dao et requete
@@ -37,8 +38,11 @@ $count = 0;
     <div class="contenu">
         <h1 class="fst-italic">Notre carte</h1>
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
-
-        <main class="container">
+                    <!--bouton pour ouvrir le modalAuth-->
+                    <div class="col-md-6 offset-md-3 text-center">
+                    <button id="openModalButton" class="btn btn-primary mt-5 fixed-top" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
+                    </div>
+        <main class="container ">
             <div class="row">
                 <?php
                 foreach ($tableau as $categorie) : ?>

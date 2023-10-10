@@ -40,6 +40,12 @@ $requete->closeCursor();
 // $libelle = !empty($plats) ? $plats[0]->libelle : '';
 
 $count = 0;
+
+//Je récupere le plat ajouté pour le passer dans l'url pour rendre le boutton de validation de la commande actif ou non
+// $plat_added = isset($_GET['plat-added']) ? $_GET['plat-added'] : false;
+// Validation et désinfection de la variable $plat_added provenant de l'URL
+$plat_added = isset($_GET['plat-added']) ? filter_var($_GET['plat-added'], FILTER_VALIDATE_BOOLEAN) : false;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,9 +59,17 @@ $count = 0;
     <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
     <div class="contenu">
         <h1 class="fst-italic">Nos plats</h1>
-        <div class="col-md-6 offset-md-3 text-center" style="margin-left: 10vh">
-            <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
-        </div>
+        <?php
+        if ($plat_added) {
+            // Affichez le bouton pour ouvrir la modalAuth seulement si des plats sont enregistrer
+            // echo '<button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>';
+        ?>
+            <div class="col-md-6 offset-md-3 text-center" style="margin-left: 10vh">
+                <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
+            </div>
+        <?php
+        }
+        ?>
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
         <main class="container" id="cards">
             <!-- <div class="row">  -->

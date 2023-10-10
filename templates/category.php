@@ -25,7 +25,9 @@ $tableau = $dao->getCategoriesWithActivePlatsCount();
 $count_active = 0;
 $count = 0;
 //Je récupere le plat ajouté pour le passer dans l'url pour rendre le boutton de validation de la commande actif ou non
-$plat_added = isset($_GET['plat-added']) ? $_GET['plat-added'] : false;
+// $plat_added = isset($_GET['plat-added']) ? $_GET['plat-added'] : false;
+// Validation et désinfection de la variable $plat_added provenant de l'URL
+$plat_added = isset($_GET['plat-added']) ? filter_var($_GET['plat-added'], FILTER_VALIDATE_BOOLEAN) : false;
 
 ?>
 <!DOCTYPE html>

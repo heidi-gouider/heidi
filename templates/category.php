@@ -39,10 +39,10 @@ $count = 0;
         <h1 class="fst-italic">Notre carte</h1>
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
                     <!--bouton pour ouvrir le modalAuth-->
-                    <div class="col-md-6 offset-md-3 text-center">
-                    <button id="openModalButton" class="btn btn-primary mt-5 fixed-top" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
+                    <div class="col-md-6 offset-md-3 text-center"style="margin-left: 10vh">
+                    <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
                     </div>
-        <main class="container ">
+        <main class="container">
             <div class="row">
                 <?php
                 foreach ($tableau as $categorie) : ?>

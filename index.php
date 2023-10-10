@@ -86,7 +86,7 @@ $count = 0;
         <?php
         foreach ($tableau as $categorie) : ?>
             <div class="col-md-6 mb-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card" id="images" style="width: 18rem;">
                     <img src="../public/IMG/category/<?= $categorie->image ?>" alt="<?= $categorie->nom_categorie ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $categorie->nom_categorie ?></h5>

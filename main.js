@@ -4,8 +4,8 @@ import './node_modules/bootstrap/dist/js/bootstrap.js';
 // import { Carousel } from 'bootstrap';
 // import 'JAVASCRIPT/Carousel.js';
 import './style.css';
-// import 'bootstrap-icons/font/bootstrap-icons.css';
-
+// import './node_modules/bootstrap-icons/font/bootstrap-icons.css';
+// import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 // menu responsive //
 // let installButton = document.querySelector('#installButton');

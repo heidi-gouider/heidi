@@ -13,8 +13,15 @@
 <body>
 
     <footer class="sticky-bottom footer">
-        <h3 class="text-center">Pour nous suivre !</h3>
-        <div class="container">
+    <div class="container">
+            <div class="text-end fs-2">
+                <ul>
+                    <li class="text-sm "><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+                    <li class="text-sm"><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
+                    <li class="text-sm"><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
+                </ul>
+            </div>
+            <h4 class="text-center">Pour nous suivre !</h4>
             <ul class="list-inline text-center">
                 <li class="list-inline-item">
                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -25,17 +32,12 @@
                 <li class="list-inline-item">
                     <a href="#"><i class="bi bi-instagram"></i></a>
                 </li>
-            </ul>
-            <div class="text-end">
-                <ul>
-                    <li class="text-sm"><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
-                    <li class="text-sm"><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
-                    <li class="text-sm"><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
-                </ul>
                 <p>&copy; 2023 The District. Tous droits réservés.</p>
-            </div>
 
+            </ul>
         </div>
+        <!-- <script type="module" src="main.js"></script> -->
+
         <!-- <h4>Nous contacter</h4> -->
     </footer>
 

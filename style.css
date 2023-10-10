@@ -203,7 +203,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transform: scale(1.1);
   /* translate: 1s; */
   border: none;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
   /* border-radius: 50%; */
 }
 

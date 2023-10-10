@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 
 $title = "Plats";
 include('../partials/header.php');
+include('modalAuth.php');
 //inclusion de la page de connexion à la base de donnée
 require_once('db_connect.php');
 require_once('Dao.php');
@@ -36,7 +37,7 @@ $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 //Cette ligne ferme le curseur de la requête. Cela libère les ressources associées à la requête et permet de faire d'autres requêtes avec la même connexion PDO.
 $requete->closeCursor();
 
-    // $libelle = !empty($plats) ? $plats[0]->libelle : '';
+// $libelle = !empty($plats) ? $plats[0]->libelle : '';
 
 $count = 0;
 ?>
@@ -52,7 +53,9 @@ $count = 0;
     <!-- <a href="add_form.php" class="btn btn-primary float-end">Ajouter</a> -->
     <div class="contenu">
         <h1 class="fst-italic">Nos plats</h1>
-
+        <div class="col-md-6 offset-md-3 text-center" style="margin-left: 10vh">
+            <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
+        </div>
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
         <main class="container" id="cards">
             <!-- <div class="row">  -->

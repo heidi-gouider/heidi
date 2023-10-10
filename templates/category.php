@@ -24,6 +24,9 @@ $tableau = $dao->getCategoriesWithActivePlatsCount();
 
 $count_active = 0;
 $count = 0;
+//Je récupere le plat ajouté pour le passer dans l'url pour rendre le boutton de validation de la commande actif ou non
+$plat_added = isset($_GET['plat-added']) ? $_GET['plat-added'] : false;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,10 +41,19 @@ $count = 0;
     <div class="contenu">
         <h1 class="fst-italic">Notre carte</h1>
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
-                    <!--bouton pour ouvrir le modalAuth-->
-                    <div class="col-md-6 offset-md-3 text-center"style="margin-left: 10vh">
-                    <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
-                    </div>
+        <!--bouton pour ouvrir le modalAuth-->
+        <?php
+        if ($plat_added) {
+            // Affichez le bouton pour ouvrir la modalAuth seulement si des plats sont enregistrer
+            // echo '<button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>';
+        ?>
+            <div class="col-md-6 offset-md-3 text-center" style="margin-left: 10vh">
+                <button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>
+            </div>
+        <?php
+        }
+        ?>
+
         <main class="container">
             <div class="row">
                 <?php

@@ -105,7 +105,29 @@ $count = 0;
         endforeach; ?>
     </div>
 </main>
+<?php
+// Vérifier si l'utilisateur a déjà donné son consentement (par exemple, en vérifiant un cookie)
+if (!isset($_COOKIE['cookie_consent'])) {
+    echo '<div class="cookie-popup">
+            <div class="cookie-content">
+                <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. Acceptez-vous l\'utilisation de cookies ?</p>
+                <a href="?cookie_consent=accept" class="cookie-button">Accepter</a>
+                <a href="?cookie_consent=refuse" class="cookie-button">Refuser</a>
+            </div>
+        </div>';
+}
 
+// Gérer la réponse de l'utilisateur
+if (isset($_GET['cookie_consent'])) {
+    if ($_GET['cookie_consent'] === 'accept') {
+        // L'utilisateur a accepté les cookies
+        setcookie('cookie_consent', 'accepted', time() + 365 * 24 * 60 * 60); // Définir un cookie d'acceptation
+    } elseif ($_GET['cookie_consent'] === 'refuse') {
+        // L'utilisateur a refusé les cookies
+        // Vous pouvez ajouter ici le code pour gérer le refus des cookies
+    }
+}
+?>
 
 <?php
 include('partials/footer.php');

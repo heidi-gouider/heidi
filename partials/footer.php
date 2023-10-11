@@ -11,16 +11,16 @@
 </head>
 
 <body>
-
+    <!-- <div class="first-line"> -->
     <footer class="sticky-bottom footer">
-    <div class="container">
-            <div class="text-end fs-2">
-                <ul>
-                    <li class="text-sm "><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+        <div class="container">
+            <!-- <div class="text-end fs-2"> -->
+                <ul class="text-end fs-2">
+                    <li class="text-sm "><a href="templates/Politique_de_confidentialite.php">Politique de confidentialité</a></li>
                     <li class="text-sm"><a href="/conditions-d-utilisation">Conditions d'utilisation</a></li>
                     <li class="text-sm"><a href="/accessibilite">Accessibilité</a></li> <!-- Lien vers la page d'accessibilité -->
                 </ul>
-            </div>
+            <!-- </div> -->
             <h4 class="text-center">Pour nous suivre !</h4>
             <ul class="list-inline text-center">
                 <li class="list-inline-item">
@@ -33,16 +33,14 @@
                     <a href="#"><i class="bi bi-instagram"></i></a>
                 </li>
                 <p>&copy; 2023 The District. Tous droits réservés.</p>
-
             </ul>
         </div>
         <!-- <script type="module" src="main.js"></script> -->
 
         <!-- <h4>Nous contacter</h4> -->
     </footer>
-
-    <!-- <footer>
-        <div class="network"> -->
+    <!-- </div> -->
+    <!-- <div class="network"> -->
     <!-- création d'une checkbox pour le bouton qui affiche au click les liens
             des résx -->
     <!-- <i class="fa-sharp fa-solid fa-share-nodes" id="open-liens"></i>

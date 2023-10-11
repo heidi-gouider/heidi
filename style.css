@@ -208,7 +208,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
   transition: 1s ease-in-out;
   /* border-radius: 50%; */
 }
-.cookie-popup {
+/* .cookie-popup {
   display: none;
   position: fixed;
   bottom: 0;
@@ -231,7 +231,7 @@ si l'utilisateur ne veut plus que la vidéo joue */
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-}
+} */
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /*  ANIMATION */
@@ -624,6 +624,7 @@ section {
 .footer ul li a {
   color: #212529;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .footer ul li a:hover {

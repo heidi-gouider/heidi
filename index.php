@@ -11,6 +11,14 @@ require_once('./templates/db_connect.php');
 //objet Dao et requete
 require_once('./templates/Dao.php');
 
+//cookie nommé user_id qui stockera l’ID d’un visiteur pour la session actuelle par exemple ce qui nous permettra de l’identifier pendant sa navigation sur notre site et un deuxième 
+//cookie qu’on appelle user_pref qui stockera les préférences mentionnés par l’utilisateur pour notre site (utilisation d’un thème sombre par exemple).
+// setcookie('user_id', '1234');
+// setcookie('user_pref', 'dark_theme', time()+3600*24, '/', '', true, true);
+// setcookie('cookie_consent');
+// setcookie('user_id', '1234');
+
+
 // Je crée une instance de DAO en passant la connexion PDO
 $dao = new Dao($db);
 

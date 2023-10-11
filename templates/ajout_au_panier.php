@@ -38,8 +38,8 @@ if (isset($_POST['id_plat']) && isset($_POST['quantite'])) {
     // header("Location: commande.php");
     header("Location: category.php");
     // Après avoir ajouté un plat au panier avec succès
-    $plat_added = true;
-    header("Location: category.php?plat-added=$plat_added");
+    // $plat_added = true;
+    // header("Location: category.php?plat-added=$plat_added");
     exit();
 } else {
     // Je stocke le message d'erreur dans une variable de session

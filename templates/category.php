@@ -1,6 +1,6 @@
 <?php
 //je démare la session php = "identifiant donné au navigateur pour l'identifie du coté serveur et rendre sur chaque page les diff variables stocké"
-// session_start();
+session_start();
 
 // Active l'affichage des erreurs dans le navigateur
 ini_set('display_errors', 1);
@@ -27,8 +27,7 @@ $count = 0;
 //Je récupere le plat ajouté pour le passer dans l'url pour rendre le boutton de validation de la commande actif ou non
 // $plat_added = isset($_GET['plat-added']) ? $_GET['plat-added'] : false;
 // Validation et désinfection de la variable $plat_added provenant de l'URL
-$plat_added = isset($_GET['plat-added']) ? filter_var($_GET['plat-added'], FILTER_VALIDATE_BOOLEAN) : false;
-
+// $plat_added = isset($_GET['plat-added']) ? filter_var($_GET['plat-added'], FILTER_VALIDATE_BOOLEAN) : false;
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,7 +44,8 @@ $plat_added = isset($_GET['plat-added']) ? filter_var($_GET['plat-added'], FILTE
         <!-- <div class="container d-flex justify-content-center" id="section"> -->
         <!--bouton pour ouvrir le modalAuth-->
         <?php
-        if ($plat_added) {
+        // if ($plat_added) {
+        if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
             // Affichez le bouton pour ouvrir la modalAuth seulement si des plats sont enregistrer
             // echo '<button id="openModalButton" class="btn btn-primary mt-5 position-fixed mx-auto" data-bs-toggle="modal" data-bs-target="#modalAuth">Valider ma commande</button>';
         ?>
